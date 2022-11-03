@@ -4,14 +4,21 @@
   "main": "index.js",
   "author": "MikhailPtichkin88 <mikhailptichkin1988@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --env port=3000",
+    "build:prod": "webpack --env mode=production",
+    "build:dev": "webpack --env mode=development"
+  },
   "devDependencies": {
     "@types/node": "^17.0.21",
     "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.7.2",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
     "webpack": "^5.69.1",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.7.4"
   }
 }
