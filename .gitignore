@@ -16,3 +16,5 @@ node_modules/
 doc/**/*.txt
 
 .idea/
+package-lock.json
+.gitignore
