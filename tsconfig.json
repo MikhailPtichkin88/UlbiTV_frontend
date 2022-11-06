@@ -11,7 +11,10 @@
     // import вместо require
     "esModuleInterop": true,
     //убираем as * из импортов
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
