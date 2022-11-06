@@ -1,5 +1,5 @@
 
-.idea/
+.idea
 package-lock.json
-.gitignore
 node_modules
+/build
