@@ -10,6 +10,7 @@
     "build:dev": "webpack --env mode=development"
   },
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@svgr/webpack": "^6.2.1",
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.39",
@@ -20,6 +21,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "react-refresh": "^0.12.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
