@@ -1,18 +1,20 @@
-@import "./reset.scss";
-@import "./variables/global.scss";
-@import "./themes/normal.scss";
-@import "./themes/dark.scss";
+@import "./reset";
+@import "./variables/global";
+@import "./themes/normal";
+@import "./themes/dark";
 
 .app {
-  font: var(--font-m);
-  background: var(--bg-color);
-  color: var(--primary-color);
-  min-height: 100vh;
+    font: var(--font-m);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
 }
-.content-page{
-  display: flex;
+
+.content-page {
+    display: flex;
 }
-.page-wrapper{
-  flex-grow: 1;
-  padding:20px;
+
+.page-wrapper {
+    flex-grow: 1;
+    padding: 20px;
 }
