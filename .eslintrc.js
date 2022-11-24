@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
     node: 1,
+    jest: true,
   },
   plugins: ["react", "i18next", "@typescript-eslint"],
   extends: [
