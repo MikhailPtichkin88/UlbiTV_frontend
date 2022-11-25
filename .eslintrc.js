@@ -10,7 +10,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:i18next/recommended"
+    "plugin:i18next/recommended",
   ],
   overrides: [],
   parserOptions: {
@@ -30,10 +30,11 @@ module.exports = {
         avoidEscape: true,
       },
     ],
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
     "react/jsx-props-no-spreading": "warn",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/ban-ts-comment": "off",
-    "i18next/no-literal-string": ["error", {markupOnly:true}]
+    "i18next/no-literal-string": ["error", { markupOnly: true }],
   },
 };

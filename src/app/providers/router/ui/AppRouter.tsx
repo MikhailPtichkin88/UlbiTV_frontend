@@ -2,10 +2,11 @@ import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import i18n from "shared/config/i18n/i18n";
 import { routeConfig } from "shared/config/routeConfig/routeConfig";
+import { PageLoader } from "shared/ui/PageLoader/PageLoader";
 
 const AppRouter = () => {
   return (
-    <Suspense fallback={<div>{i18n.t("Загрузка")}</div>}>
+    <Suspense fallback={<PageLoader />}>
       <Routes>
         {Object.values(routeConfig).map(({ element, path }) => (
           <Route
