@@ -5,5 +5,7 @@
   "О сайте": "About us",
   "Поменять": "toggle",
   "Загрузка": "...Loading",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Обновить страницу": "Reload page",
+  "Произошла ошибка":"Error ocured"
 }
