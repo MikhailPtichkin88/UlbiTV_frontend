@@ -3,12 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
     jest: true,
-  node: true,
+    node: true,
   },
-  extends: [  "eslint:recommended",
-  "plugin:react/recommended",
-  "plugin:@typescript-eslint/recommended",
-  "plugin:i18next/recommended"],
+  extends: ["eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:i18next/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -17,11 +17,11 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "i18next"],
+  plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
   rules: {
     "react/jsx-indent": [2, 4],
     "react/jsx-indent-props": [2, 4],
-indent:[2,4],
+    indent: [2, 4],
     "react/jsx-filename-extension": [
       2,
       { extensions: [".js", ".jsx", ".tsx"] },
@@ -39,6 +39,8 @@ indent:[2,4],
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "i18next/no-literal-string": [
       "error",
       {
