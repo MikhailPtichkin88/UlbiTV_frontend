@@ -3,6 +3,7 @@
     height: var(--navbar-height);
     background: var(--inverted-bg-color);
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px;
 }
