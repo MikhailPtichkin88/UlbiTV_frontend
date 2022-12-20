@@ -17,8 +17,8 @@ export const Counter = () => {
         dispatch(counterActions.decrement())
     }
     return <div>
-        <h1>{`value = ${counterValue}`}</h1>
-        <Button onClick={increment}>{"incr"}</Button>
-        <Button onClick={decrement}>{"decr"}</Button>
+        <h1 data-testid="value-title">{`value = ${counterValue}`}</h1>
+        <Button data-testid="increment-btn" onClick={increment}>{"incr"}</Button>
+        <Button data-testid="decrement-btn" onClick={decrement}>{"decr"}</Button>
     </div>
 }
