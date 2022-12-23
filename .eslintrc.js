@@ -19,7 +19,6 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
   rules: {
-    "react/jsx-indent": [2, 4],
     "react/jsx-indent-props": [2, 4],
     indent: [2, 4],
     "react/jsx-filename-extension": [
@@ -28,11 +27,12 @@ module.exports = {
     ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
-    "react/jsx-props-no-spreading": "warn",
+    "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/ban-ts-comment": "warn",
     "react/function-component-definition": "off",
     "no-shadow": "off",
