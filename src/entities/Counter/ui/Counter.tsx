@@ -5,20 +5,20 @@ import { getCounterValue } from '../model/selectors/getCounterValue/getCounterVa
 import { counterActions } from '../model/slice/CounterSlice'
 
 export const Counter = () => {
-    const dispatch = useDispatch()
-    const counterValue = useSelector(getCounterValue)
-    const { theme } = useTheme()
+  const dispatch = useDispatch()
+  const counterValue = useSelector(getCounterValue)
+  const { theme } = useTheme()
 
-    const increment = () => {
-        dispatch(counterActions.increment())
-    }
+  const increment = () => {
+    dispatch(counterActions.increment())
+  }
 
-    const decrement = () => {
-        dispatch(counterActions.decrement())
-    }
-    return <div>
-        <h1 className={theme} data-testid="value-title">{`value = ${counterValue}`}</h1>
-        <Button data-testid="increment-btn" onClick={increment}>{"incr"}</Button>
-        <Button data-testid="decrement-btn" onClick={decrement}>{"decr"}</Button>
-    </div>
+  const decrement = () => {
+    dispatch(counterActions.decrement())
+  }
+  return <div>
+    <h1 className={theme} data-testid="value-title">{`value = ${counterValue}`}</h1>
+    <Button data-testid="increment-btn" onClick={increment}>{"incr"}</Button>
+    <Button data-testid="decrement-btn" onClick={decrement}>{"decr"}</Button>
+  </div>
 }

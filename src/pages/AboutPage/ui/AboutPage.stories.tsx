@@ -6,12 +6,12 @@ import { ThemeDecorator } from "shared/config/storybook/themeDecorator/themeDeco
 import { Theme } from "app/providers/ThemeProvider";
 
 export default {
-    title: "pages/AboutPage",
-    component: AboutPage,
+  title: "pages/AboutPage",
+  component: AboutPage,
 
-    argTypes: {
-        backgroundColor: { control: "color" },
-    },
+  argTypes: {
+    backgroundColor: { control: "color" },
+  },
 } as ComponentMeta<typeof AboutPage>;
 
 

@@ -9,61 +9,72 @@ interface ModalProps {
     children?: ReactNode;
     isOpen?:boolean;
     onClose?: ()=>void
+    lazy?:boolean
 }
 
 const ANIMATION_DELAY = 300;
 
-export const Modal = ({className, children, isOpen, onClose}:ModalProps) => {
+export const Modal = ({className, children, isOpen, onClose,  lazy,}:ModalProps) => {
     
-    const [isClosing, setIsClosing] = useState(false)
-    const timerRef = useRef<ReturnType<typeof setTimeout>>()
-    const {theme} = useTheme()
+  const [isClosing, setIsClosing] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
-    const mods:Record<string,boolean> = {
-        [cls.opened]:isOpen,
-        [cls.isClosing]:isClosing,
+  const timerRef = useRef<ReturnType<typeof setTimeout>>()
+  const {theme} = useTheme()
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true)
     }
+  }, [isOpen])
 
-    const closeHandler = useCallback(() => {
-        if(onClose) {
-            setIsClosing(true)
-            timerRef.current = setTimeout(()=>{
-                onClose()
-                setIsClosing(false)
-            }, ANIMATION_DELAY)
-        }
-    },[onClose])
+  const mods:Record<string,boolean> = {
+    [cls.opened]:isOpen,
+    [cls.isClosing]:isClosing,
+  }
 
-    const onKeyDownHandler = useCallback((e:KeyboardEvent)=>{
-        if(e.key === 'Escape'){
-            closeHandler()
-        } 
-    },[closeHandler])
-
-    const onContentClick = (e:React.MouseEvent)=>{
-        e.stopPropagation()
+  const closeHandler = useCallback(() => {
+    if(onClose) {
+      setIsClosing(true)
+      timerRef.current = setTimeout(()=>{
+        onClose()
+        setIsClosing(false)
+      }, ANIMATION_DELAY)
     }
+  },[onClose])
 
+  const onKeyDownHandler = useCallback((e:KeyboardEvent)=>{
+    if(e.key === 'Escape'){
+      closeHandler()
+    } 
+  },[closeHandler])
 
-    useEffect(()=>{
+  const onContentClick = (e:React.MouseEvent)=>{
+    e.stopPropagation()
+  }
 
-        window.addEventListener("keydown", onKeyDownHandler)
+  useEffect(()=>{
 
-        return ()=>{
-            clearTimeout(timerRef.current)
-            window.removeEventListener("keydown", onKeyDownHandler)
-        }
-    },[isOpen, onKeyDownHandler])
+    window.addEventListener("keydown", onKeyDownHandler)
 
-    return (
-        <Portal>
-            <div className={classNames(cls.modal, mods, [className, theme])}> 
-                <div className={cls.overlay} onClick={closeHandler}>
-                    <div className={cls.content} onClick={onContentClick}>
-                        {children}
-                    </div>
-                </div>
-            </div>
-        </Portal>
-    )
+    return ()=>{
+      clearTimeout(timerRef.current)
+      window.removeEventListener("keydown", onKeyDownHandler)
+    }
+  },[isOpen, onKeyDownHandler])
+
+  if(lazy && !isMounted){
+    return null
+  }
+  return (
+    <Portal>
+      <div className={classNames(cls.modal, mods, [className, theme])}> 
+        <div className={cls.overlay} onClick={closeHandler}>
+          <div className={cls.content} onClick={onContentClick}>
+            {children}
+          </div>
+        </div>
+      </div>
+    </Portal>
+  )
 }

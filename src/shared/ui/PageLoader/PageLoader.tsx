@@ -7,9 +7,9 @@ interface PageLoaderProps {
 }
 
 export const PageLoader = ({ className }: PageLoaderProps) => {
-    return (
-        <div className={classNames(cls.pageloader, {}, [className])}>
-            <Loader />
-        </div>
-    );
+  return (
+    <div className={classNames(cls.pageloader, {}, [className])}>
+      <Loader />
+    </div>
+  );
 };

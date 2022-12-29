@@ -8,5 +8,5 @@ interface PortalProps {
 
 export const Portal = ({element = document.body,children}:PortalProps) => {
     
-    return createPortal(children, element)
+  return createPortal(children, element)
 }

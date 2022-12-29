@@ -5,16 +5,16 @@ import { StateSchema } from "./StateSchema";
 
 export function createReduxStore(initialState?:StateSchema) {
 
-    const rootReducers: ReducersMapObject<StateSchema>={
-        counter: counterReducer,
-        user:   userReducer,
-    }
+  const rootReducers: ReducersMapObject<StateSchema>={
+    counter: counterReducer,
+    user:   userReducer,
+  }
 
-    return configureStore<StateSchema>({
-        reducer: rootReducers,
-        devTools: __IS_DEV__,
-        preloadedState:initialState
-    });
+  return configureStore<StateSchema>({
+    reducer: rootReducers,
+    devTools: __IS_DEV__,
+    preloadedState:initialState
+  });
 }
 
 export default createReduxStore

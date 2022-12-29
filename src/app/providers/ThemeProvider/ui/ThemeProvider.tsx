@@ -10,20 +10,20 @@ initialTheme?:Theme
 
 const ThemeProvider: FC<ThemeProviderProps> = ({ children,  initialTheme}) => {
 
-    const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
+  const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
 
-    const defaultProps = useMemo(
-        () => ({
-            theme: theme,
-            setTheme: setTheme,
-        }),
-        [theme]
-    );
+  const defaultProps = useMemo(
+    () => ({
+      theme: theme,
+      setTheme: setTheme,
+    }),
+    [theme]
+  );
 
-    return (
-        <ThemeContext.Provider value={defaultProps}>
-            {children}
-        </ThemeContext.Provider>
-    );
+  return (
+    <ThemeContext.Provider value={defaultProps}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
 export default ThemeProvider;
