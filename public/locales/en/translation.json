@@ -10,5 +10,7 @@
   "Произошла ошибка": "Error ocured",
   "Короткий язык": "EN",
   "Введите имя": "Enter your name:",
-  "Введите пароль": "Enter your password:"
+  "Введите пароль": "Enter your password:",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неправильный логин или пароль":"Incorrect login or password"
 }
