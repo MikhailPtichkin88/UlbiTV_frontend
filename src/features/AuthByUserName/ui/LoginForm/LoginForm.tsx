@@ -12,18 +12,20 @@ import cls from './LoginForm.module.scss'
 
 import { DynamicModuleLoader, ReducersList }
   from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 export interface LoginFormProps {
   className?: string
+onSuccess:()=>void
 }
 
 const initialReducers:ReducersList={
   loginForm: loginReducer
 }
 
-const LoginForm = memo(({ className, }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSuccess}: LoginFormProps) => {
   const { t } = useTranslation()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const {username, password, isLoading, error} = useSelector(getLoginState)
 
 
@@ -35,9 +37,13 @@ const LoginForm = memo(({ className, }: LoginFormProps) => {
     dispatch(loginActions.setPassword(value))
   },[dispatch])
 
-  const onLoginClick = useCallback(() => {
-    dispatch(loginByUserName({username,password}))
-  },[username, password, dispatch])
+  const onLoginClick = useCallback(async () => {
+    const res = dispatch(loginByUserName({username,password}))
+    if((await res).meta.requestStatus === "fulfilled"){
+      onSuccess()
+    }
+
+  },[username, password, dispatch, onSuccess])
 
   return (
     <DynamicModuleLoader  reducers={initialReducers}>
