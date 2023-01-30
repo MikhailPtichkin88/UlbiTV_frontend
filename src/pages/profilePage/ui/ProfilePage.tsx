@@ -1,4 +1,4 @@
-import { profileReducer } from 'entities/Profile'
+import { profileReducer } from '../../../entities/Profile/index'
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import {classNames} from 'shared/lib/classNames/classNames'
