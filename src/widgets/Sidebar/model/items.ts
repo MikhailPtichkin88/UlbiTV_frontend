@@ -9,7 +9,6 @@ text: string;
 Icon: React.VFC<React.SVGProps<SVGSVGElement>>
 }
 
-
 export const SidebarItemList: SidebarItemType[] = [
   {
     path:RoutePath.main,

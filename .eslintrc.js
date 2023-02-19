@@ -1,4 +1,9 @@
 module.exports = {
+  settings: {
+    react: {
+      "version": "detect"
+    }
+  },
   env: {
     browser: true,
     es2021: true,
@@ -40,6 +45,8 @@ module.exports = {
     "no-underscore-dangle": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
     "i18next/no-literal-string": [
       "error",
       {

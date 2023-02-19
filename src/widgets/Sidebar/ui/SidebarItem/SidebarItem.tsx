@@ -11,14 +11,14 @@ interface SidebarItemProps {
     
 }
 
-export const SidebarItem = memo(({ item,  collapsed }:SidebarItemProps) => {
+export const SidebarItem = memo(({ item = {} as SidebarItemType,  collapsed }:SidebarItemProps) => {
   const {t} = useTranslation()
-  return  <AppLink 
-    theme={AppLinkTheme.SECONDARY} 
-    to={item.path} 
+  return  <AppLink
+    theme={AppLinkTheme.SECONDARY}
+    to={item?.path || '/'}
     className={classNames(cls.item, {[cls.collapsed]:collapsed})}
-  >   
+  >
     <item.Icon className={cls.icon} />
-    <span className={cls.link}>  {t(`${item.text}`)} </span>
-  </AppLink>                          
+    <span className={cls.link}>  {t(`${item?.text}`)} </span>
+  </AppLink>
 })

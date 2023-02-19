@@ -15,13 +15,11 @@ export default {
   },
 } as ComponentMeta<typeof ProfilePage>;
 
-
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args as object} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
 Normal.decorators = [StoreDecorator({})]
-
 
 export const Dark = Template.bind({});
 Dark.args = {};

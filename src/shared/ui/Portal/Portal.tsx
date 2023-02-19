@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 
 interface PortalProps {
     children: ReactNode
-    element?: HTMLElement 
+    element?: HTMLElement
 }
 
 export const Portal = ({element = document.body,children}:PortalProps) => {

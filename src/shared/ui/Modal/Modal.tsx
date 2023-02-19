@@ -1,6 +1,6 @@
 import { useTheme } from 'app/providers/ThemeProvider';
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import {  MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
 import cls from './Modal.module.scss';
 
@@ -19,7 +19,7 @@ export const Modal = ({className, children, isOpen, onClose,  lazy,}:ModalProps)
   const [isClosing, setIsClosing] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
 
-  const timerRef = useRef<ReturnType<typeof setTimeout>>()
+  const timerRef = useRef as unknown as MutableRefObject<ReturnType<typeof setTimeout>>
   const {theme} = useTheme()
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export const Modal = ({className, children, isOpen, onClose,  lazy,}:ModalProps)
     }
   }, [isOpen])
 
-  const mods:Record<string,boolean> = {
+  const mods:Mods = {
     [cls.opened]:isOpen,
     [cls.isClosing]:isClosing,
   }
@@ -46,7 +46,7 @@ export const Modal = ({className, children, isOpen, onClose,  lazy,}:ModalProps)
   const onKeyDownHandler = useCallback((e:KeyboardEvent)=>{
     if(e.key === 'Escape'){
       closeHandler()
-    } 
+    }
   },[closeHandler])
 
   const onContentClick = (e:React.MouseEvent)=>{
@@ -68,8 +68,9 @@ export const Modal = ({className, children, isOpen, onClose,  lazy,}:ModalProps)
   }
   return (
     <Portal>
-      <div className={classNames(cls.modal, mods, [className, theme])}> 
-        <div className={cls.overlay} onClick={closeHandler}>
+      <div className={classNames(cls.modal, mods, [className, theme])}>
+        <div className={cls.overlay}
+          onClick={closeHandler}>
           <div className={cls.content} onClick={onContentClick}>
             {children}
           </div>

@@ -46,7 +46,6 @@ OutlineDark.args = {
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)]
 
-
 export const Background = Template.bind({});
 Background.args = {
   children: "Text",
@@ -58,7 +57,6 @@ BackgroundInverted.args = {
   children: "Text",
   theme: ButtonTheme.BACKGROUND_INVERTED,
 };
-
 
 export const SquareSizeM = Template.bind({});
 SquareSizeM.args = {
@@ -102,5 +100,4 @@ Disabled.args = {
   theme: ButtonTheme.OUTLINE,
   disabled:true
 };
-
 

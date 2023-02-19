@@ -28,7 +28,6 @@ const LoginForm = memo(({ className, onSuccess}: LoginFormProps) => {
   const dispatch = useAppDispatch()
   const {username, password, isLoading, error} = useSelector(getLoginState)
 
-
   const onChangeUserName = useCallback((value:string)=>{
     dispatch(loginActions.setUserName(value))
   },[dispatch])
@@ -50,14 +49,14 @@ const LoginForm = memo(({ className, onSuccess}: LoginFormProps) => {
       <div className={classNames(cls.loginform, {}, [className])}>
         <Text title={t('Форма авторизации')}/>
         {error && <Text text={t("Вы ввели неправильный логин или пароль")} theme={TextTheme.ERROR}/>}
-        <Input type="text" 
+        <Input type="text"
           className={cls.input}
           placeholder={t("Введите имя")}
           autoFocus
           onChange={onChangeUserName}
           value={username}
         />
-        <Input type="text" 
+        <Input type="text"
           className={cls.input}
           placeholder={t("Введите пароль")}
           onChange={onChangePassword}

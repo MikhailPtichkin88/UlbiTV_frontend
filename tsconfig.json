@@ -14,7 +14,7 @@
     "moduleResolution": "node",
     // Для абсолютного импорта
     "baseUrl": "./src/",
-   
+    "strict": true,
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js
     // import Moment from 'moment';
@@ -30,10 +30,11 @@
     // можно писать такой
     // import React from 'react';
     "allowSyntheticDefaultImports": true,
-    "lib": ["es5", "es6", "dom"],
-
-  "strict": false,
-
+    "lib": [
+      "es5",
+      "es6",
+      "dom"
+    ],
   },
   "ts-node": {
     "compilerOptions": {
@@ -46,8 +47,8 @@
     "./src/**/*.tsx",
   ],
   "paths": {
-    "*": ["./src/*"]
+    "*": [
+      "./src/*"
+    ]
   },
-
-
 }

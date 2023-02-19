@@ -12,6 +12,6 @@ export {
   fetchProfileData
 } from "./model/services/fetchProfileData/fetchProfileData"
 
-export { 
-  ProfileCard 
+export {
+  ProfileCard
 } from "./ui/ProfileCard/ProfileCard"
