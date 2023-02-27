@@ -1,4 +1,8 @@
 {
     "Профиль": "Profile",
-    "Редактировать": "Edit"
+    "Редактировать": "Edit",
+    "Отменить": "Cancel",
+    "Сохранить": "Save",
+    "Произошла ошибка при загрузке профиля": "Profile loading error has ocured",
+    "Попробуйте перезагрузить страницу": "Please, try to reload this page"
 }

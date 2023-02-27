@@ -7,14 +7,27 @@ const initialState:ProfileSchema = {
   readonly:true,
   isLoading: false,
   error: undefined,
-  data:undefined
+  data:undefined,
+  form:undefined,
 }
 
 const profileSlice = createSlice({
   name: 'profile',
   initialState,
   reducers: {
-
+    setReadonly:(state, action:PayloadAction<boolean>)=>{
+      state.readonly = action.payload
+    },
+    cancelEdit: (state) => {
+      state.readonly = true
+      state.form = state.data
+    },
+    updateProfile:(state, action:PayloadAction<Profile>)=>{
+      state.form = {
+        ...state.form,
+        ...action.payload
+      }
+    }
   },
   extraReducers:(builder)=>{
     builder
@@ -25,6 +38,7 @@ const profileSlice = createSlice({
       .addCase(fetchProfileData.fulfilled, (state, action:PayloadAction<Profile>)=>{
         state.isLoading=false
         state.data = action.payload;
+        state.form = action.payload;
       })
       .addCase(fetchProfileData.rejected, (state, action)=>{
         state.error=action.payload
