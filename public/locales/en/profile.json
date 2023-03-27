@@ -4,5 +4,11 @@
     "Отменить": "Cancel",
     "Сохранить": "Save",
     "Произошла ошибка при загрузке профиля": "Profile loading error has ocured",
-    "Попробуйте перезагрузить страницу": "Please, try to reload this page"
+    "Попробуйте перезагрузить страницу": "Please, try to reload this page",
+    "Ваше имя": "Your name",
+    "Ваше фамилия": "Your surname",
+    "Ваш возраст": "Your name",
+    "Город": "Your city",
+    "Имя пользователя": "User name",
+    "Введите ссылку на аватар": "Avatar link"
 }

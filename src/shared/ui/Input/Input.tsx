@@ -6,7 +6,7 @@ type HtmlInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onC
 
 interface InputProps extends HtmlInputProps {
   className?: string
-  value?: string
+  value?: string | number
   onChange?: (value: string) => void
   type?: string
   placeholder?: string
@@ -32,7 +32,7 @@ export const Input: FC<InputProps> = memo(({
   const ref = useRef<HTMLInputElement>(null)
 
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    if (value?.length > e?.target?.value?.length) {
+    if (value?.toString().length > e?.target?.value?.length) {
       onChange?.(e.target.value)
       setCaretPosition(e?.target?.selectionStart || 0)
       return

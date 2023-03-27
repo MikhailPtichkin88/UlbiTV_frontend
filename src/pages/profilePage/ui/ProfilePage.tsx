@@ -1,6 +1,7 @@
 import { memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
+import { Country } from 'shared/const/common'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, ReducersList }
   from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
@@ -43,6 +44,24 @@ const ProfilePage = memo(({className, }:profilePageProps) => {
     dispatch(profileActions.updateProfile({lastname:value || ""}))
   }, [dispatch])
 
+  const onChangeAge = useCallback((value:string | number) => {
+    if(Number(value)){
+      dispatch(profileActions.updateProfile({age:Number(value) || 0}))
+    }
+  }, [dispatch])
+
+  const onChangeCity = useCallback((value:string) => {
+    dispatch(profileActions.updateProfile({city:value || ""}))
+  }, [dispatch])
+
+  const onChangeUsername = useCallback((value:string) => {
+    dispatch(profileActions.updateProfile({username:value || ""}))
+  }, [dispatch])
+
+  const onChangeAvatar = useCallback((value:string) => {
+    dispatch(profileActions.updateProfile({avatar:value || ""}))
+  }, [dispatch])
+
   return(
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames("", {}, [className])}>
@@ -54,6 +73,10 @@ const ProfilePage = memo(({className, }:profilePageProps) => {
           readonly={readonly}
           onChangeFirstName={onChangeFirstName}
           onChangeLastName={onChangeLastName}
+          onChangeAge={onChangeAge}
+          onChangeCity={onChangeCity}
+          onChangeUsername={onChangeUsername}
+          onChangeAvatar={onChangeAvatar}
         />
       </div>
     </DynamicModuleLoader>
