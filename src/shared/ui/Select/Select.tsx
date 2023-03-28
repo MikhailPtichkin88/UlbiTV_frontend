@@ -12,10 +12,11 @@ interface SelectProps {
     label?: string
     options?: SelectOptions[]
     value?: string
+    readonly?: boolean
     onChange?: (value: string)=> void
 }
 
-export const Select = memo(({className, label, options, value, onChange }:SelectProps) => {
+export const Select = memo(({className, label, options, value, onChange, readonly }:SelectProps) => {
     
   const optionsList = useMemo(()=>{
     return options?.map((opt)=> (
@@ -37,7 +38,7 @@ export const Select = memo(({className, label, options, value, onChange }:Select
     )}
 
     <select
-      name="" id=""
+      disabled={readonly}
       className={cls.select}
       value={value}
       onChange={onChangeHandler}>

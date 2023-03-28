@@ -1,7 +1,9 @@
+import { Country } from 'entities/Country'
+import { Currency } from 'entities/Currency'
 import { memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { Country } from 'shared/const/common'
+
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, ReducersList }
   from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
@@ -62,6 +64,14 @@ const ProfilePage = memo(({className, }:profilePageProps) => {
     dispatch(profileActions.updateProfile({avatar:value || ""}))
   }, [dispatch])
 
+  const onChangeCurrency = useCallback((currency:Currency) => {
+    dispatch(profileActions.updateProfile({currency:currency}))
+  }, [dispatch])
+
+  const onChangeCountry = useCallback((country:Country) => {
+    dispatch(profileActions.updateProfile({country:country}))
+  }, [dispatch])
+
   return(
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames("", {}, [className])}>
@@ -77,6 +87,8 @@ const ProfilePage = memo(({className, }:profilePageProps) => {
           onChangeCity={onChangeCity}
           onChangeUsername={onChangeUsername}
           onChangeAvatar={onChangeAvatar}
+          onChangeCurrency={onChangeCurrency}
+          onChangeCountry={onChangeCountry}
         />
       </div>
     </DynamicModuleLoader>
