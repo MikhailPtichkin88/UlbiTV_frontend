@@ -2,6 +2,8 @@
   "Перевод": "Translate",
   "Язык": "English",
   "Главная страница": "Main page",
+  "Главная": "Main",
+  "Профиль": "Profile",
   "О сайте": "About us",
   "Поменять": "toggle",
   "Загрузка": "...Loading",
@@ -14,5 +16,8 @@
   "Форма авторизации": "Authorization form",
   "Вы ввели неправильный логин или пароль": "Incorrect login or password",
   "Войти": "Sign in",
-  "PROFILE_PAGE": "Profile"
+  "Выйти": "Sign out",
+  "PROFILE_PAGE": "Profile",
+  "Укажите валюту": "Choose currency",
+  "Укажите страну": "Choose country"
 }

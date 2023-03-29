@@ -11,6 +11,9 @@
     "Город": "Your city",
     "Имя пользователя": "User name",
     "Введите ссылку на аватар": "Avatar link",
-    "Укажите валюту": "Choose currency",
-    "Укажите страну": "Choose country"
+    "Имя и фамилия обязательны": "Name and surname requrid",
+    "Некорректный возраст": "Incorrect age",
+    "Некорректный регион": "Incorrect country",
+    "Ошибка сервера": "Server error",
+    "Данные не указаны": "Data not found"
 }
