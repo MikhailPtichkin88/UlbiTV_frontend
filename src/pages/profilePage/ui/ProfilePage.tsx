@@ -48,7 +48,9 @@ const ProfilePage = memo(({className, }:profilePageProps) => {
   }
 
   useEffect(()=>{
-    dispatch(fetchProfileData())
+    if(__PROJECT__ !== 'storybook'){
+      dispatch(fetchProfileData())
+    }
   },[dispatch])
 
   const onChangeFirstName = useCallback((value:string) => {
