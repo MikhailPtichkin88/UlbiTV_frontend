@@ -41,7 +41,7 @@ export const Modal = ({className, children, isOpen, onClose,  lazy,}:ModalProps)
         setIsClosing(false)
       }, ANIMATION_DELAY)
     }
-  },[onClose])
+  },[onClose, timerRef])
 
   const onKeyDownHandler = useCallback((e:KeyboardEvent)=>{
     if(e.key === 'Escape'){
@@ -61,7 +61,7 @@ export const Modal = ({className, children, isOpen, onClose,  lazy,}:ModalProps)
       clearTimeout(timerRef.current)
       window.removeEventListener("keydown", onKeyDownHandler)
     }
-  },[isOpen, onKeyDownHandler])
+  },[isOpen, onKeyDownHandler, timerRef])
 
   if(lazy && !isMounted){
     return null

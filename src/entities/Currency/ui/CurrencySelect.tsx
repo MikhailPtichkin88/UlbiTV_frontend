@@ -22,7 +22,7 @@ export const CurrencySelect = memo(({className, value, onChange, readonly}:Curre
 
   const onChangeHandler = useCallback((value:string) => {
     onChange?.(value as Currency)
-  },[])
+  },[onChange])
 
   return <Select
     className={classNames("", {}, [className])}

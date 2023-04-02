@@ -24,7 +24,7 @@ export const CountrySelect = memo(({className, value, onChange, readonly}:Countr
 
   const onChangeHandler = useCallback((value:string) => {
     onChange?.(value as Country)
-  },[])
+  },[onChange])
 
   return <Select
     className={classNames("", {}, [className])}

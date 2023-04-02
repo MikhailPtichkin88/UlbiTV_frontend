@@ -1,5 +1,5 @@
 import { AnyAction, CombinedState, Reducer, ReducersMapObject } from "@reduxjs/toolkit";
-import { EnhancedStore, ToolkitStore } from "@reduxjs/toolkit/dist/configureStore";
+import { EnhancedStore } from "@reduxjs/toolkit/dist/configureStore";
 import { AxiosInstance } from "axios";
 import { CounterSchema } from "entities/Counter";
 import { ProfileSchema } from "entities/Profile";
