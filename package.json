@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --env port=3000",
+    "start:dev": "concurrently \"npm:start\" \"npm run start:dev:server\"",
     "start:dev:server": "node ./json-server/index.js",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
@@ -84,6 +85,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^0.26.1",
+    "concurrently": "^8.0.1",
     "css-loader": "^6.7.1",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
