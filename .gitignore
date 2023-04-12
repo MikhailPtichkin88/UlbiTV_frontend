@@ -3,6 +3,6 @@
 package-lock.json
 node_modules
 /build
-
+/extractedTranslations
 .loki/report.html
 .loki/report.json
