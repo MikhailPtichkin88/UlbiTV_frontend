@@ -1,7 +1,7 @@
 import { Article } from "./article"
 
 export interface ArticleDetailsSchema{
-isLoading: boolean
+isLoading?: boolean
 error?: string
 data?: Article
 }

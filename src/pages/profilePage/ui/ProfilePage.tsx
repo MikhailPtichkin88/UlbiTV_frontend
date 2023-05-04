@@ -21,6 +21,7 @@ import { fetchProfileData,
   ValidateProfileError}  from '../../../entities/Profile/index'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Text } from 'shared/ui/Text/Text'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 
 const reducers:ReducersList = {
   profile: profileReducer
@@ -46,12 +47,7 @@ const ProfilePage = memo(({className, }:profilePageProps) => {
     [ValidateProfileError.SERVER_ERROR]: t('Ошибка сервера'),
     [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
   }
-
-  useEffect(()=>{
-    if(__PROJECT__ !== 'storybook'){
-      dispatch(fetchProfileData())
-    }
-  },[dispatch])
+  useInitialEffect(()=>dispatch(fetchProfileData()))
 
   const onChangeFirstName = useCallback((value:string) => {
     dispatch(profileActions.updateProfile({first:value || ""}))

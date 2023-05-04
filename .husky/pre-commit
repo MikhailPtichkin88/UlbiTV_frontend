@@ -5,5 +5,5 @@ npm run build:prod
 npm run lint:ts:fix
 npm run lint:scss:fix
 
-# npm run test:unit
+npm run test:unit
 
