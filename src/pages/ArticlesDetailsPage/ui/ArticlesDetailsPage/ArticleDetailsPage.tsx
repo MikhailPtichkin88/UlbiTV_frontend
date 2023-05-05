@@ -2,10 +2,10 @@ import {classNames} from 'shared/lib/classNames/classNames'
 import cls from './ArticleDetailsPage.module.scss'
 import { useTranslation } from 'react-i18next'
 import { memo } from 'react'
-import { ArticleDetails } from '../../../../entities/Article'
 import { useParams } from 'react-router-dom'
-import { CommentList } from 'entities/Comment'
 import { Text } from 'shared/ui/Text/Text'
+import { ArticleDetails } from '../../../../entities/Article'
+import { CommentList } from '../../../../entities/Comment'
 import { DynamicModuleLoader, ReducersList }
   from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsCommentsReducer, getArticleComments }
