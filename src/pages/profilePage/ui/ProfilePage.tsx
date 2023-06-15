@@ -22,6 +22,7 @@ import { fetchProfileData,
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Text } from 'shared/ui/Text/Text'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { useParams } from 'react-router-dom'
 
 const reducers:ReducersList = {
   profile: profileReducer
@@ -39,6 +40,7 @@ const ProfilePage = memo(({className, }:profilePageProps) => {
   const readonly = useSelector(getProfileReadonly)
   const dispatch = useAppDispatch()
   const validateErrors = useSelector(getProfileValidateError)
+  const {id} = useParams<{id:string}>()
 
   const validateErrorTranslates = {
     [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
@@ -47,7 +49,7 @@ const ProfilePage = memo(({className, }:profilePageProps) => {
     [ValidateProfileError.SERVER_ERROR]: t('Ошибка сервера'),
     [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
   }
-  useInitialEffect(()=>dispatch(fetchProfileData()))
+  useInitialEffect(()=>id && dispatch(fetchProfileData(id)))
 
   const onChangeFirstName = useCallback((value:string) => {
     dispatch(profileActions.updateProfile({first:value || ""}))

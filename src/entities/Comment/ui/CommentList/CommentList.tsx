@@ -14,6 +14,16 @@ interface CommentProps {
 export const CommentList = ({className, comments, isLoading}:CommentProps) => {
   const {t} = useTranslation()
   // eslint-disable-next-line i18next/no-literal-string
+
+  if(isLoading){
+    return (
+      <div className={classNames(cls.commentList, {}, [className])}>
+        <CommentCard isLoading={true}/>
+        <CommentCard isLoading={true}/>
+        <CommentCard isLoading={true}/>
+      </div>
+
+    )}
   return <div className={classNames(cls.commentList, {}, [className])}>{
     comments?.length
       ? comments.map((comment:Comment)=>(

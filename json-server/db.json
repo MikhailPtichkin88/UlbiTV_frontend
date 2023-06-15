@@ -102,6 +102,24 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "QAF_9X1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "321",
+      "id": "F3Qzocd"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "xexexe",
+      "id": "UPTw4HO"
     }
   ],
   "users": [
@@ -120,14 +138,28 @@
       "avatar": "https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/02/17/10/homersimpson1702a.jpg?width=1200"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 30,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "admin213",
+      "avatar": "https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/02/17/10/homersimpson1702a.jpg?width=1200"
+    },
+    {
+      "id": "2",
+      "first": "Ulbi",
+      "lastname": "Tv",
+      "age": 28,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://logowik.com/content/uploads/images/homer-simpson4924.jpg"
+    }
+  ]
 }
