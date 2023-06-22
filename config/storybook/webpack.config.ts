@@ -10,9 +10,13 @@ export default ({ config }: { config: webpack.Configuration }) => {
     html: "",
     src: path.resolve(__dirname, "..", "..", "src"),
   };
+  // config.resolve = config.resolve || {};
+  // config.resolve.alias = {
+  //   entities: path.resolve(__dirname, "./src/entities"),
+  // };
   config.resolve?.modules?.push(paths.src);
   config.resolve?.extensions?.push("ts", "tsx");
-
+  
   //@ts-ignore
   config.module.rules = config.module.rules.map((rule:RuleSetRule)=>{
     if(/svg/.test(rule.test as string)){

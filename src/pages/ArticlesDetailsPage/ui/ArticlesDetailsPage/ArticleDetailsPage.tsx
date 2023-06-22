@@ -2,7 +2,7 @@ import {classNames} from 'shared/lib/classNames/classNames'
 import cls from './ArticleDetailsPage.module.scss'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Text } from 'shared/ui/Text/Text'
 import { ArticleDetails } from '../../../../entities/Article'
 import { CommentList } from '../../../../entities/Comment'
@@ -18,6 +18,8 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { AddCommentForm } from 'features/AddNewComment'
 import { addCommentForArticle }
   from '../../model/services/addCommentForArticle/addCommentForArticle'
+import { Button } from 'shared/ui/Button/Button'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 interface ArticlesDetailsPageProps {
      className?: string
@@ -28,11 +30,16 @@ const reducers:ReducersList = {
 
 const ArticleDetailsPage = ({className, }:ArticlesDetailsPageProps) => {
   const {t} = useTranslation("article");
+  const navigate = useNavigate()
   const { id } = useParams<{id:string}>()
   const dispatch = useDispatch()
   const comments = useSelector(getArticleComments.selectAll)
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
   const commentsError = useSelector(getArticleCommentsError)
+
+  const onBackToList = useCallback(() =>{
+    navigate(RoutePath.articles)
+  },[])
 
   const onSendComment = useCallback((text:string)=>{
     dispatch(addCommentForArticle(text))
@@ -50,6 +57,7 @@ const ArticleDetailsPage = ({className, }:ArticlesDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames(cls.articledetailspage, {}, [className])}>
+        <Button onClick={onBackToList}>{t("Назад к списку")}</Button>
         <ArticleDetails id={id}/>
         <Text className={cls.commentTitle} title={t("Комментарии")}/>
         <AddCommentForm onSendComment={onSendComment}/>
