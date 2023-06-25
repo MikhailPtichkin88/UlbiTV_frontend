@@ -1,4 +1,4 @@
-import {classNames} from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Skeleton.module.scss'
 import { CSSProperties } from 'react'
 
@@ -9,11 +9,21 @@ interface SkeletonProps {
   border?: string
 }
 
-export const Skeleton = ({className, height, width, border}:SkeletonProps) => {
-    
-  const styles: CSSProperties  = {
+export const Skeleton = ({
+  className,
+  height,
+  width,
+  border,
+}: SkeletonProps) => {
+  const styles: CSSProperties = {
     width,
     height,
-    borderRadius: border}
-  return <div className={classNames(cls.skeleton, {}, [className])} style={styles}></div>
+    borderRadius: border,
+  }
+  return (
+    <div
+      className={classNames(cls.skeleton, {}, [className])}
+      style={styles}
+    ></div>
+  )
 }

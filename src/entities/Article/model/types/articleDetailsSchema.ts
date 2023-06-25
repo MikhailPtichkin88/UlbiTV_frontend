@@ -1,7 +1,7 @@
-import { Article } from "./article"
+import { Article } from './article'
 
-export interface ArticleDetailsSchema{
-isLoading?: boolean
-error?: string
-data?: Article
+export interface ArticleDetailsSchema {
+  isLoading?: boolean
+  error?: string
+  data?: Article
 }

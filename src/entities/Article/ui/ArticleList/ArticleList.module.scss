@@ -1,13 +1,13 @@
 .BIG {
-    .card {
-        margin-bottom: 20px;
-    }
+  .card {
+    margin-bottom: 20px;
+  }
 }
 
 .SMALL {
-    &.articlelist {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
+  &.articlelist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }

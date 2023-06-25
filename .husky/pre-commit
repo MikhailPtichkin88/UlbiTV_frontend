@@ -4,6 +4,7 @@
 npm run build:prod
 npm run lint:ts:fix
 npm run lint:scss:fix
+npx pretty-quick --staged
 
 npm run test:unit
 

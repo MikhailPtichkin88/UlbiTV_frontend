@@ -1,4 +1,4 @@
-import {classNames} from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './CommentCard.module.scss'
 import { Comment } from '../../model/types/comment'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
@@ -8,36 +8,45 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
 
 interface CommentProps {
-     className?: string
-      comment?: Comment
-      isLoading?: boolean
+  className?: string
+  comment?: Comment
+  isLoading?: boolean
 }
 
-export const CommentCard = ({className, comment, isLoading}:CommentProps) => {
-
-  if(isLoading){
+export const CommentCard = ({
+  className,
+  comment,
+  isLoading,
+}: CommentProps) => {
+  if (isLoading) {
     return (
-      <div className={classNames(cls.commentCard, {}, [className, cls.loading])}>
+      <div
+        className={classNames(cls.commentCard, {}, [className, cls.loading])}
+      >
         <div className={cls.header}>
-          <Skeleton width={30} height={30} border={"50%"}/>
-          <Skeleton className={cls.username} width={100} height={16}/>
+          <Skeleton width={30} height={30} border={'50%'} />
+          <Skeleton className={cls.username} width={100} height={16} />
         </div>
-        <Skeleton className={cls.text} width={"100%"} height={50}/>
+        <Skeleton className={cls.text} width={'100%'} height={50} />
       </div>
-    )}
+    )
+  }
 
-  if(!comment){
+  if (!comment) {
     return null
   }
 
   return (
     <div className={classNames(cls.commentCard, {}, [className])}>
-      <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.header}>
-        { comment.user.avatar && <Avatar size={40} src={comment.user.avatar}/> }
+      <AppLink
+        to={`${RoutePath.profile}${comment.user.id}`}
+        className={cls.header}
+      >
+        {comment.user.avatar && <Avatar size={40} src={comment.user.avatar} />}
         <Text className={cls.username} title={comment.user.username} />
       </AppLink>
-  
-      <Text className={cls.text} text={comment.text} />
 
-    </div>)
+      <Text className={cls.text} text={comment.text} />
+    </div>
+  )
 }

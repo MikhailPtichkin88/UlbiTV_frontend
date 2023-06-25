@@ -1,11 +1,11 @@
-import React, { ErrorInfo, ReactNode, Suspense } from "react";
-import { ErrorPage } from "widgets/ErrorPage";
+import React, { ErrorInfo, ReactNode, Suspense } from 'react'
+import { ErrorPage } from 'widgets/ErrorPage'
 
 interface ErrorBounfaryProps {
-  children: ReactNode;
+  children: ReactNode
 }
 interface ErrorBoundartState {
-  hasError: boolean;
+  hasError: boolean
 }
 
 export class ErrorBoundary extends React.Component<
@@ -13,30 +13,30 @@ export class ErrorBoundary extends React.Component<
   ErrorBoundartState
 > {
   constructor(props: ErrorBounfaryProps) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError() {
     // Update state so the next render will show the fallback UI.
-    return { hasError: true };
+    return { hasError: true }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.log(error, errorInfo);
+    console.log(error, errorInfo)
   }
 
   render() {
-    const { hasError } = this.state;
-    const { children } = this.props;
+    const { hasError } = this.state
+    const { children } = this.props
     if (hasError) {
       return (
         <Suspense fallback="">
           <ErrorPage />
         </Suspense>
-      );
+      )
     }
 
-    return children;
+    return children
   }
 }

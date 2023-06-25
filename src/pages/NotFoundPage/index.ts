@@ -1,2 +1,2 @@
-import { NotFoundPage } from "./ui/NotFoundPage";
-export { NotFoundPage };
+import { NotFoundPage } from './ui/NotFoundPage'
+export { NotFoundPage }

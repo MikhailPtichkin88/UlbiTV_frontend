@@ -1,27 +1,27 @@
-@import "./reset";
-@import "./variables/global";
-@import "./themes/normal";
-@import "./themes/green";
-@import "./themes/dark";
+@import './reset';
+@import './variables/global';
+@import './themes/normal';
+@import './themes/green';
+@import './themes/dark';
 
 body {
-    font: var(--font-m);
-    color: var(--primary-color);
+  font: var(--font-m);
+  color: var(--primary-color);
 }
 
 .app {
-    min-height: 100vh;
-    background: var(--bg-color);
+  min-height: 100vh;
+  background: var(--bg-color);
 }
 
 .content-page {
-    display: flex;
+  display: flex;
 }
 
 .page-wrapper {
-    flex-grow: 1;
-    padding: 20px 20px 20px 40px;
-    height: calc(100vh - var(--navbar-height));
-    overflow-y: auto;
-    flex-shrink: 100;
+  flex-grow: 1;
+  padding: 20px 20px 20px 40px;
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
+  flex-shrink: 100;
 }

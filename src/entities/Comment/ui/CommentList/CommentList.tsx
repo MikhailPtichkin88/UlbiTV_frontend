@@ -1,4 +1,4 @@
-import {classNames} from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import { Text } from 'shared/ui/Text/Text'
 import { Comment } from '../../model/types/comment'
 import cls from './CommentList.module.scss'
@@ -11,26 +11,37 @@ interface CommentProps {
   isLoading?: boolean
 }
 
-export const CommentList = ({className, comments, isLoading}:CommentProps) => {
-  const {t} = useTranslation()
+export const CommentList = ({
+  className,
+  comments,
+  isLoading,
+}: CommentProps) => {
+  const { t } = useTranslation()
   // eslint-disable-next-line i18next/no-literal-string
 
-  if(isLoading){
+  if (isLoading) {
     return (
       <div className={classNames(cls.commentList, {}, [className])}>
-        <CommentCard isLoading={true}/>
-        <CommentCard isLoading={true}/>
-        <CommentCard isLoading={true}/>
+        <CommentCard isLoading={true} />
+        <CommentCard isLoading={true} />
+        <CommentCard isLoading={true} />
       </div>
-
-    )}
-  return <div className={classNames(cls.commentList, {}, [className])}>{
-    comments?.length
-      ? comments.map((comment:Comment)=>(
-        <CommentCard key={comment.id}
-          isLoading={isLoading}
-          className={cls.comment}
-          comment={comment}
-        />))
-      : <Text text={t("Комментарии отсутствуют")}/>}</div>
+    )
+  }
+  return (
+    <div className={classNames(cls.commentList, {}, [className])}>
+      {comments?.length ? (
+        comments.map((comment: Comment) => (
+          <CommentCard
+            key={comment.id}
+            isLoading={isLoading}
+            className={cls.comment}
+            comment={comment}
+          />
+        ))
+      ) : (
+        <Text text={t('Комментарии отсутствуют')} />
+      )}
+    </div>
+  )
 }

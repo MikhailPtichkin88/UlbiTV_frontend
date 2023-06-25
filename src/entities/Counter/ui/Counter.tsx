@@ -16,9 +16,18 @@ export const Counter = () => {
   const decrement = () => {
     dispatch(counterActions.decrement())
   }
-  return <div>
-    <h1 className={theme} data-testid="value-title">{`value = ${counterValue}`}</h1>
-    <Button data-testid="increment-btn" onClick={increment}>{"incr"}</Button>
-    <Button data-testid="decrement-btn" onClick={decrement}>{"decr"}</Button>
-  </div>
+  return (
+    <div>
+      <h1
+        className={theme}
+        data-testid="value-title"
+      >{`value = ${counterValue}`}</h1>
+      <Button data-testid="increment-btn" onClick={increment}>
+        {'incr'}
+      </Button>
+      <Button data-testid="decrement-btn" onClick={decrement}>
+        {'decr'}
+      </Button>
+    </div>
+  )
 }

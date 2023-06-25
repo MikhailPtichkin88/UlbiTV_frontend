@@ -1,4 +1,2 @@
-import  {ProfilePageAsync}  from "./ui/ProfilePage.async"
-export {
-  ProfilePageAsync as ProfilePage
-}
+import { ProfilePageAsync } from './ui/ProfilePage.async'
+export { ProfilePageAsync as ProfilePage }

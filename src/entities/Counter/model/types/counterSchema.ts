@@ -1,3 +1,3 @@
 export interface CounterSchema {
-    value:number;
+  value: number
 }
