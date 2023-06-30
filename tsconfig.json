@@ -11,10 +11,13 @@
     "jsx": "react-jsx",
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "allowJs": true,
+    "strict": true,
     "moduleResolution": "node",
     // Для абсолютного импорта
-    "baseUrl": "./src/",
-    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js
     // import Moment from 'moment';
@@ -29,26 +32,12 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
-    "allowSyntheticDefaultImports": true,
-    "lib": [
-      "es5",
-      "es6",
-      "dom"
-    ],
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS",
-    },
+      "module": "CommonJS"
+    }
   },
-  "include": [
-    "./config/jest/setupTests.ts",
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-  ],
-  "paths": {
-    "*": [
-      "./src/*"
-    ]
-  },
+  "include": ["./config/jest/setupTests.ts", "./src/**/*.ts", "./src/**/*.tsx"]
 }

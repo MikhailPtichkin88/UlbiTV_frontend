@@ -20,9 +20,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -81,6 +79,130 @@
           "paragraphs": [
             "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
           ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Python news",
+      "subtitle": "What's new in Python for 2022?",
+      "img": "https://cdn-edge.kwork.ru/pics/t3/05/21311018-1655653505.jpg",
+      "views": 1500,
+      "createdAt": "01.03.2022",
+      "userId": "2",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Title of this block",
+          "paragraphs": [
+            "Python is a widely-used programming language known for its simplicity and versatility."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "print('Hello, world!')"
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://cdn-edge.kwork.ru/pics/t3/05/21311018-1655653505.jpg",
+          "title": "Image 1 - Python logo"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Java news",
+      "subtitle": "What's new in Java for 2022?",
+      "img": "https://fuzeservers.ru/wp-content/uploads/6/8/c/68c002704dca9c8f6316be783e593de6.jpeg",
+      "views": 800,
+      "createdAt": "10.03.2022",
+      "userId": "1",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Title of this block",
+          "paragraphs": [
+            "Java is a popular programming language used for building a wide range of applications."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, world!\");\n    }\n}"
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://fuzeservers.ru/wp-content/uploads/6/8/c/68c002704dca9c8f6316be783e593de6.jpeg",
+          "title": "Image 1 - Java logo"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "C++ news",
+      "subtitle": "What's new in C++ for 2022?",
+      "img": "https://avatars.mds.yandex.net/i?id=c1725c463e1a86ad1b3583f52792a88e4922c159-9147461-images-thumbs&n=13",
+      "views": 500,
+      "createdAt": "15.03.2022",
+      "userId": "2",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Title of this block",
+          "paragraphs": [
+            "C++ is a powerful programming language used for system-level development and high-performance applications."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, world!\" << std::endl;\n    return 0;\n}"
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://avatars.mds.yandex.net/i?id=c1725c463e1a86ad1b3583f52792a88e4922c159-9147461-images-thumbs&n=13",
+          "title": "Image 1 - C++ logo"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Ruby news",
+      "subtitle": "What's new in Ruby for 2022?",
+      "img": "https://i.pinimg.com/originals/eb/9e/3b/eb9e3b7dab09358e7cf13f188f64f9f4.png",
+      "views": 300,
+      "createdAt": "20.03.2022",
+      "userId": "1",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Title of this block",
+          "paragraphs": [
+            "Ruby is a dynamic, object-oriented programming language known for its simplicity and productivity."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "puts 'Hello, world!'"
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://i.pinimg.com/originals/eb/9e/3b/eb9e3b7dab09358e7cf13f188f64f9f4.png",
+          "title": "Image 1 - Ruby logo"
         }
       ]
     }
