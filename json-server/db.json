@@ -205,6 +205,786 @@
           "title": "Image 1 - Ruby logo"
         }
       ]
+    },
+    {
+      "id": "6",
+      "title": "Data Visualization in Python",
+      "subtitle": "Best Python Libraries for Data Visualization",
+      "img": "https://img.freepik.com/free-vector/technological-falling-particles-dark-background_52683-17130.jpg?w=1060&t=st=1688282199~exp=1688282799~hmac=a7b0235c59f5a1830ea52d89fb6976f7813f58baa1f43e47b821973be683bad6",
+      "views": 900,
+      "createdAt": "08.07.2023",
+      "userId": "2",
+      "type": ["Data Science"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to Data Visualization",
+          "paragraphs": [
+            "Data visualization is a graphical representation of information and data to help in understanding patterns, trends, and insights."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://img.freepik.com/free-vector/blue-futuristic-networking-technology_53876-100679.jpg?w=1060&t=st=1688282323~exp=1688282923~hmac=44932dcb4985f004b15ffbdd8a2b2a98dcd4fafb93e05e48339fd629cb930797",
+          "title": "Image 1 - Data Visualization"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Machine Learning with TensorFlow",
+      "subtitle": "TensorFlow's Impact on Machine Learning",
+      "img": "https://img.freepik.com/free-photo/rpa-concept-with-blurry-hand-touching-screen_23-2149311914.jpg?w=1060&t=st=1688281640~exp=1688282240~hmac=c39a8688916f5a91eb21960f2991eae426a8b5b65de8e30cc18625c80a2e3158",
+      "views": 1200,
+      "createdAt": "09.07.2023",
+      "userId": "1",
+      "type": ["Machine Learning"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to TensorFlow",
+          "paragraphs": [
+            "TensorFlow is an open-source machine learning framework developed by Google, widely used in various ML tasks."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/technology-human-touch-background-modern-remake-creation-adam_17851045.htm#query=technology&position=3&from_view=keyword&track=sph",
+          "title": "Image 1 - TensorFlow"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Web Development with React",
+      "subtitle": "Exploring React for Frontend Development",
+      "img": "https://img.freepik.com/free-vector/cyber-technology-background_23-2148390330.jpg?w=1060&t=st=1688281652~exp=1688282252~hmac=5b10248d5ea5824f659a9840e34189ad9cffc8b1829f04a272f2455b31405935",
+      "views": 1500,
+      "createdAt": "10.07.2023",
+      "userId": "2",
+      "type": ["Web Development"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to React",
+          "paragraphs": [
+            "React is a popular JavaScript library used for building user interfaces and single-page applications."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/abstract-background-with-low-poly-design_2795509.htm#query=technology&position=5&from_view=keyword&track=sph",
+          "title": "Image 1 - React"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Cybersecurity Trends",
+      "subtitle": "Emerging Trends in Cybersecurity for 2023",
+      "img": "https://img.freepik.com/free-photo/technology-human-touch-background-modern-remake-creation-adam_53876-129794.jpg?w=1060&t=st=1688281671~exp=1688282271~hmac=2206dd9932099981daa3cbdd19473280f74e2829da5cc25a137d09bb237aea04",
+      "views": 800,
+      "createdAt": "11.07.2023",
+      "userId": "1",
+      "type": ["Cybersecurity"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Understanding Cybersecurity",
+          "paragraphs": [
+            "Cybersecurity is the practice of protecting computer systems, networks, and data from security breaches and attacks."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-vector/abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics_22421018.htm#query=technology&position=6&from_view=keyword&track=sph",
+          "title": "Image 1 - Cybersecurity"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Big Data Analytics",
+      "subtitle": "Harnessing Big Data for Insights",
+      "img": "https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?w=900&t=st=1688281791~exp=1688282391~hmac=721684a8b9ae97f793d1df1d808bba65b492e27195e67aba9b3061d64658e0b1",
+      "views": 1100,
+      "createdAt": "12.07.2023",
+      "userId": "2",
+      "type": ["Data Science"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to Big Data",
+          "paragraphs": [
+            "Big Data analytics involves processing and analyzing large datasets to uncover valuable insights and patterns."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-vector/abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics_22421018.htm#query=technology&position=6&from_view=keyword&track=sph",
+          "title": "Image 1 - Big Data Analytics"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Mobile App Development with Flutter",
+      "subtitle": "Building Cross-Platform Apps with Flutter",
+      "img": "https://img.freepik.com/free-vector/abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics_1217-4607.jpg?w=826&t=st=1688281723~exp=1688282323~hmac=e2febf8bf385ff6855515b1f8f9a4c934662719e5e537c6f60fc4bf96a8044b4",
+      "views": 900,
+      "createdAt": "13.07.2023",
+      "userId": "1",
+      "type": ["Mobile Development"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to Flutter",
+          "paragraphs": [
+            "Flutter is a UI toolkit developed by Google for building natively compiled applications for mobile, web, and desktop from a single codebase."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/abstract-background-with-low-poly-design_2795509.htm#query=technology&position=5&from_view=keyword&track=sph",
+          "title": "Image 1 - Flutter"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Cloud Computing Trends",
+      "subtitle": "Latest Trends in Cloud Computing",
+      "img": "https://img.freepik.com/free-vector/tech-stickers-collection-with-tomomi-cat_23-2150546424.jpg?w=740&t=st=1688282411~exp=1688283011~hmac=12bfbfaa9ded4f0f46ad7f549da11b1598eb584e846ce19fe593a8ed4d88299c",
+      "views": 1200,
+      "createdAt": "14.07.2023",
+      "userId": "2",
+      "type": ["Cloud Computing"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to Cloud Computing",
+          "paragraphs": [
+            "Cloud Computing allows users to access and store data and applications over the internet instead of a local computer's hard drive."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-ai-image/motherboard-closeup-technology-integrated-microchip-circuit-board-computer-processor-with-neon-light_39518213.htm#query=technology&position=22&from_view=keyword&track=sph",
+          "title": "Image 1 - Cloud Computing"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Artificial Intelligence Applications",
+      "subtitle": "Real-world Applications of AI",
+      "img": "https://img.freepik.com/premium-psd/set-abstract-technology-futuristic-circles_313905-4160.jpg?w=1060",
+      "views": 1500,
+      "createdAt": "15.07.2023",
+      "userId": "1",
+      "type": ["Artificial Intelligence"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Understanding AI Applications",
+          "paragraphs": [
+            "AI is applied in various fields such as healthcare, finance, robotics, and more to enhance efficiency and decision-making."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_38669459.htm#query=technology&position=19&from_view=keyword&track=sph",
+          "title": "Image 1 - Artificial Intelligence"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Web Security Best Practices",
+      "subtitle": "Ensuring Web Application Security",
+      "img": "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=1060&t=st=1688281842~exp=1688282442~hmac=13873de51e308f854df2f976f89049b71267da822ac99e686682522158ddb9cb",
+      "views": 1000,
+      "createdAt": "16.07.2023",
+      "userId": "2",
+      "type": ["Web Development"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Web Application Security",
+          "paragraphs": [
+            "Web security practices are essential to protect web applications from potential threats and vulnerabilities."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/premium-photo/blue-technology-luminous-background-photo-generative-ai_47636563.htm#query=technology&position=38&from_view=keyword&track=sph",
+          "title": "Image 1 - Web Security"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Internet of Things (IoT) Innovations",
+      "subtitle": "Latest IoT Innovations and Trends",
+      "img": "https://img.freepik.com/free-photo/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image_511042-596.jpg?w=1380&t=st=1688281983~exp=1688282583~hmac=d7a492a8d99348a4fd96b80402762cb5c0f6a64fa4655c8c7e019e75e32570f8",
+      "views": 1100,
+      "createdAt": "17.07.2023",
+      "userId": "1",
+      "type": ["Internet of Things"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to IoT",
+          "paragraphs": [
+            "Internet of Things refers to the interconnection of various devices through the internet, enabling data exchange and automation."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/3d-illustration-blue-purple-futuristic-sci-fi-techno-lights-cool-background_27572603.htm#query=technology&position=37&from_view=keyword&track=sph",
+          "title": "Image 1 - Internet of Things"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Blockchain Revolution",
+      "subtitle": "Exploring the Impact of Blockchain Technology",
+      "img": "https://img.freepik.com/free-photo/cybercriminal-attacking-imortant-database-hacker-using-computer-virus-malware-break-into-server-woman-committing-cybercrime-phishing-scam-working-monitors-late-night_482257-63766.jpg?w=1060&t=st=1688282478~exp=1688283078~hmac=01c01ca95253da623d2d36d153c6a71dc36eda166376f609c61968fc90d09ced",
+      "views": 1400,
+      "createdAt": "18.07.2023",
+      "userId": "2",
+      "type": ["Blockchain"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Understanding Blockchain",
+          "paragraphs": [
+            "Blockchain is a decentralized and distributed ledger technology that ensures secure and transparent data transactions."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/abstract-dark-background-with-green-lines-generative-ai_41192859.htm#query=technology&position=23&from_view=keyword&track=sph",
+          "title": "Image 1 - Blockchain Revolution"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Ethical Hacking Fundamentals",
+      "subtitle": "Introduction to Ethical Hacking",
+      "img": "https://img.freepik.com/free-photo/front-view-man-reading-menu-restaurant_23-2150384778.jpg?w=1060&t=st=1688282500~exp=1688283100~hmac=5a2e4fea5d85827df5a0486bdd92bb30235dd94df6e8c761f47ea95c84278271",
+      "views": 900,
+      "createdAt": "19.07.2023",
+      "userId": "1",
+      "type": ["Cybersecurity"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Ethical Hacking Overview",
+          "paragraphs": [
+            "Ethical hacking involves legally penetrating computer systems to identify vulnerabilities and weaknesses."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image_41111846.htm#query=technology&position=18&from_view=keyword&track=sph",
+          "title": "Image 1 - Ethical Hacking"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Augmented Reality Applications",
+      "subtitle": "Real-world Applications of AR",
+      "img": "https://img.freepik.com/free-photo/3d-illustration-blue-purple-futuristic-sci-fi-techno-lights-cool-background_181624-57587.jpg?w=1380&t=st=1688281908~exp=1688282508~hmac=c56885fc9b4f6254c61385bbe78dc4006ee85d14d7bf7f9ff0ecf04a668181d0",
+      "views": 1200,
+      "createdAt": "20.07.2023",
+      "userId": "2",
+      "type": ["Augmented Reality"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to AR",
+          "paragraphs": [
+            "Augmented Reality overlays digital content onto the physical world, enhancing user experiences in various fields."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.examplewebsite.com/ar_image.png",
+          "title": "Image 1 - Augmented Reality Applications"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "UX Design Principles",
+      "subtitle": "Creating User-Centric Designs",
+      "img": "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=1060&t=st=1688282446~exp=1688283046~hmac=4aaeb8795b3c67959a248a0857fa9155071868bc228098ab0e55022261ef6a9e",
+      "views": 800,
+      "createdAt": "21.07.2023",
+      "userId": "1",
+      "type": ["Design"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Understanding UX Design",
+          "paragraphs": [
+            "User Experience (UX) design focuses on creating products that provide meaningful and satisfying experiences for users."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.examplewebsite.com/ux_design_image.png",
+          "title": "Image 1 - UX Design Principles"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Natural Language Processing (NLP) Advancements",
+      "subtitle": "Recent Advances in NLP",
+      "img": "https://img.freepik.com/free-photo/light-trails-buildings_1359-715.jpg?w=1060&t=st=1688281830~exp=1688282430~hmac=6ed1d1785239bfb60412fb8301d8d07bf5bc422306591197450039cc961fa42c",
+      "views": 1500,
+      "createdAt": "22.07.2023",
+      "userId": "2",
+      "type": ["Artificial Intelligence"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to NLP",
+          "paragraphs": [
+            "Natural Language Processing enables machines to understand and process human language, leading to advancements in AI applications."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-ai-image/modern-office-equipment-illuminated-night-wireless-connection-generated-by-ai_43131188.htm#query=technology&position=12&from_view=keyword&track=sph",
+          "title": "Image 1 - NLP Advancements"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "title": "Data Visualization in Python",
+      "subtitle": "Best Python Libraries for Data Visualization",
+      "img": "https://img.freepik.com/free-vector/technological-falling-particles-dark-background_52683-17130.jpg?w=1060&t=st=1688282199~exp=1688282799~hmac=a7b0235c59f5a1830ea52d89fb6976f7813f58baa1f43e47b821973be683bad6",
+      "views": 900,
+      "createdAt": "08.07.2023",
+      "userId": "2",
+      "type": ["Data Science"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to Data Visualization",
+          "paragraphs": [
+            "Data visualization is a graphical representation of information and data to help in understanding patterns, trends, and insights."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://img.freepik.com/free-vector/blue-futuristic-networking-technology_53876-100679.jpg?w=1060&t=st=1688282323~exp=1688282923~hmac=44932dcb4985f004b15ffbdd8a2b2a98dcd4fafb93e05e48339fd629cb930797",
+          "title": "Image 1 - Data Visualization"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "title": "Machine Learning with TensorFlow",
+      "subtitle": "TensorFlow's Impact on Machine Learning",
+      "img": "https://img.freepik.com/free-photo/rpa-concept-with-blurry-hand-touching-screen_23-2149311914.jpg?w=1060&t=st=1688281640~exp=1688282240~hmac=c39a8688916f5a91eb21960f2991eae426a8b5b65de8e30cc18625c80a2e3158",
+      "views": 1200,
+      "createdAt": "09.07.2023",
+      "userId": "1",
+      "type": ["Machine Learning"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to TensorFlow",
+          "paragraphs": [
+            "TensorFlow is an open-source machine learning framework developed by Google, widely used in various ML tasks."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/technology-human-touch-background-modern-remake-creation-adam_17851045.htm#query=technology&position=3&from_view=keyword&track=sph",
+          "title": "Image 1 - TensorFlow"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "Web Development with React",
+      "subtitle": "Exploring React for Frontend Development",
+      "img": "https://img.freepik.com/free-vector/cyber-technology-background_23-2148390330.jpg?w=1060&t=st=1688281652~exp=1688282252~hmac=5b10248d5ea5824f659a9840e34189ad9cffc8b1829f04a272f2455b31405935",
+      "views": 1500,
+      "createdAt": "10.07.2023",
+      "userId": "2",
+      "type": ["Web Development"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to React",
+          "paragraphs": [
+            "React is a popular JavaScript library used for building user interfaces and single-page applications."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/abstract-background-with-low-poly-design_2795509.htm#query=technology&position=5&from_view=keyword&track=sph",
+          "title": "Image 1 - React"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "title": "Cybersecurity Trends",
+      "subtitle": "Emerging Trends in Cybersecurity for 2023",
+      "img": "https://img.freepik.com/free-photo/technology-human-touch-background-modern-remake-creation-adam_53876-129794.jpg?w=1060&t=st=1688281671~exp=1688282271~hmac=2206dd9932099981daa3cbdd19473280f74e2829da5cc25a137d09bb237aea04",
+      "views": 800,
+      "createdAt": "11.07.2023",
+      "userId": "1",
+      "type": ["Cybersecurity"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Understanding Cybersecurity",
+          "paragraphs": [
+            "Cybersecurity is the practice of protecting computer systems, networks, and data from security breaches and attacks."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-vector/abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics_22421018.htm#query=technology&position=6&from_view=keyword&track=sph",
+          "title": "Image 1 - Cybersecurity"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "title": "Big Data Analytics",
+      "subtitle": "Harnessing Big Data for Insights",
+      "img": "https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?w=900&t=st=1688281791~exp=1688282391~hmac=721684a8b9ae97f793d1df1d808bba65b492e27195e67aba9b3061d64658e0b1",
+      "views": 1100,
+      "createdAt": "12.07.2023",
+      "userId": "2",
+      "type": ["Data Science"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to Big Data",
+          "paragraphs": [
+            "Big Data analytics involves processing and analyzing large datasets to uncover valuable insights and patterns."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-vector/abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics_22421018.htm#query=technology&position=6&from_view=keyword&track=sph",
+          "title": "Image 1 - Big Data Analytics"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "title": "Mobile App Development with Flutter",
+      "subtitle": "Building Cross-Platform Apps with Flutter",
+      "img": "https://img.freepik.com/free-vector/abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics_1217-4607.jpg?w=826&t=st=1688281723~exp=1688282323~hmac=e2febf8bf385ff6855515b1f8f9a4c934662719e5e537c6f60fc4bf96a8044b4",
+      "views": 900,
+      "createdAt": "13.07.2023",
+      "userId": "1",
+      "type": ["Mobile Development"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to Flutter",
+          "paragraphs": [
+            "Flutter is a UI toolkit developed by Google for building natively compiled applications for mobile, web, and desktop from a single codebase."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/abstract-background-with-low-poly-design_2795509.htm#query=technology&position=5&from_view=keyword&track=sph",
+          "title": "Image 1 - Flutter"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "title": "Cloud Computing Trends",
+      "subtitle": "Latest Trends in Cloud Computing",
+      "img": "https://img.freepik.com/free-vector/tech-stickers-collection-with-tomomi-cat_23-2150546424.jpg?w=740&t=st=1688282411~exp=1688283011~hmac=12bfbfaa9ded4f0f46ad7f549da11b1598eb584e846ce19fe593a8ed4d88299c",
+      "views": 1200,
+      "createdAt": "14.07.2023",
+      "userId": "2",
+      "type": ["Cloud Computing"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to Cloud Computing",
+          "paragraphs": [
+            "Cloud Computing allows users to access and store data and applications over the internet instead of a local computer's hard drive."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-ai-image/motherboard-closeup-technology-integrated-microchip-circuit-board-computer-processor-with-neon-light_39518213.htm#query=technology&position=22&from_view=keyword&track=sph",
+          "title": "Image 1 - Cloud Computing"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "title": "Artificial Intelligence Applications",
+      "subtitle": "Real-world Applications of AI",
+      "img": "https://img.freepik.com/premium-psd/set-abstract-technology-futuristic-circles_313905-4160.jpg?w=1060",
+      "views": 1500,
+      "createdAt": "15.07.2023",
+      "userId": "1",
+      "type": ["Artificial Intelligence"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Understanding AI Applications",
+          "paragraphs": [
+            "AI is applied in various fields such as healthcare, finance, robotics, and more to enhance efficiency and decision-making."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_38669459.htm#query=technology&position=19&from_view=keyword&track=sph",
+          "title": "Image 1 - Artificial Intelligence"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "title": "Web Security Best Practices",
+      "subtitle": "Ensuring Web Application Security",
+      "img": "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=1060&t=st=1688281842~exp=1688282442~hmac=13873de51e308f854df2f976f89049b71267da822ac99e686682522158ddb9cb",
+      "views": 1000,
+      "createdAt": "16.07.2023",
+      "userId": "2",
+      "type": ["Web Development"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Web Application Security",
+          "paragraphs": [
+            "Web security practices are essential to protect web applications from potential threats and vulnerabilities."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/premium-photo/blue-technology-luminous-background-photo-generative-ai_47636563.htm#query=technology&position=38&from_view=keyword&track=sph",
+          "title": "Image 1 - Web Security"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Internet of Things (IoT) Innovations",
+      "subtitle": "Latest IoT Innovations and Trends",
+      "img": "https://img.freepik.com/free-photo/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image_511042-596.jpg?w=1380&t=st=1688281983~exp=1688282583~hmac=d7a492a8d99348a4fd96b80402762cb5c0f6a64fa4655c8c7e019e75e32570f8",
+      "views": 1100,
+      "createdAt": "17.07.2023",
+      "userId": "1",
+      "type": ["Internet of Things"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to IoT",
+          "paragraphs": [
+            "Internet of Things refers to the interconnection of various devices through the internet, enabling data exchange and automation."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/3d-illustration-blue-purple-futuristic-sci-fi-techno-lights-cool-background_27572603.htm#query=technology&position=37&from_view=keyword&track=sph",
+          "title": "Image 1 - Internet of Things"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "title": "Blockchain Revolution",
+      "subtitle": "Exploring the Impact of Blockchain Technology",
+      "img": "https://img.freepik.com/free-photo/cybercriminal-attacking-imortant-database-hacker-using-computer-virus-malware-break-into-server-woman-committing-cybercrime-phishing-scam-working-monitors-late-night_482257-63766.jpg?w=1060&t=st=1688282478~exp=1688283078~hmac=01c01ca95253da623d2d36d153c6a71dc36eda166376f609c61968fc90d09ced",
+      "views": 1400,
+      "createdAt": "18.07.2023",
+      "userId": "2",
+      "type": ["Blockchain"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Understanding Blockchain",
+          "paragraphs": [
+            "Blockchain is a decentralized and distributed ledger technology that ensures secure and transparent data transactions."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/abstract-dark-background-with-green-lines-generative-ai_41192859.htm#query=technology&position=23&from_view=keyword&track=sph",
+          "title": "Image 1 - Blockchain Revolution"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "title": "Ethical Hacking Fundamentals",
+      "subtitle": "Introduction to Ethical Hacking",
+      "img": "https://img.freepik.com/free-photo/front-view-man-reading-menu-restaurant_23-2150384778.jpg?w=1060&t=st=1688282500~exp=1688283100~hmac=5a2e4fea5d85827df5a0486bdd92bb30235dd94df6e8c761f47ea95c84278271",
+      "views": 900,
+      "createdAt": "19.07.2023",
+      "userId": "1",
+      "type": ["Cybersecurity"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Ethical Hacking Overview",
+          "paragraphs": [
+            "Ethical hacking involves legally penetrating computer systems to identify vulnerabilities and weaknesses."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-photo/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image_41111846.htm#query=technology&position=18&from_view=keyword&track=sph",
+          "title": "Image 1 - Ethical Hacking"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "title": "Augmented Reality Applications",
+      "subtitle": "Real-world Applications of AR",
+      "img": "https://img.freepik.com/free-photo/3d-illustration-blue-purple-futuristic-sci-fi-techno-lights-cool-background_181624-57587.jpg?w=1380&t=st=1688281908~exp=1688282508~hmac=c56885fc9b4f6254c61385bbe78dc4006ee85d14d7bf7f9ff0ecf04a668181d0",
+      "views": 1200,
+      "createdAt": "20.07.2023",
+      "userId": "2",
+      "type": ["Augmented Reality"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to AR",
+          "paragraphs": [
+            "Augmented Reality overlays digital content onto the physical world, enhancing user experiences in various fields."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.examplewebsite.com/ar_image.png",
+          "title": "Image 1 - Augmented Reality Applications"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "title": "UX Design Principles",
+      "subtitle": "Creating User-Centric Designs",
+      "img": "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=1060&t=st=1688282446~exp=1688283046~hmac=4aaeb8795b3c67959a248a0857fa9155071868bc228098ab0e55022261ef6a9e",
+      "views": 800,
+      "createdAt": "21.07.2023",
+      "userId": "1",
+      "type": ["Design"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Understanding UX Design",
+          "paragraphs": [
+            "User Experience (UX) design focuses on creating products that provide meaningful and satisfying experiences for users."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.examplewebsite.com/ux_design_image.png",
+          "title": "Image 1 - UX Design Principles"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "title": "Natural Language Processing (NLP) Advancements",
+      "subtitle": "Recent Advances in NLP",
+      "img": "https://img.freepik.com/free-photo/light-trails-buildings_1359-715.jpg?w=1060&t=st=1688281830~exp=1688282430~hmac=6ed1d1785239bfb60412fb8301d8d07bf5bc422306591197450039cc961fa42c",
+      "views": 1500,
+      "createdAt": "22.07.2023",
+      "userId": "2",
+      "type": ["Artificial Intelligence"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Introduction to NLP",
+          "paragraphs": [
+            "Natural Language Processing enables machines to understand and process human language, leading to advancements in AI applications."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://www.freepik.com/free-ai-image/modern-office-equipment-illuminated-night-wireless-connection-generated-by-ai_43131188.htm#query=technology&position=12&from_view=keyword&track=sph",
+          "title": "Image 1 - NLP Advancements"
+        }
+      ]
     }
   ],
   "comments": [

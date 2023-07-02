@@ -3,16 +3,17 @@ import { memo, useState } from 'react'
 
 import { useTranslation } from 'react-i18next'
 import { Input } from 'shared/ui/Input/Input'
+import { Page } from 'shared/ui/Page/Page'
 
 const MainPage = memo(() => {
   const { t } = useTranslation('main')
   const [value, setValue] = useState('')
   return (
-    <div style={{ padding: '30px' }}>
+    <Page>
       <BugButton />
       <Input value={value} onChange={setValue} placeholder={'Введите текст'} />
       <div>{t('Главная страница')}</div>
-    </div>
+    </Page>
   )
 })
 export default MainPage

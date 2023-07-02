@@ -1,9 +1,9 @@
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
-import { memo, useCallback, useEffect } from 'react'
+import { CSSProperties, memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-
+import cls from './ProfilePage.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
@@ -27,6 +27,7 @@ import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Text } from 'shared/ui/Text/Text'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useParams } from 'react-router-dom'
+import { Page } from 'shared/ui/Page/Page'
 
 const reducers: ReducersList = {
   profile: profileReducer,
@@ -115,7 +116,7 @@ const ProfilePage = memo(({ className }: profilePageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div style={{ width: '100%', padding: '20px' }}>
+      <Page className={cls.pageWrapper}>
         <ProfilePageHeader />
         {validateErrors?.length &&
           validateErrors.map((err) => (
@@ -139,7 +140,7 @@ const ProfilePage = memo(({ className }: profilePageProps) => {
           onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 })

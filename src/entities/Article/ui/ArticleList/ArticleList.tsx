@@ -32,17 +32,10 @@ export const ArticleList = ({
       .map((item, index) => <ArticleListItemSkeleton key={index} view={view} />)
   }
 
-  if (isLoading) {
-    return (
-      <div className={classNames(cls.articlelist, {}, [className, cls[view]])}>
-        {getSkeletons(view)}
-      </div>
-    )
-  }
-
   return (
     <div className={classNames(cls.articlelist, {}, [className, cls[view]])}>
       {articles.length > 0 ? articles.map(renderArticle) : null}
+      {isLoading && getSkeletons(view)}
     </div>
   )
 }
