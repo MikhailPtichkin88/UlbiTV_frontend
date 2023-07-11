@@ -15,6 +15,7 @@ import {
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useNavigate } from 'react-router-dom'
 
 export interface LoginFormProps {
   className?: string
@@ -28,6 +29,7 @@ const initialReducers: ReducersList = {
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   const { username, password, isLoading, error } = useSelector(getLoginState)
 
   const onChangeUserName = useCallback(
@@ -48,8 +50,9 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const res = dispatch(loginByUserName({ username, password }))
     if ((await res).meta.requestStatus === 'fulfilled') {
       onSuccess()
+      navigate?.('/about')
     }
-  }, [username, password, dispatch, onSuccess])
+  }, [dispatch, username, password, onSuccess, navigate])
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>

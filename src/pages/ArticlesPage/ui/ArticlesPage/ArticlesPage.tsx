@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
 import { ArticleView } from 'entities/Article/model/types/article'
-import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlePage'
-import { memo, useCallback, useEffect } from 'react'
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlePage'
+import { initArticlesPage } from '../../model/services/initArticlesPage'
+import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
@@ -16,7 +17,6 @@ import {
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors'
-import { fetchArticlesList } from '../../model/services/fetchArticleList'
 import {
   articlesPageActions,
   articlesPageReducer,
@@ -37,6 +37,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   const articles = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlesPageIsLoading)
   const view = useSelector(getArticlesPageView)
+
   const onChangeView = useCallback(
     (view: ArticleView) => {
       dispatch(articlesPageActions.setView(view))
@@ -49,18 +50,11 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   }, [dispatch])
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState())
-    dispatch(fetchArticlesList({}))
+    dispatch(initArticlesPage())
   })
 
-  useEffect(() => {
-    if (window.innerWidth > 1390 && window.innerHeight > 1200) {
-      console.log('1111')
-      dispatch(fetchNextArticlesPage())
-    }
-  }, [])
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.articlespage, {}, [className])}
