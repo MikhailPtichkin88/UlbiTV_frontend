@@ -12,6 +12,7 @@ import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
 import { AddCommentFormSchema } from 'features/AddNewComment'
 import { LoginSchema } from 'features/AuthByUserName'
+import { SaveScrollSchema } from 'features/ScrollSave'
 import { ArticleDetailsCommentsSchema } from 'pages/ArticlesDetailsPage'
 import { ArticlesPageSchema } from 'pages/ArticlesPage'
 import { NavigateOptions, To } from 'react-router-dom'
@@ -19,7 +20,7 @@ import { NavigateOptions, To } from 'react-router-dom'
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
-
+  saveScroll: SaveScrollSchema
   // Асинхронные редюсеры
   loginForm?: LoginSchema
   profile?: ProfileSchema
