@@ -6,6 +6,7 @@ import {
   getArticlesPageNum,
 } from '../selectors/articlesPageSelectors'
 import { fetchArticlesList } from './fetchArticleList'
+import { articlesPageActions } from '../slice/articlesPageSlice'
 
 export const fetchNextArticlesPage = createAsyncThunk<
   void,
@@ -13,12 +14,15 @@ export const fetchNextArticlesPage = createAsyncThunk<
   ThunkConfig<string>
 >('articlesPage/fetchNextArticlesPage', async (_, thunkApi) => {
   const { getState, dispatch } = thunkApi
-
-  const hasMore = getArticlesPageHasMore(getState())
-  const page = getArticlesPageNum(getState())
   const isLoading = getArticlesPageIsLoading(getState())
+  const page = getArticlesPageNum(getState())
+  if (page === 1) {
+    dispatch(articlesPageActions.setHasMore(true))
+  }
+  const hasMore = getArticlesPageHasMore(getState())
 
   if (hasMore && !isLoading) {
-    dispatch(fetchArticlesList({ page: page + 1 }))
+    dispatch(articlesPageActions.setPage(page + 1))
+    dispatch(fetchArticlesList({}))
   }
 })

@@ -1,0 +1,9 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.tab {
+  color: var(--primary-color);
+}

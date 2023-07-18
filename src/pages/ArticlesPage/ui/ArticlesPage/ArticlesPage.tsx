@@ -1,7 +1,4 @@
 /* eslint-disable max-len */
-import { ArticleView } from 'entities/Article/model/types/article'
-import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlePage'
-import { initArticlesPage } from '../../model/services/initArticlesPage'
 import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -12,17 +9,20 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Page } from 'widgets/Page/Page'
-import { ArticleList, ArticleViewSelector } from '../../../../entities/Article'
+import { ArticleList } from '../../../../entities/Article'
 import {
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors'
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlePage'
+import { initArticlesPage } from '../../model/services/initArticlesPage'
 import {
-  articlesPageActions,
   articlesPageReducer,
   getArticles,
 } from '../../model/slice/articlesPageSlice'
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 import cls from './ArticlesPage.module.scss'
+import { useSearchParams } from 'react-router-dom'
 
 interface ArticlesPageProps {
   className?: string
@@ -38,19 +38,14 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   const isLoading = useSelector(getArticlesPageIsLoading)
   const view = useSelector(getArticlesPageView)
 
-  const onChangeView = useCallback(
-    (view: ArticleView) => {
-      dispatch(articlesPageActions.setView(view))
-    },
-    [dispatch]
-  )
+  const [searchParams] = useSearchParams()
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage())
   }, [dispatch])
 
   useInitialEffect(() => {
-    dispatch(initArticlesPage())
+    dispatch(initArticlesPage(searchParams))
   })
 
   return (
@@ -59,8 +54,13 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.articlespage, {}, [className])}
       >
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
-        <ArticleList articles={articles} isLoading={isLoading} view={view} />
+        <ArticlesPageFilters />
+        <ArticleList
+          articles={articles}
+          isLoading={isLoading}
+          view={view}
+          className={cls.list}
+        />
       </Page>
     </DynamicModuleLoader>
   )

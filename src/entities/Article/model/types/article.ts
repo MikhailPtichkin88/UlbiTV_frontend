@@ -30,10 +30,22 @@ export interface ArticleImgBlock extends ArticleBlockBase {
 
 export type ArticleBlock = ArticleCodeBlock | ArticleTextBlock | ArticleImgBlock
 
+export enum ArticleSortField {
+  VIEWS = 'views',
+  TITLE = 'title',
+  CREATED = 'created',
+}
+
 export enum ArticleType {
+  ALL = 'ALL',
   IT = 'IT',
-  SCIENCE = 'SCIENCE',
-  ECONOMICS = 'ECONOMICS',
+  DATA_SCIENCE = 'Data Science',
+  DESIGN = 'Design',
+  WEB_DEV = 'Web Dev',
+  CYBERSECURITY = 'Cybersecurity',
+  BLOCKCHAIN = 'Blockchain',
+  AI = 'AI',
+  MOBILE_DEV = 'Mobile Dev',
 }
 export enum ArticleView {
   BIG = 'BIG',

@@ -21,8 +21,6 @@ export function useInfiniteScroll({
       }
 
       observer = new IntersectionObserver(([entry]) => {
-        console.log(entry.intersectionRatio)
-
         //  чтобы колбэк вызывался 1 раз (только когда элемент в зоне видимости)
         if (entry.isIntersecting) {
           callback()
