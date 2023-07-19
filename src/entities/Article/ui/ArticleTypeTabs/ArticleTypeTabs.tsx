@@ -18,7 +18,7 @@ export const ArticleTypeTabs = ({
   const { t } = useTranslation()
 
   const typeTabs = useMemo(() => {
-    const tabs = [] as TabItem<typeof ArticleType[keyof typeof ArticleType]>[]
+    const tabs = [] as TabItem<(typeof ArticleType)[keyof typeof ArticleType]>[]
     Object.values(ArticleType).forEach((type) =>
       tabs.push({ value: type, content: t(type) })
     )
