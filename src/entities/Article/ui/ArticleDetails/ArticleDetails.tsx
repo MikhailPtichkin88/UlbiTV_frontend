@@ -1,5 +1,5 @@
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
-import { memo, useCallback, useEffect } from 'react'
+import { FC, memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
@@ -37,101 +37,103 @@ const reducers: ReducersList = {
   articleDetails: articleDetailsReducer,
 }
 
-export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
-  const { t } = useTranslation('article')
-  const isLoading = useSelector(getArticleDetailsIsLoading)
-  const article = useSelector(getArticleDetailsData)
-  const error = useSelector(getArticleDetailsError)
+export const ArticleDetails: FC<ArticleDetailsProps> = memo(
+  ({ className, id }: ArticleDetailsProps) => {
+    const { t } = useTranslation('article')
+    const isLoading = useSelector(getArticleDetailsIsLoading)
+    const article = useSelector(getArticleDetailsData)
+    const error = useSelector(getArticleDetailsError)
 
-  const dispatch = useAppDispatch()
+    const dispatch = useAppDispatch()
 
-  const renderBlock = useCallback((block: ArticleBlock) => {
-    switch (block.type) {
-      case ArticleBlockType.CODE:
-        return (
-          <ArticleCodeBlockComponent
-            key={block.id}
-            className={cls.block}
-            block={block}
+    const renderBlock = useCallback((block: ArticleBlock) => {
+      switch (block.type) {
+        case ArticleBlockType.CODE:
+          return (
+            <ArticleCodeBlockComponent
+              key={block.id}
+              className={cls.block}
+              block={block}
+            />
+          )
+        case ArticleBlockType.IMAGE:
+          return (
+            <ArticleImageBlockComponent
+              key={block.id}
+              className={cls.block}
+              block={block}
+            />
+          )
+        case ArticleBlockType.TEXT:
+          return (
+            <ArticleTextBlockComponent
+              key={block.id}
+              className={cls.block}
+              block={block}
+            />
+          )
+        default:
+          return null
+      }
+    }, [])
+
+    useInitialEffect(() => dispatch(fetchArticleById(id)))
+
+    let content
+    if (isLoading) {
+      content = (
+        <div>
+          <Skeleton
+            className={cls.avatar}
+            width={200}
+            height={200}
+            border={'50%'}
           />
-        )
-      case ArticleBlockType.IMAGE:
-        return (
-          <ArticleImageBlockComponent
-            key={block.id}
-            className={cls.block}
-            block={block}
-          />
-        )
-      case ArticleBlockType.TEXT:
-        return (
-          <ArticleTextBlockComponent
-            key={block.id}
-            className={cls.block}
-            block={block}
-          />
-        )
-      default:
-        return null
-    }
-  }, [])
-
-  useInitialEffect(() => dispatch(fetchArticleById(id)))
-
-  let content
-  if (isLoading) {
-    content = (
-      <div>
-        <Skeleton
-          className={cls.avatar}
-          width={200}
-          height={200}
-          border={'50%'}
-        />
-        <Skeleton className={cls.title} width={300} height={32} />
-        <Skeleton className={cls.skeleton} width={600} height={24} />
-        <Skeleton className={cls.skeleton} width={'100%'} height={200} />
-        <Skeleton className={cls.skeleton} width={'100%'} height={200} />
-      </div>
-    )
-  } else if (error) {
-    content = (
-      <Text
-        title={t('Произошла ошибка при загрузке страницы')}
-        align={TextAlign.CENTER}
-        theme={TextTheme.ERROR}
-      />
-    )
-  } else {
-    content = (
-      <>
-        <div className={cls.avatarWrapper}>
-          <Avatar src={article?.img} className={cls.avatar} />
+          <Skeleton className={cls.title} width={300} height={32} />
+          <Skeleton className={cls.skeleton} width={600} height={24} />
+          <Skeleton className={cls.skeleton} width={'100%'} height={200} />
+          <Skeleton className={cls.skeleton} width={'100%'} height={200} />
         </div>
+      )
+    } else if (error) {
+      content = (
         <Text
-          className={cls.title}
-          title={article?.title}
-          text={article?.subtitle}
-          size={TextSize.L}
+          title={t('Произошла ошибка при загрузке страницы')}
+          align={TextAlign.CENTER}
+          theme={TextTheme.ERROR}
         />
-        <div className={cls.articleInfo}>
-          <Icon className={cls.icon} Svg={EyeIcon} />
-          <Text text={String(article?.views)} />
+      )
+    } else {
+      content = (
+        <>
+          <div className={cls.avatarWrapper}>
+            <Avatar src={article?.img} className={cls.avatar} />
+          </div>
+          <Text
+            className={cls.title}
+            title={article?.title}
+            text={article?.subtitle}
+            size={TextSize.L}
+          />
+          <div className={cls.articleInfo}>
+            <Icon className={cls.icon} Svg={EyeIcon} />
+            <Text text={String(article?.views)} />
+          </div>
+          <div className={cls.articleInfo}>
+            <Icon className={cls.icon} Svg={CalendarIcon} />
+            <Text text={String(article?.createdAt)} />
+          </div>
+          {article?.blocks.map(renderBlock)}
+        </>
+      )
+    }
+
+    return (
+      <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <div className={classNames(cls.articledetails, {}, [className])}>
+          {content}
         </div>
-        <div className={cls.articleInfo}>
-          <Icon className={cls.icon} Svg={CalendarIcon} />
-          <Text text={String(article?.createdAt)} />
-        </div>
-        {article?.blocks.map(renderBlock)}
-      </>
+      </DynamicModuleLoader>
     )
   }
-
-  return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.articledetails, {}, [className])}>
-        {content}
-      </div>
-    </DynamicModuleLoader>
-  )
-})
+)

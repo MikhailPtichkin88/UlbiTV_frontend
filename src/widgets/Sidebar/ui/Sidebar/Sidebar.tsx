@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from 'react'
+import { FC, memo, useMemo, useState } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher'
@@ -12,7 +12,7 @@ interface SidebarProps {
   className?: string
 }
 
-export const Sidebar = memo(({ className }: SidebarProps) => {
+export const Sidebar: FC<SidebarProps> = memo(({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false)
   const sidebarItemsList = useSelector(getSidebarItems)
   const onToggle = () => {

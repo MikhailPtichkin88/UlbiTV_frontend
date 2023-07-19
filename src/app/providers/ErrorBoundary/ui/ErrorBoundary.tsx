@@ -31,6 +31,7 @@ export class ErrorBoundary extends React.Component<
     const { children } = this.props
     if (hasError) {
       return (
+        //@ts-ignore
         <Suspense fallback="">
           <ErrorPage />
         </Suspense>

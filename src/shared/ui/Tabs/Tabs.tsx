@@ -1,26 +1,28 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Tabs.module.scss'
-import { useTranslation } from 'react-i18next'
 import { ReactNode, useCallback } from 'react'
 import { Card, CardTheme } from '../Card/Card'
 
-export interface TabItem {
-  value: string
+export interface TabItem<T extends string> {
+  value: T
   content: ReactNode
 }
 
-interface TabsProps {
+interface TabsProps<T extends string> {
   className?: string
-  tabs: TabItem[]
-  value: string
-  onTabClick: (value: TabItem) => void
+  tabs: TabItem<T>[]
+  value: T
+  onTabClick: (value: TabItem<T>) => void
 }
 
-export const Tabs = ({ className, tabs, value, onTabClick }: TabsProps) => {
-  const { t } = useTranslation()
-
+export const Tabs = <T extends string>({
+  className,
+  tabs,
+  value,
+  onTabClick,
+}: TabsProps<T>) => {
   const onClickHandler = useCallback(
-    (tab: TabItem) => () => onTabClick(tab),
+    (tab: TabItem<T>) => () => onTabClick(tab),
     [onTabClick]
   )
 

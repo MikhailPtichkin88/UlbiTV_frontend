@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { FC, memo } from 'react'
 import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Text.module.scss'
 
@@ -26,7 +26,7 @@ interface TextProps {
   size?: TextSize
 }
 
-export const Text = memo(
+export const Text: FC<TextProps> = memo(
   ({
     className,
     title,

@@ -1,5 +1,5 @@
 import { getUserAuthData } from '../../../../entities/User'
-import { memo } from 'react'
+import { FC, memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -12,7 +12,7 @@ interface SidebarItemProps {
   collapsed?: boolean
 }
 
-export const SidebarItem = memo(
+export const SidebarItem: FC<SidebarItemProps> = memo(
   ({ item = {} as SidebarItemType, collapsed }: SidebarItemProps) => {
     const { t } = useTranslation()
     const isAuth = useSelector(getUserAuthData)
