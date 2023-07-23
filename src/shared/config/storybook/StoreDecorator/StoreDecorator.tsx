@@ -5,14 +5,14 @@ import { loginReducer } from 'features/AuthByUserName'
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from '../../../../entities/Article/model/slice/articleDetailsSlice'
 import { addCommentFormReducer } from 'features/AddNewComment/model/slices/addCommentFormSlice'
-import { articleDetailsCommentsReducer } from 'pages/ArticlesDetailsPage/model/slices/ArticleDetailsCommentsSlice'
+import { articleDetailsPageReducer } from 'pages/ArticlesDetailsPage/model/slices'
 
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
   addCommentForm: addCommentFormReducer,
-  articleDetailsComments: articleDetailsCommentsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
 }
 
 export const StoreDecorator =

@@ -5,10 +5,15 @@
 }
 
 .SMALL {
-  &.articlelist {
-    max-width: 1200px;
-    display: flex;
+  max-width: 1200px;
+  display: flex;
+  gap: 30px;
+
+  &.wrap {
     flex-wrap: wrap;
-    gap: 30px;
+  }
+
+  &.no_wrap {
+    flex-wrap: nowrap;
   }
 }

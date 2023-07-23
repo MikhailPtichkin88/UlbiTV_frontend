@@ -3,13 +3,22 @@ import cls from './ArticleList.module.scss'
 import { Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
-import { Text, TextSize } from 'shared/ui/Text/Text'
+import { Text, TextAlign, TextSize, TextTheme } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
+import { HTMLAttributeAnchorTarget } from 'react'
 interface ArticleListProps {
   className?: string
   articles: Article[]
   isLoading?: boolean
   view?: ArticleView
+  error?: string
+  wrap?: ArticleListWrap
+  target?: HTMLAttributeAnchorTarget
+}
+
+export enum ArticleListWrap {
+  WRAP = 'wrap',
+  NO_WRAP = 'no_wrap',
 }
 
 export const ArticleList = ({
@@ -17,6 +26,9 @@ export const ArticleList = ({
   articles,
   isLoading,
   view = ArticleView.SMALL,
+  error,
+  wrap = ArticleListWrap.WRAP,
+  target,
 }: ArticleListProps) => {
   const { t } = useTranslation('article')
 
@@ -26,8 +38,21 @@ export const ArticleList = ({
       article={article}
       view={view}
       className={cls.card}
+      target={target}
     />
   )
+
+  if (error) {
+    return (
+      <Text
+        align={TextAlign.CENTER}
+        theme={TextTheme.ERROR}
+        size={TextSize.L}
+        title={t('Ошибка загрузки статей')}
+      />
+    )
+  }
+
   if (!isLoading && !articles.length) {
     return (
       <div className={classNames(cls.articlelist, {}, [className, cls[view]])}>
@@ -42,7 +67,12 @@ export const ArticleList = ({
   }
 
   return (
-    <div className={classNames(cls.articlelist, {}, [className, cls[view]])}>
+    <div
+      className={classNames(cls.articlelist, { [cls[wrap]]: true }, [
+        className,
+        cls[view],
+      ])}
+    >
       {articles.length > 0 ? articles.map(renderArticle) : null}
       {isLoading && getSkeletons(view)}
     </div>
