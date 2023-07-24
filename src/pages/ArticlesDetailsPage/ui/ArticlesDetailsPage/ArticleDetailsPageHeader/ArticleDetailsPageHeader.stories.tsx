@@ -5,16 +5,16 @@ import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDeco
 import { Theme } from 'app/providers/ThemeProvider'
 
 export default {
-     title: '/ArticleDetailsPageHeader',
-     component: ArticleDetailsPageHeader,
-     argTypes: {
-      backgroundColor: { control: 'color' },
-      },
+  title: '/ArticleDetailsPageHeader',
+  component: ArticleDetailsPageHeader,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof ArticleDetailsPageHeader>
 
 const Template: ComponentStory<typeof ArticleDetailsPageHeader> = () => (
-      <ArticleDetailsPageHeader />
-    )
+  <ArticleDetailsPageHeader />
+)
 
 export const Normal = Template.bind({})
 Normal.args = {}
