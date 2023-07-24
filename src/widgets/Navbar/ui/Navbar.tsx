@@ -5,7 +5,10 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
 import cls from './Navbar.module.scss'
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 interface NavbarProps {
   className?: string
@@ -30,7 +33,23 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   if (authData) {
     return (
       <header className={classNames(cls.navbar, {}, [className])}>
-        <Button theme={ButtonTheme.CLEAR_INVERTED} onClick={onLogout}>
+        <Text
+          className={cls.appName}
+          title={t('UlbiTV App')}
+          theme={TextTheme.INVERTED}
+        />
+        <AppLink
+          to={RoutePath.article_create}
+          theme={AppLinkTheme.SECONDARY}
+          className={cls.createBtn}
+        >
+          {t('Создание статьи')}
+        </AppLink>
+        <Button
+          theme={ButtonTheme.CLEAR_INVERTED}
+          onClick={onLogout}
+          className={cls.links}
+        >
           {t('Выйти')}
         </Button>
       </header>
@@ -38,7 +57,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   }
   return (
     <header className={classNames(cls.navbar, {}, [className])}>
-      <Button theme={ButtonTheme.CLEAR_INVERTED} onClick={onShowModal}>
+      <Button
+        theme={ButtonTheme.CLEAR_INVERTED}
+        onClick={onShowModal}
+        className={cls.links}
+      >
         {t('Войти')}
       </Button>
       {isAuthModal && (
