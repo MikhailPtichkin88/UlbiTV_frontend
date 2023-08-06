@@ -6,6 +6,13 @@ import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkele
 import { Text, TextAlign, TextSize, TextTheme } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { HTMLAttributeAnchorTarget } from 'react'
+import {
+  AutoSizer,
+  List,
+  WindowScroller,
+  ListRowProps,
+} from 'react-virtualized'
+import { PAGE_ID } from 'widgets/Page/Page'
 interface ArticleListProps {
   className?: string
   articles: Article[]
@@ -32,16 +39,34 @@ export const ArticleList = ({
 }: ArticleListProps) => {
   const { t } = useTranslation('article')
 
-  const renderArticle = (article: Article) => (
-    <ArticleListItem
-      key={article.id}
-      article={article}
-      view={view}
-      className={cls.card}
-      target={target}
-    />
-  )
+  const isBig = view === ArticleView.BIG
+  const itemsPerRow = isBig ? 1 : 4
+  const rowCount = isBig
+    ? articles.length
+    : Math.ceil(articles.length / itemsPerRow)
 
+  const rowRenderer = ({ key, index, style }: ListRowProps) => {
+    const items = []
+    const fromIndex = index * itemsPerRow
+    const toIndex = Math.min(fromIndex + itemsPerRow, articles.length)
+
+    for (let i = fromIndex; i < toIndex; i++) {
+      items.push(
+        <ArticleListItem
+          article={articles[i]}
+          view={view}
+          className={cls.card}
+          target={target}
+          key={articles[i].id}
+        />
+      )
+    }
+    return (
+      <div key={key} style={style} className={cls.row}>
+        {items}
+      </div>
+    )
+  }
   if (error) {
     return (
       <Text
@@ -67,14 +92,40 @@ export const ArticleList = ({
   }
 
   return (
-    <div
-      className={classNames(cls.articlelist, { [cls[wrap]]: true }, [
-        className,
-        cls[view],
-      ])}
+    <WindowScroller
+      onScroll={() => console.log('scroll')}
+      scrollElement={document.getElementById(PAGE_ID) as Element}
     >
-      {articles.length > 0 ? articles.map(renderArticle) : null}
-      {isLoading && getSkeletons(view)}
-    </div>
+      {({
+        width,
+        height,
+        registerChild,
+        scrollTop,
+        isScrolling,
+        onChildScroll,
+      }) => (
+        <div
+          // @ts-ignore
+          ref={registerChild}
+          className={classNames(cls.articlelist, { [cls[wrap]]: true }, [
+            className,
+            cls[view],
+          ])}
+        >
+          <List
+            height={height ?? 700}
+            rowCount={rowCount}
+            rowHeight={isBig ? 700 : 330}
+            rowRenderer={rowRenderer}
+            width={width ? width - 80 : 700}
+            autoHeight
+            onScroll={onChildScroll}
+            isScrolling={isScrolling}
+            scrollTop={scrollTop}
+          />
+          {isLoading && getSkeletons(view)}
+        </div>
+      )}
+    </WindowScroller>
   )
 }

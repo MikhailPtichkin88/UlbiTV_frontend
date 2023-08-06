@@ -53,6 +53,7 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
   const { t } = useTranslation('article')
   const { id } = useParams<{ id: string }>()
+
   const dispatch = useDispatch()
   const comments = useSelector(getArticleComments.selectAll)
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading)

@@ -7,6 +7,8 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article'
 import { ArticleBlockType } from 'entities/Article/model/types/article'
+import { MemoryRouter } from 'react-router-dom'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator'
 
 export default {
   title: 'pages/ArticlesPage',

@@ -2,6 +2,7 @@
 import { ReactNode } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
-export const RouterDecorator = (story: () => ReactNode) => {
-  return <BrowserRouter>{story()}</BrowserRouter>
-}
+export const RouterDecorator =
+  (baseUrl: string) => (story: () => ReactNode) => {
+    return <BrowserRouter basename={baseUrl}>{story()}</BrowserRouter>
+  }
