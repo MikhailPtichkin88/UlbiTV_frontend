@@ -3,10 +3,7 @@ import cls from './AddCommentForm.module.scss'
 import { Input } from 'shared/ui/Input/Input'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import {
-  getAddCommentFormError,
-  getAddCommentFormText,
-} from '../../model/selectors/addCommentFormSelector'
+import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelector'
 import { useSelector } from 'react-redux'
 import { useCallback } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
@@ -18,7 +15,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { sendComment } from '../../model/services/sendComment/sendComment'
+import { HStack } from 'shared/ui/Stack'
 
 export interface AddCommentFormProps {
   className?: string
@@ -32,7 +29,6 @@ const reducers: ReducersList = {
 const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
   const { t } = useTranslation()
   const text = useSelector(getAddCommentFormText)
-  const error = useSelector(getAddCommentFormError)
   const dispatch = useAppDispatch()
 
   const onCommentTextChange = useCallback(
@@ -49,9 +45,13 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.addCommentForm, {}, [className])}>
+      <HStack
+        justify="between"
+        gap="8"
+        max
+        className={classNames(cls.addCommentForm, {}, [className])}
+      >
         <Input
-          className={cls.input}
           placeholder={t('Введите текст комментария')}
           value={text}
           onChange={onCommentTextChange}
@@ -59,7 +59,7 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
         <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler}>
           {t('Отправить')}
         </Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   )
 }

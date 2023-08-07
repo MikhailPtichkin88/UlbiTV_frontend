@@ -57,7 +57,6 @@ const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
   const dispatch = useDispatch()
   const comments = useSelector(getArticleComments.selectAll)
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
-  const commentsError = useSelector(getArticleCommentsError)
   const recommendations = useSelector(getArticleRecommendations.selectAll)
   const recommendationsIsLoading = useSelector(
     getArticleRecommendationsIsLoading

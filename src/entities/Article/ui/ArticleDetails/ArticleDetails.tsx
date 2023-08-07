@@ -27,6 +27,7 @@ import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleC
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { HStack, VStack } from 'shared/ui/Stack'
 
 interface ArticleDetailsProps {
   className?: string
@@ -106,23 +107,25 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo(
     } else {
       content = (
         <>
-          <div className={cls.avatarWrapper}>
-            <Avatar src={article?.img} className={cls.avatar} />
-          </div>
+          <HStack justify="center" max>
+            <Avatar src={article?.img} />
+          </HStack>
           <Text
             className={cls.title}
             title={article?.title}
             text={article?.subtitle}
             size={TextSize.L}
           />
-          <div className={cls.articleInfo}>
-            <Icon className={cls.icon} Svg={EyeIcon} />
-            <Text text={String(article?.views)} />
-          </div>
-          <div className={cls.articleInfo}>
-            <Icon className={cls.icon} Svg={CalendarIcon} />
-            <Text text={String(article?.createdAt)} />
-          </div>
+          <VStack gap="4">
+            <HStack gap="8">
+              <Icon Svg={EyeIcon} />
+              <Text text={String(article?.views)} />
+            </HStack>
+            <HStack gap="8">
+              <Icon Svg={CalendarIcon} />
+              <Text text={String(article?.createdAt)} />
+            </HStack>
+          </VStack>
           {article?.blocks.map(renderBlock)}
         </>
       )
@@ -130,9 +133,12 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo(
 
     return (
       <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-        <div className={classNames(cls.articledetails, {}, [className])}>
+        <VStack
+          gap="16"
+          className={classNames(cls.articledetails, {}, [className])}
+        >
           {content}
-        </div>
+        </VStack>
       </DynamicModuleLoader>
     )
   }

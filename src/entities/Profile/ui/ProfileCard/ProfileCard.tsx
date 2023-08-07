@@ -9,6 +9,7 @@ import { Loader } from 'shared/ui/Loader/Loader'
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text'
 import { Profile } from 'entities/Profile/'
 import cls from './ProfileCard.module.scss'
+import { HStack, VStack } from 'shared/ui/Stack'
 
 interface ProfileCardProps {
   className?: string
@@ -45,26 +46,32 @@ export const ProfileCard = ({
 
   if (isLoading) {
     return (
-      <div
+      <HStack
+        justify="center"
+        max
         className={classNames(cls.profilecard, { [cls.loading]: true }, [
           className,
         ])}
       >
         <Loader />
-      </div>
+      </HStack>
     )
   }
 
   if (error) {
     return (
-      <div className={classNames(cls.profilecard, {}, [className, cls.error])}>
+      <HStack
+        justify="center"
+        max
+        className={classNames(cls.profilecard, {}, [className, cls.error])}
+      >
         <Text
           title={t('Произошла ошибка при загрузке профиля')}
           text={t('Попробуйте перезагрузить страницу')}
           theme={TextTheme.ERROR}
           align={TextAlign.CENTER}
         />
-      </div>
+      </HStack>
     )
   }
 
@@ -73,71 +80,73 @@ export const ProfileCard = ({
   }
 
   return (
-    <div className={classNames(cls.profilecard, mods, [className])}>
-      <div className={cls.data}>
-        {data?.avatar && (
-          <div className={cls.avatarWrapper}>
-            <Avatar src={data?.avatar} alt="avatar img" />
-          </div>
-        )}
-        <Input
-          value={data?.first}
-          placeholder={t('Ваше имя')}
-          className={cls.input}
-          readonly={readonly}
-          onChange={onChangeFirstName}
-        />
+    <VStack
+      gap="8"
+      max
+      className={classNames(cls.profilecard, mods, [className])}
+    >
+      {data?.avatar && (
+        <HStack justify="center" max>
+          <Avatar src={data?.avatar} alt="avatar img" />
+        </HStack>
+      )}
+      <Input
+        value={data?.first}
+        placeholder={t('Ваше имя')}
+        className={cls.input}
+        readonly={readonly}
+        onChange={onChangeFirstName}
+      />
 
-        <Input
-          value={data?.lastname}
-          placeholder={t('Ваше фамилия')}
-          className={cls.input}
-          readonly={readonly}
-          onChange={onChangeLastName}
-        />
+      <Input
+        value={data?.lastname}
+        placeholder={t('Ваше фамилия')}
+        className={cls.input}
+        readonly={readonly}
+        onChange={onChangeLastName}
+      />
 
-        <Input
-          value={Number(data?.age) || 0}
-          placeholder={t('Ваш возраст')}
-          className={cls.input}
-          readonly={readonly}
-          onChange={onChangeAge}
-        />
+      <Input
+        value={Number(data?.age) || 0}
+        placeholder={t('Ваш возраст')}
+        className={cls.input}
+        readonly={readonly}
+        onChange={onChangeAge}
+      />
 
-        <Input
-          value={data?.city}
-          placeholder={t('Город')}
-          className={cls.input}
-          readonly={readonly}
-          onChange={onChangeCity}
-        />
-        <Input
-          value={data?.username}
-          placeholder={t('Имя пользователя')}
-          className={cls.input}
-          readonly={readonly}
-          onChange={onChangeUsername}
-        />
-        <Input
-          value={data?.avatar}
-          placeholder={t('Введите ссылку на аватар')}
-          className={cls.input}
-          readonly={readonly}
-          onChange={onChangeAvatar}
-        />
-        <CurrencySelect
-          className={cls.input}
-          value={data?.currency}
-          onChange={onChangeCurrency}
-          readonly={readonly}
-        />
-        <CountrySelect
-          className={cls.input}
-          value={data?.country}
-          onChange={onChangeCountry}
-          readonly={readonly}
-        />
-      </div>
-    </div>
+      <Input
+        value={data?.city}
+        placeholder={t('Город')}
+        className={cls.input}
+        readonly={readonly}
+        onChange={onChangeCity}
+      />
+      <Input
+        value={data?.username}
+        placeholder={t('Имя пользователя')}
+        className={cls.input}
+        readonly={readonly}
+        onChange={onChangeUsername}
+      />
+      <Input
+        value={data?.avatar}
+        placeholder={t('Введите ссылку на аватар')}
+        className={cls.input}
+        readonly={readonly}
+        onChange={onChangeAvatar}
+      />
+      <CurrencySelect
+        className={cls.input}
+        value={data?.currency}
+        onChange={onChangeCurrency}
+        readonly={readonly}
+      />
+      <CountrySelect
+        className={cls.input}
+        value={data?.country}
+        onChange={onChangeCountry}
+        readonly={readonly}
+      />
+    </VStack>
   )
 }
