@@ -38,6 +38,16 @@
   text-align: center;
 }
 
+.size_s {
+  .title {
+    font: var(--font-m);
+  }
+
+  .text {
+    font: var(--font-s);
+  }
+}
+
 .size_m {
   .title {
     font: var(--font-l);
