@@ -7,8 +7,17 @@
   padding: 20px;
 }
 
-.links {
+.links,
+.dropdown {
   margin-left: auto;
+}
+
+.dropdown {
+  min-width: 100px;
+
+  & > div {
+    min-width: 150px;
+  }
 }
 
 .mainLink {

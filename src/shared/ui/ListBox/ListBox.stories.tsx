@@ -1,10 +1,10 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { ListBox } from './ListBox'
-import 'app/styles/index.scss'
-import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
-import { Currency } from 'entities/Currency'
+import 'app/styles/index.scss'
+import { Country } from 'entities/Country'
 import { useState } from 'react'
+import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
+import { ListBox } from './ListBox'
 
 export default {
   title: 'shared/ListBox',
@@ -12,23 +12,41 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ padding: 100 }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as ComponentMeta<typeof ListBox>
 
 const options = [
-  { value: Currency.RUB, content: Currency.RUB },
-  { value: Currency.EUR, content: Currency.EUR },
-  { value: Currency.USD, content: Currency.USD },
+  { value: Country.Armenia, content: Country.Armenia },
+  { value: Country.Belarus, content: Country.Belarus },
+  { value: Country.Kazakhstan, content: Country.Kazakhstan },
+  { value: Country.Russia, content: Country.Russia },
+  { value: Country.Ukraine, content: Country.Ukraine },
 ]
 
-const Template: ComponentStory<typeof ListBox> = () => {
+const Template: ComponentStory<typeof ListBox> = (args) => {
   const [value, setValue] = useState<string>(options[0].value)
 
-  return <ListBox items={options} value={value} onChange={setValue} />
+  return <ListBox {...args} items={options} value={value} onChange={setValue} />
 }
 
-export const Normal = Template.bind({})
-Normal.args = {}
+export const BottomLeft = Template.bind({})
+BottomLeft.args = { direction: 'bottom left' }
 
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+export const BottomRight = Template.bind({})
+BottomRight.args = { direction: 'bottom right' }
+
+export const TopLeft = Template.bind({})
+TopLeft.args = { direction: 'top left' }
+
+export const TopRight = Template.bind({})
+TopRight.args = { direction: 'top right' }
+
+// export const Dark = Template.bind({})
+// Dark.args = {}
+// Dark.decorators = [ThemeDecorator(Theme.DARK)]

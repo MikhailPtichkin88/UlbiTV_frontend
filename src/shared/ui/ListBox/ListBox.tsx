@@ -4,8 +4,7 @@ import { Listbox as HlistBox } from '@headlessui/react'
 import { Fragment, ReactNode } from 'react'
 import { Button } from '../Button/Button'
 import { HStack } from '../Stack'
-
-type DropdownDirection = 'top' | 'bottom'
+import { DropdownDirection } from 'app/types/ui'
 
 export interface ListBoxItem {
   value: string
@@ -30,10 +29,16 @@ export const ListBox = ({
   value,
   defaultValue,
   readonly,
-  direction = 'bottom',
+  direction = 'bottom right',
   label,
   onChange,
 }: ListBoxProps) => {
+  const mapDirectionsClass: Record<DropdownDirection, string> = {
+    'bottom left': cls.bottomLeft,
+    'bottom right': cls.bottomRight,
+    'top left': cls.topLeft,
+    'top right': cls.topRight,
+  }
   return (
     <HStack gap={'8'}>
       {label && <span className={cls.label}>{`${label} ►`}</span>}
@@ -50,7 +55,9 @@ export const ListBox = ({
           </Button>
         </HlistBox.Button>
         <HlistBox.Options
-          className={classNames(cls.options, {}, [cls[direction]])}
+          className={classNames(cls.options, {}, [
+            mapDirectionsClass[direction],
+          ])}
         >
           {items?.map((item) => (
             <HlistBox.Option

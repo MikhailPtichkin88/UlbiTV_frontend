@@ -9,12 +9,24 @@
   border-radius: 12px;
   box-shadow: 4px 4px 8px var(--listbox-bg);
 
-  &.bottom {
+  &.bottomLeft {
     top: calc(100% + 5px);
+    right: 0;
   }
 
-  &.top {
+  &.bottomRight {
+    top: calc(100% + 5px);
+    left: 0;
+  }
+
+  &.topLeft {
     bottom: calc(100% + 5px);
+    right: 0;
+  }
+
+  &.topRight {
+    bottom: calc(100% + 5px);
+    left: 0;
   }
 }
 
