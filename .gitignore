@@ -9,3 +9,4 @@ node_modules
 extractedTranslations
 extractedTranslations/en/translation.json
 extractedTranslations/ru/translation.json
+/reports
