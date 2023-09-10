@@ -21,6 +21,7 @@ interface ArticleListProps {
   error?: string
   wrap?: ArticleListWrap
   target?: HTMLAttributeAnchorTarget
+  virtualized?: boolean
 }
 
 export enum ArticleListWrap {
@@ -36,6 +37,7 @@ export const ArticleList = ({
   error,
   wrap = ArticleListWrap.WRAP,
   target,
+  virtualized = true,
 }: ArticleListProps) => {
   const { t } = useTranslation('article')
 
@@ -112,17 +114,29 @@ export const ArticleList = ({
             cls[view],
           ])}
         >
-          <List
-            height={height ?? 700}
-            rowCount={rowCount}
-            rowHeight={isBig ? 700 : 330}
-            rowRenderer={rowRenderer}
-            width={width ? width - 80 : 700}
-            autoHeight
-            onScroll={onChildScroll}
-            isScrolling={isScrolling}
-            scrollTop={scrollTop}
-          />
+          {virtualized ? (
+            <List
+              height={height ?? 700}
+              rowCount={rowCount}
+              rowHeight={isBig ? 700 : 330}
+              rowRenderer={rowRenderer}
+              width={width ? width - 80 : 700}
+              autoHeight
+              onScroll={onChildScroll}
+              isScrolling={isScrolling}
+              scrollTop={scrollTop}
+            />
+          ) : (
+            articles.map((article) => (
+              <ArticleListItem
+                article={article}
+                view={view}
+                className={cls.card}
+                target={target}
+                key={article.id}
+              />
+            ))
+          )}
           {isLoading && getSkeletons(view)}
         </div>
       )}
