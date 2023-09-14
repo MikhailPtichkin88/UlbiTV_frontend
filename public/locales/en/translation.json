@@ -20,5 +20,7 @@
   "PROFILE_PAGE": "Profile",
   "Укажите валюту": "Choose currency",
   "Укажите страну": "Choose country",
-  "Комментарии отсутствуют": "No comments"
+  "Комментарии отсутствуют": "No comments",
+  "админ_панель": "Admin panel",
+  "нет_прав": "Access forbidden"
 }
