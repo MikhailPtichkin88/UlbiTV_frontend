@@ -36,7 +36,7 @@ export const ArticleDetailsComments = ({
   })
 
   return (
-    <VStack gap="8" className={classNames('', {}, [className])}>
+    <VStack gap="16" max className={classNames('', {}, [className])}>
       <Text size={TextSize.L} title={t('Комментарии')} />
       <AddCommentForm onSendComment={onSendComment} />
       <CommentList comments={comments} isLoading={commentsIsLoading} />

@@ -20,7 +20,9 @@
       "views": 713,
       "createdAt": "06.02.2019",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -90,7 +92,9 @@
       "views": 812,
       "createdAt": "01.03.2020",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -121,7 +125,9 @@
       "views": 945,
       "createdAt": "13.03.2020",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -152,7 +158,9 @@
       "views": 510,
       "createdAt": "15.03.2020",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -183,7 +191,9 @@
       "views": 300,
       "createdAt": "20.07.2020",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -214,7 +224,9 @@
       "views": 1023,
       "createdAt": "08.10.2020",
       "userId": "2",
-      "type": ["Data Science"],
+      "type": [
+        "Data Science"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -240,7 +252,9 @@
       "views": 978,
       "createdAt": "09.11.2020",
       "userId": "1",
-      "type": ["Machine Learning"],
+      "type": [
+        "Machine Learning"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -266,7 +280,9 @@
       "views": 1209,
       "createdAt": "10.12.2020",
       "userId": "2",
-      "type": ["Web Dev"],
+      "type": [
+        "Web Dev"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -292,7 +308,9 @@
       "views": 865,
       "createdAt": "11.07.2021",
       "userId": "1",
-      "type": ["Cybersecurity"],
+      "type": [
+        "Cybersecurity"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -318,7 +336,9 @@
       "views": 1102,
       "createdAt": "12.09.2021",
       "userId": "2",
-      "type": ["Data Science"],
+      "type": [
+        "Data Science"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -344,7 +364,9 @@
       "views": 103,
       "createdAt": "13.08.2021",
       "userId": "1",
-      "type": ["Mobile Development"],
+      "type": [
+        "Mobile Development"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -370,7 +392,9 @@
       "views": 1198,
       "createdAt": "14.05.2021",
       "userId": "2",
-      "type": ["Cloud Computing"],
+      "type": [
+        "Cloud Computing"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -396,7 +420,9 @@
       "views": 1534,
       "createdAt": "15.04.2021",
       "userId": "1",
-      "type": ["AI"],
+      "type": [
+        "AI"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -422,7 +448,9 @@
       "views": 1007,
       "createdAt": "16.11.2021",
       "userId": "2",
-      "type": ["Web Development"],
+      "type": [
+        "Web Development"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -448,7 +476,9 @@
       "views": 1102,
       "createdAt": "17.12.2021",
       "userId": "1",
-      "type": ["Internet of Things"],
+      "type": [
+        "Internet of Things"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -474,7 +504,9 @@
       "views": 1420,
       "createdAt": "18.01.2022",
       "userId": "2",
-      "type": ["Blockchain"],
+      "type": [
+        "Blockchain"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -500,7 +532,9 @@
       "views": 908,
       "createdAt": "19.03.2022",
       "userId": "1",
-      "type": ["Cybersecurity"],
+      "type": [
+        "Cybersecurity"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -526,7 +560,9 @@
       "views": 1207,
       "createdAt": "20.07.2022",
       "userId": "2",
-      "type": ["Augmented Reality"],
+      "type": [
+        "Augmented Reality"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -552,7 +588,9 @@
       "views": 856,
       "createdAt": "21.05.2022",
       "userId": "1",
-      "type": ["Design"],
+      "type": [
+        "Design"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -578,7 +616,9 @@
       "views": 1524,
       "createdAt": "22.06.2022",
       "userId": "2",
-      "type": ["AI"],
+      "type": [
+        "AI"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -604,7 +644,9 @@
       "views": 907,
       "createdAt": "08.07.2022",
       "userId": "2",
-      "type": ["Data Science"],
+      "type": [
+        "Data Science"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -630,7 +672,9 @@
       "views": 1034,
       "createdAt": "09.08.2022",
       "userId": "1",
-      "type": ["Machine Learning"],
+      "type": [
+        "Machine Learning"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -656,7 +700,9 @@
       "views": 764,
       "createdAt": "10.09.2022",
       "userId": "2",
-      "type": ["Web Dev"],
+      "type": [
+        "Web Dev"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -682,7 +728,9 @@
       "views": 829,
       "createdAt": "11.10.2022",
       "userId": "1",
-      "type": ["Cybersecurity"],
+      "type": [
+        "Cybersecurity"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -708,7 +756,9 @@
       "views": 1101,
       "createdAt": "12.11.2022",
       "userId": "2",
-      "type": ["Data Science"],
+      "type": [
+        "Data Science"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -734,7 +784,9 @@
       "views": 943,
       "createdAt": "13.12.2022",
       "userId": "1",
-      "type": ["Mobile Dev"],
+      "type": [
+        "Mobile Dev"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -760,7 +812,9 @@
       "views": 1211,
       "createdAt": "31.12.2022",
       "userId": "2",
-      "type": ["Cloud Computing"],
+      "type": [
+        "Cloud Computing"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -786,7 +840,9 @@
       "views": 1535,
       "createdAt": "10.01.2023",
       "userId": "1",
-      "type": ["AI"],
+      "type": [
+        "AI"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -812,7 +868,9 @@
       "views": 1056,
       "createdAt": "16.02.2023",
       "userId": "2",
-      "type": ["Web Dev"],
+      "type": [
+        "Web Dev"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -838,7 +896,9 @@
       "views": 1178,
       "createdAt": "17.03.2023",
       "userId": "1",
-      "type": ["Internet of Things"],
+      "type": [
+        "Internet of Things"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -864,7 +924,9 @@
       "views": 1478,
       "createdAt": "18.04.2023",
       "userId": "2",
-      "type": ["Blockchain"],
+      "type": [
+        "Blockchain"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -890,7 +952,9 @@
       "views": 564,
       "createdAt": "19.05.2023",
       "userId": "1",
-      "type": ["Cybersecurity"],
+      "type": [
+        "Cybersecurity"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -916,7 +980,9 @@
       "views": 1221,
       "createdAt": "20.06.2023",
       "userId": "2",
-      "type": ["Augmented Reality"],
+      "type": [
+        "Augmented Reality"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -942,7 +1008,9 @@
       "views": 832,
       "createdAt": "21.07.2023",
       "userId": "1",
-      "type": ["Design"],
+      "type": [
+        "Design"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -968,7 +1036,9 @@
       "views": 1578,
       "createdAt": "22.08.2023",
       "userId": "2",
-      "type": ["AI"],
+      "type": [
+        "AI"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -1023,6 +1093,12 @@
       "userId": "2",
       "text": "xexexe",
       "id": "UPTw4HO"
+    },
+    {
+      "articleId": "2",
+      "userId": "2",
+      "text": "comment",
+      "id": "NXvQ0Ud"
     }
   ],
   "users": [
@@ -1030,28 +1106,38 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://logowik.com/content/uploads/images/homer-simpson4924.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/02/17/10/homersimpson1702a.jpg?width=1200"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER", "USER"],
+      "roles": [
+        "MANAGER",
+        "USER"
+      ],
       "avatar": "https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/02/17/10/homersimpson1702a.jpg?width=1200"
     },
     {
       "id": "4",
       "username": "manager_admin",
       "password": "123",
-      "roles": ["MANAGER", "MANAGER"],
+      "roles": [
+        "MANAGER",
+        "MANAGER"
+      ],
       "avatar": "https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/02/17/10/homersimpson1702a.jpg?width=1200"
     }
   ],
