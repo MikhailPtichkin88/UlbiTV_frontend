@@ -1,12 +1,19 @@
 
-.idea
-package-lock.json
-node_modules
-/build
 
-.loki/report.html
-.loki/report.json
+package-lock.json
+
+
+
+
+
 extractedTranslations
 extractedTranslations/en/translation.json
 extractedTranslations/ru/translation.json
+
+/build
+node_modules
+.idea
+/storybook-static
+.loki/report.html
+.loki/report.json
 /reports
