@@ -5,6 +5,7 @@ import 'app/styles/index.scss'
 import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 import { Sidebar } from './Sidebar'
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'widget/Sidebar',
@@ -13,6 +14,7 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof Sidebar>
 
 const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />

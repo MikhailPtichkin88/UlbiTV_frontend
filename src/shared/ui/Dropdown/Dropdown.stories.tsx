@@ -6,7 +6,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { Button } from '../Button/Button'
 
 export default {
-  title: '/Dropdown',
+  title: 'shared/Dropdown',
   component: Dropdown,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -16,16 +16,28 @@ export default {
 const items: DropdownItem[] = [
   { content: 'First' },
   { content: 'Second' },
-  { content: 'Disabled' },
+  { content: 'Disabled', disabled: true },
 ]
 
-const Template: ComponentStory<typeof Dropdown> = () => {
-  return <Dropdown items={items} />
+const Template: ComponentStory<typeof Dropdown> = (args) => {
+  return (
+    <div style={{ padding: 50 }}>
+      <Dropdown {...args} />
+    </div>
+  )
 }
 
 export const Normal = Template.bind({})
-Normal.args = { trigger: <Button>Open</Button> }
+Normal.args = {
+  trigger: <Button>Open</Button>,
+  items: items,
+  direction: 'bottom left',
+}
 
 export const Dark = Template.bind({})
-Dark.args = {}
+Dark.args = {
+  trigger: <Button>Open</Button>,
+  items: items,
+  direction: 'bottom left',
+}
 Dark.decorators = [ThemeDecorator(Theme.DARK)]

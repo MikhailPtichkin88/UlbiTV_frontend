@@ -31,7 +31,11 @@ AuthNavbar.args = {}
 AuthNavbar.decorators = [
   StoreDecorator({
     user: {
-      authData: {},
+      authData: {
+        id: '1',
+        username: 'admin',
+        avatar: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+      },
     },
   }),
 ]

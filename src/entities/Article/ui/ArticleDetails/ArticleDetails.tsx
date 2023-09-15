@@ -31,7 +31,7 @@ import { HStack, VStack } from 'shared/ui/Stack'
 
 interface ArticleDetailsProps {
   className?: string
-  id: string
+  id?: string
 }
 
 const reducers: ReducersList = {

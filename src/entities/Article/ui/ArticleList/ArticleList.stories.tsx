@@ -101,17 +101,17 @@ const Template: ComponentStory<typeof ArticleList> = (args) => (
   <ArticleList {...args} />
 )
 
-export const Primary = Template.bind({})
-Primary.args = {
-  view: ArticleView.BIG,
-  articles: articles,
-}
+// export const Primary = Template.bind({})
+// Primary.args = {
+//   view: ArticleView.BIG,
+//   articles: articles,
+// }
 
-export const Small = Template.bind({})
-Small.args = {
-  view: ArticleView.SMALL,
-  articles: articles,
-}
+// export const Small = Template.bind({})
+// Small.args = {
+//   view: ArticleView.SMALL,
+//   articles: articles,
+// }
 
 export const PrimarySkeleton = Template.bind({})
 PrimarySkeleton.args = {
