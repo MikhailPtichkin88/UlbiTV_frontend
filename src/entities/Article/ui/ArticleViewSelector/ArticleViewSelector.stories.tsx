@@ -2,12 +2,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
-import {
-  Article,
-  ArticleBlockType,
-  ArticleType,
-  ArticleView,
-} from '../../model/types/article'
 import { ArticleViewSelector } from './ArticleViewSelector'
 
 export default {

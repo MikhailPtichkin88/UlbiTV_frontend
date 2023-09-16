@@ -79,12 +79,18 @@ const articlesPageSlice = createSlice({
         }
       })
       .addCase(fetchArticlesList.fulfilled, (state, action) => {
+        if (
+          Number(action.payload.headers['x-total-count']) <
+          state.page * state.limit
+        ) {
+          state.hasMore = false
+        }
         state.isLoading = false
         // state.hasMore = action.payload.length > 0
         if (action.meta.arg.replace) {
-          articlesAdapter.setAll(state, action.payload)
+          articlesAdapter.setAll(state, action.payload.data)
         } else {
-          articlesAdapter.addMany(state, action.payload)
+          articlesAdapter.addMany(state, action.payload.data)
         }
       })
       .addCase(fetchArticlesList.rejected, (state, action) => {

@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
 import 'app/styles/index.scss'
 import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
-import { ArticleSortField } from '../../model/types/article'
+import { ArticleSortField } from '../../model/consts/consts'
 import { ArticleSortSelector } from './ArticleSortSelector'
 
 export default {

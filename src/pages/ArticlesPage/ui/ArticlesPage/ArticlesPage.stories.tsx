@@ -1,14 +1,11 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import ArticlesPage from './ArticlesPage'
-import 'app/styles/index.scss'
-import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
+import 'app/styles/index.scss'
+import { ArticleType, ArticleView } from 'entities/Article'
+import { ArticleBlockType } from 'entities/Article/model/consts/consts'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
-import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article'
-import { ArticleBlockType } from 'entities/Article/model/types/article'
-import { MemoryRouter } from 'react-router-dom'
-import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator'
+import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
+import ArticlesPage from './ArticlesPage'
 
 export default {
   title: 'pages/ArticlesPage',

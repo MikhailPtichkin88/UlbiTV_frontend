@@ -6,7 +6,7 @@ import {
   ArticleBlockType,
   ArticleType,
   ArticleView,
-} from '../../model/types/article'
+} from '../../model/consts/consts'
 import { ArticleList } from './ArticleList'
 
 export default {

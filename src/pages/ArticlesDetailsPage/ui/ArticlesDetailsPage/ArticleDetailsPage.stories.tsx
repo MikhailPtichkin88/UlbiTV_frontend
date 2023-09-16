@@ -6,7 +6,8 @@ import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDeco
 import { Theme } from 'app/providers/ThemeProvider'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import { ArticleType, ArticleView } from 'entities/Article'
-import { Article, ArticleBlockType } from 'entities/Article/model/types/article'
+import { Article } from 'entities/Article/model/types/article'
+import { ArticleBlockType } from 'entities/Article'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator'
 

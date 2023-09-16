@@ -21,9 +21,9 @@ import { getProfileError } from '../model/selectors/getProfileError/getProfileEr
 import { getProfileIsLoading } from '../model/selectors/getProfileIsLoading/getProfileIsLoading'
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly'
 import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
-import { ValidateProfileError } from '../model/types/editableProfileCardSchema'
 import { EditableProfileCardHeader } from './EditableProfileCardHeader/EditableProfileCardHeader'
 import { VStack } from 'shared/ui/Stack'
+import { ValidateProfileError } from '../model/consts/consts'
 
 interface EditableProfileCardProps {
   className?: string

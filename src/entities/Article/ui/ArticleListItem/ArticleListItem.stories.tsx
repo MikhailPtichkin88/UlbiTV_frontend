@@ -2,12 +2,12 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
+import { Article } from '../../model/types/article'
 import {
-  Article,
   ArticleBlockType,
   ArticleType,
   ArticleView,
-} from '../../model/types/article'
+} from '../../model/consts/consts'
 import { ArticleListItem } from './ArticleListItem'
 
 export default {

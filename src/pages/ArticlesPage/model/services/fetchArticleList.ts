@@ -9,15 +9,16 @@ import {
   getArticlesPageSort,
   getArticlesPageType,
 } from '../selectors/articlesPageSelectors'
-import { articlesPageActions } from '../slice/articlesPageSlice'
+// import { articlesPageActions } from '../slice/articlesPageSlice'
 import { addQueryParams } from 'shared/lib/url/addQueryParams/addQueryParams'
+import { AxiosResponse } from 'axios'
 
 interface FetchArticleListProps {
   replace?: boolean
 }
 
 export const fetchArticlesList = createAsyncThunk<
-  Article[],
+  AxiosResponse<Article[]>,
   FetchArticleListProps,
   ThunkConfig<string>
 >('articlesPage/fetchArticlesList', async (props, thunkApi) => {
@@ -47,11 +48,7 @@ export const fetchArticlesList = createAsyncThunk<
       throw new Error()
     }
 
-    if (Number(res.headers['x-total-count']) < page * limit) {
-      dispatch(articlesPageActions.setHasMore(false))
-    }
-
-    return res.data
+    return res
   } catch (e) {
     return rejectWithValue('error')
   }
