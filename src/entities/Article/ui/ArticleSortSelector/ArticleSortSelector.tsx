@@ -47,6 +47,7 @@ export const ArticleSortSelector = ({
         options={sortFieldOptions}
         label={t('Сортировать ПО')}
       />
+
       <Select
         value={order}
         onChange={onChangeOrder}
