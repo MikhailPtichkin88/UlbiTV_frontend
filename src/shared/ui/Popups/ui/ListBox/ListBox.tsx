@@ -2,10 +2,11 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ListBox.module.scss'
 import { Listbox as HlistBox } from '@headlessui/react'
 import { Fragment, ReactNode } from 'react'
-import { Button } from '../Button/Button'
-import { HStack } from '../Stack'
-import { DropdownDirection } from 'app/types/ui'
-
+import { Button } from 'shared/ui/Button/Button'
+import { HStack } from 'shared/ui/Stack/HStack/HStack'
+import { DropdownDirection } from '../../../../types'
+import { mapDirectionsClass } from '../consts'
+import popupCls from '../Popup.module.scss'
 export interface ListBoxItem {
   value: string
   content: ReactNode
@@ -33,12 +34,6 @@ export const ListBox = ({
   label,
   onChange,
 }: ListBoxProps) => {
-  const mapDirectionsClass: Record<DropdownDirection, string> = {
-    'bottom left': cls.bottomLeft,
-    'bottom right': cls.bottomRight,
-    'top left': cls.topLeft,
-    'top right': cls.topRight,
-  }
   return (
     <HStack gap={'8'}>
       {label && <span className={cls.label}>{`${label} ►`}</span>}
@@ -68,11 +63,15 @@ export const ListBox = ({
             >
               {({ active, selected }) => (
                 <li
-                  className={classNames(cls.item, {
-                    [cls.active]: active,
-                    [cls.selected]: selected,
-                    [cls.disabled]: item.disabled,
-                  })}
+                  className={classNames(
+                    cls.item,
+                    {
+                      [popupCls.active]: active,
+                      [cls.selected]: selected,
+                      [cls.disabled]: item.disabled,
+                    },
+                    [popupCls.item]
+                  )}
                 >
                   {item.content}
                 </li>

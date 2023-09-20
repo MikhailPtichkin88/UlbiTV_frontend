@@ -1,11 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Dropdown.module.scss'
-import { useTranslation } from 'react-i18next'
 import { Menu } from '@headlessui/react'
 import { Fragment, ReactNode } from 'react'
 import { generateUniqueId } from 'shared/lib/generateUniqueId/generateUniqueId'
-import { DropdownDirection } from 'app/types/ui'
-import { AppLink } from '../AppLink/AppLink'
+import { DropdownDirection } from '../../../../types'
+import { AppLink } from '../../../AppLink/AppLink'
+import { mapDirectionsClass } from '../consts'
+import popupCls from '../Popup.module.scss'
 
 export interface DropdownItem {
   disabled?: boolean
@@ -27,16 +28,9 @@ export const Dropdown = ({
   items,
   direction = 'bottom right',
 }: DropdownProps) => {
-  const { t } = useTranslation()
-  const mapDirectionsClass: Record<DropdownDirection, string> = {
-    'bottom left': cls.bottomLeft,
-    'bottom right': cls.bottomRight,
-    'top left': cls.topLeft,
-    'top right': cls.topRight,
-  }
   return (
     <Menu as={'div'} className={classNames(cls.dropdown, {}, [className])}>
-      <Menu.Button className={cls.btn}>{trigger}</Menu.Button>
+      <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
       <Menu.Items
         className={classNames(cls.menu, {}, [mapDirectionsClass[direction]])}
       >

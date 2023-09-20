@@ -1,0 +1,29 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  z-index: 11;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+}
+
+.item {
+  padding: 10px 25px;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.active {
+  background: var(--inverted-primary-color);
+  border-radius: 8px;
+}

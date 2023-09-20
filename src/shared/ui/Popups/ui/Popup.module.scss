@@ -1,0 +1,67 @@
+.popup {
+  position: relative;
+}
+
+.active {
+  background: var(--inverted-primary-color);
+}
+
+.bottomLeft {
+  top: calc(100% + 5px);
+  right: 0;
+}
+
+.bottomRight {
+  top: calc(100% + 5px);
+  left: 0;
+}
+
+.topLeft {
+  bottom: calc(100% + 5px);
+  right: 0;
+}
+
+.topRight {
+  bottom: calc(100% + 5px);
+  left: 0;
+}
+
+.item {
+  &:first-child.active {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  &:last-child.active {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &:not(.selected).active {
+    cursor: pointer;
+    color: var(--secondary-color);
+  }
+}
+
+.trigger {
+  background: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.panel {
+  position: absolute;
+  background-color: var(--card-bg);
+  z-index: 11;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  padding: 15px;
+}

@@ -6,28 +6,28 @@
   position: absolute;
   z-index: 10;
   background-color: var(--listbox-bg);
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 4px 4px 8px var(--listbox-bg);
 
-  &.bottomLeft {
-    top: calc(100% + 5px);
-    right: 0;
-  }
+  // &.bottomLeft {
+  //   top: calc(100% + 5px);
+  //   right: 0;
+  // }
 
-  &.bottomRight {
-    top: calc(100% + 5px);
-    left: 0;
-  }
+  // &.bottomRight {
+  //   top: calc(100% + 5px);
+  //   left: 0;
+  // }
 
-  &.topLeft {
-    bottom: calc(100% + 5px);
-    right: 0;
-  }
+  // &.topLeft {
+  //   bottom: calc(100% + 5px);
+  //   right: 0;
+  // }
 
-  &.topRight {
-    bottom: calc(100% + 5px);
-    left: 0;
-  }
+  // &.topRight {
+  //   bottom: calc(100% + 5px);
+  //   left: 0;
+  // }
 }
 
 .item {
@@ -57,20 +57,6 @@
       color: var(--primary-color);
       line-height: 12px;
     }
-  }
-
-  &:not(.selected).active {
-    cursor: pointer;
-    color: var(--secondary-color);
-
-    // &::after {
-    //   width: 50px;
-    // }
-  }
-
-  &.disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
   }
 }
 

@@ -1,43 +1,31 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Dropdown, DropdownItem } from './Dropdown'
+import { Popup } from './Popup'
 import 'app/styles/index.scss'
 import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
-import { Button } from '../Button/Button'
+import { Button } from 'shared/ui/Button/Button'
 
 export default {
-  title: 'shared/Dropdown',
-  component: Dropdown,
+  title: 'shared/Popup',
+  component: Popup,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof Dropdown>
+} as ComponentMeta<typeof Popup>
 
-const items: DropdownItem[] = [
-  { content: 'First' },
-  { content: 'Second' },
-  { content: 'Disabled', disabled: true },
-]
-
-const Template: ComponentStory<typeof Dropdown> = (args) => {
-  return (
-    <div style={{ padding: 50 }}>
-      <Dropdown {...args} />
-    </div>
-  )
-}
+const Template: ComponentStory<typeof Popup> = (args) => <Popup {...args} />
 
 export const Normal = Template.bind({})
 Normal.args = {
   trigger: <Button>Open</Button>,
-  items: items,
+  children: <Button>Menu</Button>,
   direction: 'bottom left',
 }
 
 export const Dark = Template.bind({})
 Dark.args = {
   trigger: <Button>Open</Button>,
-  items: items,
+  children: <Button>Menu</Button>,
   direction: 'bottom left',
 }
 Dark.decorators = [ThemeDecorator(Theme.DARK)]
