@@ -25,7 +25,6 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children, initialTheme }) => {
   )
 
   return (
-    // @ts-ignore
     <ThemeContext.Provider value={defaultProps}>
       {children}
     </ThemeContext.Provider>
