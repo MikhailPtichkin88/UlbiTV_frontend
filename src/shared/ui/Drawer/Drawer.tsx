@@ -1,16 +1,17 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Drawer.module.scss'
-import { useTranslation } from 'react-i18next'
 import { ReactNode } from 'react'
 import { useTheme } from 'app/providers/ThemeProvider'
 import { Portal } from '../Portal/Portal'
 import { Overlay } from '../Overlay/Overlay'
+import { useModal } from 'shared/lib/hooks/useModal/useModal'
 
 interface DrawerProps {
   className?: string
   children: ReactNode
   isOpen?: boolean
   onClose?: () => void
+  lazy?: boolean
 }
 
 export const Drawer = ({
@@ -18,11 +19,23 @@ export const Drawer = ({
   children,
   isOpen,
   onClose,
+  lazy,
 }: DrawerProps) => {
-  const { t } = useTranslation()
   const { theme } = useTheme()
-  const mods = {
+
+  const { close, isMounted, isClosing } = useModal({
+    animationDelay: 300,
+    isOpen,
+    onClose,
+  })
+
+  const mods: Mods = {
     [cls.opened]: isOpen,
+    [cls.isClosing]: isClosing,
+  }
+
+  if (lazy && !isMounted) {
+    return null
   }
 
   return (
@@ -34,7 +47,7 @@ export const Drawer = ({
           'app_drawer',
         ])}
       >
-        <Overlay onClick={onClose}>
+        <Overlay onClick={close}>
           <div className={cls.content}>{children}</div>
         </Overlay>
       </div>

@@ -9,6 +9,7 @@
   z-index: -1;
   display: flex;
   align-items: flex-end;
+  transition: transform 0.3s;
 }
 
 .content {
@@ -47,5 +48,11 @@
 
   .content {
     transform: translateY(0%);
+  }
+}
+
+.isClosing {
+  .content {
+    transform: translateY(100%);
   }
 }
