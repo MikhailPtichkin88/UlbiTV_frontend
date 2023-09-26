@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 interface OverlayProps {
   className?: string
   onClick?: () => void
-  children: ReactNode
+  children?: ReactNode
 }
 
 export const Overlay = ({ className, onClick, children }: OverlayProps) => {

@@ -12,22 +12,22 @@
   transition: transform 0.3s;
 }
 
-.content {
-  height: 50%;
-  background: var(--bg-color);
-  bottom: 0;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  position: absolute;
-  width: 100%;
-  min-height: 100px;
-  padding: 20px;
-  transition: 0.3s transform;
-  transform: translateY(100%);
-  overflow-y: auto;
-  overflow-x: hidden;
-  z-index: 10000;
-}
+// .content {
+//   height: 50%;
+//   background: var(--bg-color);
+//   bottom: 0;
+//   border-top-left-radius: 12px;
+//   border-top-right-radius: 12px;
+//   position: absolute;
+//   width: 100%;
+//   min-height: 100px;
+//   padding: 20px;
+//   transition: 0.3s transform;
+//   transform: translateY(100%);
+//   overflow-y: auto;
+//   overflow-x: hidden;
+//   z-index: 10000;
+// }
 
 .content::before {
   content: '';
@@ -46,13 +46,25 @@
   opacity: 1;
   z-index: var(--modal-z-index);
 
-  .content {
-    transform: translateY(0%);
-  }
+  // .content {
+  //   transform: translateY(0%);
+  // }
 }
 
 .isClosing {
-  .content {
-    transform: translateY(100%);
-  }
+  // .content {
+  //   transform: translateY(100%);
+  // }
+}
+
+.sheet {
+  padding: 15px;
+  position: fixed;
+  left: 2vw;
+  height: calc(100vh + 50px);
+  width: 96vw;
+  border-radius: 12px 12px 0;
+  background: var(--bg-color);
+  touch-action: none;
+  z-index: 100;
 }
