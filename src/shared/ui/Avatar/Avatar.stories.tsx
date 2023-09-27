@@ -1,8 +1,8 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Avatar } from './Avatar'
-import 'app/styles/index.scss'
-import avatar from 'shared/assets/img/avatar.jpg'
+import '@/app/styles/index.scss'
+import avatar from '@/shared/assets/img/avatar.jpg'
 
 export default {
   title: 'shared/Avatar',

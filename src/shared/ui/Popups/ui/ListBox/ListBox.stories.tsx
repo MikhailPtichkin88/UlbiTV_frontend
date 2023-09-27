@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import 'app/styles/index.scss'
-import { Country } from 'entities/Country'
+import { Theme } from '@/app/providers/ThemeProvider'
+import '@/app/styles/index.scss'
+import { Country } from '@/entities/Country'
 import { useState } from 'react'
-import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
+import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { ListBox } from './ListBox'
 
 export default {

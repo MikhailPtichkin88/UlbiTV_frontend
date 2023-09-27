@@ -1,7 +1,7 @@
 import { Article } from './../../../../../entities/Article/model/types/article'
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { ThunkConfig } from 'app/providers/StoreProvider'
-import { addQueryParams } from 'shared/lib/url/addQueryParams/addQueryParams'
+import { ThunkConfig } from '@/app/providers/StoreProvider'
+import { addQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams'
 
 export const fetchArticleRecommendations = createAsyncThunk<
   Article[],

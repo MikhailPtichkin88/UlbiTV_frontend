@@ -1,10 +1,10 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleViewSelector.module.scss'
-import ListIcon from 'shared/assets/icons/list-24-24.svg'
-import TiledIcon from 'shared/assets/icons/tiled-24-24.svg'
+import ListIcon from '@/shared/assets/icons/list-24-24.svg'
+import TiledIcon from '@/shared/assets/icons/tiled-24-24.svg'
 import { ArticleView } from '../../model/consts/consts'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { Icon } from 'shared/ui/Icon/ui/Icon'
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Icon } from '@/shared/ui/Icon/ui/Icon'
 
 interface ArticleViewSelectorProps {
   className?: string

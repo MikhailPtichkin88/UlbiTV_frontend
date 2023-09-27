@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { ThunkConfig } from 'app/providers/StoreProvider'
+import { ThunkConfig } from '@/app/providers/StoreProvider'
 import { Article, ArticleType } from '../../../../entities/Article'
 import {
   getArticlesPageLimit,
@@ -10,7 +10,7 @@ import {
   getArticlesPageType,
 } from '../selectors/articlesPageSelectors'
 // import { articlesPageActions } from '../slice/articlesPageSlice'
-import { addQueryParams } from 'shared/lib/url/addQueryParams/addQueryParams'
+import { addQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams'
 import { AxiosResponse } from 'axios'
 
 interface FetchArticleListProps {

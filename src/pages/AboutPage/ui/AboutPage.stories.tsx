@@ -1,10 +1,10 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import AboutPage from './AboutPage'
-import 'app/styles/index.scss'
-import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
-import { Theme } from 'app/providers/ThemeProvider'
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+import '@/app/styles/index.scss'
+import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'pages/AboutPage',

@@ -1,10 +1,10 @@
-import { BugButton } from 'app/providers/ErrorBoundary'
+import { BugButton } from '@/app/providers/ErrorBoundary'
 import { memo, useState } from 'react'
 
 import { useTranslation } from 'react-i18next'
-import { Dropdown } from 'shared/ui/Popups/ui/Dropdown/Dropdown'
-import { Input } from 'shared/ui/Input/Input'
-import { Page } from 'widgets/Page/Page'
+import { Dropdown } from '@/shared/ui/Popups/ui/Dropdown/Dropdown'
+import { Input } from '@/shared/ui/Input/Input'
+import { Page } from '@/widgets/Page/Page'
 
 const MainPage = memo(() => {
   const { t } = useTranslation('main')

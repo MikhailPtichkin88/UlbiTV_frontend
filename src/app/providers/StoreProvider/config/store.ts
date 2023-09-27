@@ -5,13 +5,13 @@ import {
   ReducersMapObject,
 } from '@reduxjs/toolkit'
 import { NavigateOptions, To } from 'react-router-dom'
-import { $api } from 'shared/api/api'
+import { $api } from '@/shared/api/api'
 import { counterReducer } from '../../../../entities/Counter'
 import { userReducer } from '../../../../entities/User'
 import { createReducerManager } from './reducerManager'
 import { StateSchema, ThunkExtraArg } from './StateSchema'
-import { saveScrollReducer } from 'features/ScrollSave'
-import { rtkApi } from 'shared/api/rtkApi'
+import { saveScrollReducer } from '@/features/ScrollSave'
+import { rtkApi } from '@/shared/api/rtkApi'
 
 export function createReduxStore(
   initialState?: StateSchema,

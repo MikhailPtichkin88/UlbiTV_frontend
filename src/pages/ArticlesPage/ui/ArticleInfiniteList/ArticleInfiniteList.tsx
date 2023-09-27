@@ -1,14 +1,14 @@
-import { ArticleList } from 'entities/Article'
+import { ArticleList } from '@/entities/Article'
 import {
   getArticlesPageError,
   getArticlesPageIsLoading,
   getArticlesPageView,
-} from 'pages/ArticlesPage/model/selectors/articlesPageSelectors'
-import { getArticles } from 'pages/ArticlesPage/model/slice/articlesPageSlice'
+} from '@/pages/ArticlesPage/model/selectors/articlesPageSelectors'
+import { getArticles } from '@/pages/ArticlesPage/model/slice/articlesPageSlice'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
-import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { Text, TextTheme } from '@/shared/ui/Text/Text'
 
 interface ArticleInfiniteListProps {
   className?: string

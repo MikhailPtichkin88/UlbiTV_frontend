@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { CountrySelect } from './CountrySelect'
-import 'app/styles/index.scss'
+import '@/app/styles/index.scss'
 import { Country } from '../../Country'
 
 export default {

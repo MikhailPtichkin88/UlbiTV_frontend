@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import 'app/styles/index.scss'
+import '@/app/styles/index.scss'
 import { Code } from './Code'
 
 export default {

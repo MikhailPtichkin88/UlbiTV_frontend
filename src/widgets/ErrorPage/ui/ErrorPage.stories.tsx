@@ -1,9 +1,9 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import 'app/styles/index.scss'
-import { ThemeDecorator } from 'shared/config/storybook/themeDecorator/themeDecorator'
-import { Theme } from 'app/providers/ThemeProvider'
+import '@/app/styles/index.scss'
+import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
 import { ErrorPage } from './ErrorPage'
 
 export default {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { CurrencySelect } from './CurrencySelect'
-import 'app/styles/index.scss'
+import '@/app/styles/index.scss'
 import { Currency } from '../model/types/currency'
 
 export default {
