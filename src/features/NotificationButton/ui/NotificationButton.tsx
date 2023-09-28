@@ -46,11 +46,9 @@ export const NotificationButton = ({
       </BrowserView>
       <MobileView>
         {trigger}
-        <AnimationProvider>
-          <Drawer onClose={onCloseDrawer} isOpen={open}>
-            <NotificationList />
-          </Drawer>
-        </AnimationProvider>
+        <Drawer onClose={onCloseDrawer} isOpen={open}>
+          <NotificationList />
+        </Drawer>
       </MobileView>
     </>
   )
