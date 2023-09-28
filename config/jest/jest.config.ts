@@ -32,8 +32,8 @@ export default {
   setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
-    '^@/(.*)$': '<rootDir>/src/$1',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
