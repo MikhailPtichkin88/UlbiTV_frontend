@@ -1,6 +1,6 @@
 import { HTMLAttributeAnchorTarget } from 'react'
 import { useTranslation } from 'react-i18next'
-import { List, ListRowProps, WindowScroller } from 'react-virtualized'
+// import { List, ListRowProps, WindowScroller } from 'react-virtualized'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Text, TextAlign, TextSize, TextTheme } from '@/shared/ui/Text/Text'
 import { PAGE_ID } from '@/widgets/Page/Page'
@@ -17,7 +17,7 @@ interface ArticleListProps {
   error?: string
   wrap?: ArticleListWrap
   target?: HTMLAttributeAnchorTarget
-  virtualized?: boolean
+  // virtualized?: boolean
 }
 
 export enum ArticleListWrap {
@@ -33,8 +33,8 @@ export const ArticleList = ({
   error,
   wrap = ArticleListWrap.WRAP,
   target,
-  virtualized = true,
-}: ArticleListProps) => {
+}: // virtualized = true,
+ArticleListProps) => {
   const { t } = useTranslation('article')
 
   const isBig = view === ArticleView.BIG
@@ -43,28 +43,28 @@ export const ArticleList = ({
     ? articles?.length
     : Math.ceil(articles?.length / itemsPerRow)
 
-  const rowRenderer = ({ key, index, style }: ListRowProps) => {
-    const items = []
-    const fromIndex = index * itemsPerRow
-    const toIndex = Math.min(fromIndex + itemsPerRow, articles.length)
+  // const rowRenderer = ({ key, index, style }: ListRowProps) => {
+  //   const items = []
+  //   const fromIndex = index * itemsPerRow
+  //   const toIndex = Math.min(fromIndex + itemsPerRow, articles.length)
 
-    for (let i = fromIndex; i < toIndex; i++) {
-      items.push(
-        <ArticleListItem
-          article={articles[i]}
-          view={view}
-          className={cls.card}
-          target={target}
-          key={articles[i].id}
-        />
-      )
-    }
-    return (
-      <div key={key} style={style} className={cls.row}>
-        {items}
-      </div>
-    )
-  }
+  //   for (let i = fromIndex; i < toIndex; i++) {
+  //     items.push(
+  //       <ArticleListItem
+  //         article={articles[i]}
+  //         view={view}
+  //         className={cls.card}
+  //         target={target}
+  //         key={articles[i].id}
+  //       />
+  //     )
+  //   }
+  //   return (
+  //     <div key={key} style={style} className={cls.row}>
+  //       {items}
+  //     </div>
+  //   )
+  // }
   if (error) {
     return (
       <Text
@@ -90,52 +90,54 @@ export const ArticleList = ({
   }
 
   return (
-    <WindowScroller
-      onScroll={() => console.log('scroll')}
-      scrollElement={document.getElementById(PAGE_ID) as Element}
-    >
-      {({
-        width,
-        height,
-        registerChild,
-        scrollTop,
-        isScrolling,
-        onChildScroll,
-      }) => (
-        <div
-          // @ts-ignore
-          ref={registerChild}
-          className={classNames(cls.articlelist, { [cls[wrap]]: true }, [
-            className,
-            cls[view],
-          ])}
-        >
-          {virtualized ? (
-            <List
-              height={height ?? 700}
-              rowCount={rowCount}
-              rowHeight={isBig ? 700 : 330}
-              rowRenderer={rowRenderer}
-              width={width ? width - 80 : 700}
-              autoHeight
-              onScroll={onChildScroll}
-              isScrolling={isScrolling}
-              scrollTop={scrollTop}
-            />
-          ) : (
-            articles.map((article) => (
-              <ArticleListItem
-                article={article}
-                view={view}
-                className={cls.card}
-                target={target}
-                key={article.id}
-              />
-            ))
-          )}
-          {isLoading && getSkeletons(view)}
-        </div>
-      )}
-    </WindowScroller>
+    // <WindowScroller
+    //   onScroll={() => console.log('scroll')}
+    //   scrollElement={document.getElementById(PAGE_ID) as Element}
+    // >
+    //   {({
+    //     width,
+    //     height,
+    //     registerChild,
+    //     scrollTop,
+    //     isScrolling,
+    //     onChildScroll,
+    //   }) => (
+    //     <div
+    //       // @ts-ignore
+    //       ref={registerChild}
+    //       className={classNames(cls.articlelist, { [cls[wrap]]: true }, [
+    //         className,
+    //         cls[view],
+    //       ])}
+    //     >
+    //       {virtualized ? (
+    //         <List
+    //           height={height ?? 700}
+    //           rowCount={rowCount}
+    //           rowHeight={isBig ? 700 : 330}
+    //           rowRenderer={rowRenderer}
+    //           width={width ? width - 80 : 700}
+    //           autoHeight
+    //           onScroll={onChildScroll}
+    //           isScrolling={isScrolling}
+    //           scrollTop={scrollTop}
+    //         />
+    //       ) : (
+    <>
+      {articles.map((article) => (
+        <ArticleListItem
+          article={article}
+          view={view}
+          className={cls.card}
+          target={target}
+          key={article.id}
+        />
+      ))}
+    </>
+    //       )}
+    //       {isLoading && getSkeletons(view)}
+    //     </div>
+    //   )}
+    // </WindowScroller>
   )
 }
