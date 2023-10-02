@@ -123,6 +123,7 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-virtualized": "^9.22.5",
+    "react-virtuoso": "^4.6.0",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
     "style-loader": "^3.3.1",

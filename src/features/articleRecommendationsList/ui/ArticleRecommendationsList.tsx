@@ -28,7 +28,6 @@ export const ArticleRecommendationsList = ({
         isLoading={isLoading}
         wrap={ArticleListWrap.NO_WRAP}
         target="_blank"
-        // virtualized={false}
       />
     </VStack>
   )

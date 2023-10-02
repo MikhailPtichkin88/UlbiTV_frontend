@@ -1,0 +1,48 @@
+.BIG {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+.SMALL {
+  max-width: 1200px;
+  display: flex;
+  gap: 30px;
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.no_wrap {
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    display: inline-flex;
+    height: 300px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.wrapper {
+  height: calc(100vh - 260px);
+  width: 1200px;
+  overflow-y: hidden;
+}
+
+.virtualList {
+  max-width: 1050px;
+  height: 100vh;
+  overflow-y: auto;
+  margin: 0 auto;
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+  }
+}
