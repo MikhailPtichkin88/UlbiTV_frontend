@@ -103,17 +103,19 @@ export const DrawerContent = ({
         ])}
       >
         <Overlay onClick={close} />
-        <Spring.a.div
-          className={cls.sheet}
-          style={{
-            display,
-            bottom: `calc(-100vh + ${height - 100}px)`,
-            y,
-          }}
-          {...bind()}
-        >
-          {children}
-        </Spring.a.div>
+        <div className={cls.wrapper}>
+          <Spring.a.div
+            className={cls.sheet}
+            style={{
+              display,
+              bottom: `calc(-100vh + ${height - 100}px)`,
+              y,
+            }}
+            {...bind()}
+          >
+            {children}
+          </Spring.a.div>
+        </div>
       </div>
     </Portal>
   )
