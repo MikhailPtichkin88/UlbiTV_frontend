@@ -1120,5 +1120,85 @@
       "username": "admin213",
       "avatar": "https://logowik.com/content/uploads/images/homer-simpson4924.jpg"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 3,
+      "feedback": "Нормально, но не хватило раскрытия деталей",
+      "userId": "2",
+      "articleId": "1"
+    },
+    {
+      "id": "3",
+      "rate": 5,
+      "feedback": "Очень понравилось",
+      "userId": "3",
+      "articleId": "1"
+    },
+    {
+      "id": "4",
+      "rate": 4,
+      "feedback": "Полезная статься",
+      "userId": "2",
+      "articleId": "2"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "rate": 3,
+      "id": "vMd4bkP"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "Норм статья",
+      "id": "XRrYFte"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "rate": 2,
+      "feedback": "рельсы - фигня",
+      "id": "euAfEiq"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 3,
+      "feedback": "Нормально, но не хватило раскрытия деталей",
+      "userId": "2",
+      "profileId": "1"
+    },
+    {
+      "id": "3",
+      "rate": 5,
+      "feedback": "Очень понравилось",
+      "userId": "3",
+      "profileId": "1"
+    },
+    {
+      "id": "4",
+      "rate": 4,
+      "feedback": "Полезная статься",
+      "userId": "2",
+      "profileId": "2"
+    }
   ]
 }

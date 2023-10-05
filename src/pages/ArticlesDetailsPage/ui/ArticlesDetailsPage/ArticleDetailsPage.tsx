@@ -16,6 +16,7 @@ import { articleDetailsPageReducer } from '../../model/slices'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { ArticleDetailsComments } from '@/pages/ArticlesDetailsPage/ArticleDetailsComments/ArticleDetailsComments'
+import { ArticleRating } from '@/features/ArticleRating'
 
 interface ArticlesDetailsPageProps {
   className?: string
@@ -29,19 +30,20 @@ const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
   const { t } = useTranslation('article')
   const { id } = useParams<{ id: string }>()
 
-  // if (!id) {
-  //   return (
-  //     <div className={classNames(cls.articledetailspage, {}, [className])}>
-  //       {t('Статья не найдена')}
-  //     </div>
-  //   )
-  // }
+  if (!id) {
+    return (
+      <div className={classNames(cls.articledetailspage, {}, [className])}>
+        {t('Статья не найдена')}
+      </div>
+    )
+  }
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.articledetailspage, {}, [className])}>
         <ArticleDetailsPageHeader />
-        <ArticleDetails id={id} />
-        <ArticleRecommendationsList />
+        <ArticleDetails id={id} className={cls.mb_30} />
+        <ArticleRating articleId={id} className={cls.mb_30} />
+        <ArticleRecommendationsList className={cls.mb_30} />
         <ArticleDetailsComments id={id} />
       </Page>
     </DynamicModuleLoader>
