@@ -20,15 +20,33 @@ import { ArticleRating } from '@/features/ArticleRating'
 
 interface ArticlesDetailsPageProps {
   className?: string
+  storybookId?: string
 }
 
 const reducers: ReducersList = {
   articleDetailsPage: articleDetailsPageReducer,
 }
 
-const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
+const ArticleDetailsPage = ({
+  className,
+  storybookId,
+}: ArticlesDetailsPageProps) => {
   const { t } = useTranslation('article')
   const { id } = useParams<{ id: string }>()
+
+  if (storybookId) {
+    return (
+      <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <Page className={classNames(cls.articledetailspage, {}, [className])}>
+          <ArticleDetailsPageHeader />
+          <ArticleDetails id={storybookId} className={cls.mb_30} />
+          <ArticleRating articleId={storybookId} className={cls.mb_30} />
+          <ArticleRecommendationsList className={cls.mb_30} />
+          <ArticleDetailsComments id={storybookId} />
+        </Page>
+      </DynamicModuleLoader>
+    )
+  }
 
   if (!id) {
     return (
@@ -37,6 +55,7 @@ const ArticleDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
       </div>
     )
   }
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.articledetailspage, {}, [className])}>

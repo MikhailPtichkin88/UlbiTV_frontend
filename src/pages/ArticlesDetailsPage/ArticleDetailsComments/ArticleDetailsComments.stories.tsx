@@ -15,7 +15,6 @@ export default {
 
 const Template: ComponentStory<typeof ArticleDetailsComments> = () => (
   <div style={{ padding: 20 }}>
-    {' '}
     <ArticleDetailsComments id={'1'} />
   </div>
 )
