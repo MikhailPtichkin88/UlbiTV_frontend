@@ -8,7 +8,7 @@ import {
 } from '@/entities/User'
 import { useDispatch, useSelector } from 'react-redux'
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
-import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
 
 interface AvatarDropdownProps {

@@ -8,7 +8,7 @@ import { getArticles } from '@/pages/ArticlesPage/model/slice/articlesPageSlice'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
-import { Text, TextTheme } from '@/shared/ui/Text/Text'
+import { Text, TextTheme } from '@/shared/ui/Text'
 import { Page } from '@/widgets/Page/Page'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useCallback } from 'react'

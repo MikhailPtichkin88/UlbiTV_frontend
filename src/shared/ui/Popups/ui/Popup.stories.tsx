@@ -3,7 +3,7 @@ import { Popup } from './Popup'
 import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
-import { Button } from '@/shared/ui/Button/Button'
+import { Button } from '@/shared/ui/Button'
 
 export default {
   title: 'shared/Popup',

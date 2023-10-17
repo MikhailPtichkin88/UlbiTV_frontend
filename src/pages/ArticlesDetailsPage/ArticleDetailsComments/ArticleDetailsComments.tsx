@@ -2,7 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { CommentList } from '@/entities/Comment'
 import { AddCommentForm } from '@/features/AddNewComment'
-import { TextSize, Text } from '@/shared/ui/Text/Text'
+import { TextSize, Text } from '@/shared/ui/Text'
 import { Suspense, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getArticleCommentsIsLoading } from '../model/selectors/comments'
@@ -11,7 +11,7 @@ import { getArticleComments } from '../model/slices/ArticleDetailsCommentsSlice'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId'
 import { VStack } from '@/shared/ui/Stack'
-import { Loader } from '@/shared/ui/Loader/Loader'
+import { Loader } from '@/shared/ui/Loader'
 
 interface ArticleDetailsCommentsProps {
   className?: string

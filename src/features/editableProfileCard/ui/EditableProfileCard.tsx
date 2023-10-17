@@ -11,7 +11,7 @@ import {
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Text, TextTheme } from '@/shared/ui/Text/Text'
+import { Text, TextTheme } from '@/shared/ui/Text'
 
 import { fetchProfileData } from '../model/services/fetchProfileData/fetchProfileData'
 import { profileActions, profileReducer } from '../model/slice/profileSlice'
