@@ -1,6 +1,6 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Page.module.scss'
-import { MutableRefObject, ReactNode, UIEvent, useEffect, useRef } from 'react'
+import { MutableRefObject, ReactNode, UIEvent, useRef } from 'react'
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { getScrollByPath, saveScrollActions } from '@/features/ScrollSave'

@@ -9,7 +9,6 @@ import { Popover } from '@/shared/ui/Popups'
 import { BrowserView, MobileView } from 'react-device-detect'
 import { Drawer } from '@/shared/ui/Drawer'
 import { useCallback, useState } from 'react'
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider'
 
 interface NotificationButtonProps {
   triggerClassName?: string

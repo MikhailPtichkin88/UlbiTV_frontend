@@ -13,11 +13,7 @@ import { AddCommentFormSchema } from '@/features/AddNewComment'
 import { LoginSchema } from '@/features/AuthByUserName'
 import { SaveScrollSchema } from '@/features/ScrollSave'
 import { ProfileSchema } from '@/features/editableProfileCard'
-import {
-  ArticleDetailsCommentsSchema,
-  ArticleDetailsPageSchema,
-  ArticleDetailsRecommendationsSchema,
-} from '@/pages/ArticlesDetailsPage'
+import { ArticleDetailsPageSchema } from '@/pages/ArticlesDetailsPage'
 
 import { ArticlesPageSchema } from '@/pages/ArticlesPage'
 import { rtkApi } from '@/shared/api/rtkApi'

@@ -12,8 +12,6 @@ import { HStack } from '@/shared/ui/Stack'
 import { Text, TextTheme } from '@/shared/ui/Text'
 import { getUserAuthData } from '../../../entities/User'
 import cls from './Navbar.module.scss'
-import { Drawer } from '@/shared/ui/Drawer'
-import { NotificationList } from '@/entities/Notification'
 interface NavbarProps {
   className?: string
 }

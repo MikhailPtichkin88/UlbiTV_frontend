@@ -4,7 +4,6 @@ import {
   Reducer,
   ReducersMapObject,
 } from '@reduxjs/toolkit'
-import { NavigateOptions, To } from 'react-router-dom'
 import { $api } from '@/shared/api/api'
 import { counterReducer } from '../../../../entities/Counter'
 import { userReducer } from '../../../../entities/User'

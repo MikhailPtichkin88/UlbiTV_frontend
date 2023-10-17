@@ -7,7 +7,6 @@ import { t } from 'i18next'
 import { HTMLAttributeAnchorTarget } from 'react'
 import { useSelector } from 'react-redux'
 import { Virtuoso } from 'react-virtuoso'
-import { getArticles } from '../../model/slice/articlesPageSlice'
 import cls from './ArticleVirtualList.module.scss'
 import { getArticlesPageHasMore } from '../../model/selectors/articlesPageSelectors'
 

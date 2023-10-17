@@ -1,6 +1,5 @@
-import { Mods, classNames } from '@/shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './StarRating.module.scss'
-import { useTranslation } from 'react-i18next'
 import StarIcon from '@/shared/assets/icons/star.svg'
 import { Icon } from '../Icon'
 import { useState } from 'react'
