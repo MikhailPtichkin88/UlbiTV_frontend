@@ -10,12 +10,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
+import { DropdownDirection } from '@/shared/types'
 
 interface AvatarDropdownProps {
   className?: string
+  dropdownDirection?: DropdownDirection
 }
 
-export const AvatarDropdown = ({ className }: AvatarDropdownProps) => {
+export const AvatarDropdown = ({
+  className,
+  dropdownDirection = 'bottom left',
+}: AvatarDropdownProps) => {
   const { t } = useTranslation('translation')
 
   const authData = useSelector(getUserAuthData)
@@ -33,7 +38,7 @@ export const AvatarDropdown = ({ className }: AvatarDropdownProps) => {
   return (
     <Dropdown
       className={classNames('', {}, [className])}
-      direction="bottom left"
+      direction={dropdownDirection}
       items={[
         ...(isAdminPanelAvaliable
           ? [

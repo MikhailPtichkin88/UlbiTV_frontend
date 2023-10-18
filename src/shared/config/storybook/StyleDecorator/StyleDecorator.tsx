@@ -1,4 +1,12 @@
 import { Story } from '@storybook/react'
-import '@/app/styles/index.scss'
+import { CSSProperties } from 'react'
 
-export const StyleDecorator = (StoryComponent: Story) => <StoryComponent />
+export const StyleDecorator =
+  (style: CSSProperties = {}) =>
+  (StoryComponent: Story) => {
+    return (
+      <div style={{ padding: 30, ...style }}>
+        <StoryComponent />
+      </div>
+    )
+  }

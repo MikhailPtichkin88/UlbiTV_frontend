@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { CurrencySelect } from './CurrencySelect'
 import '@/app/styles/index.scss'
 import { Currency } from '../model/types/currency'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/CurrencySelect',
@@ -24,3 +25,4 @@ export const Primary = Template.bind({})
 Primary.args = {
   value: Currency.RUB,
 }
+Primary.decorators = [StyleDecorator()]

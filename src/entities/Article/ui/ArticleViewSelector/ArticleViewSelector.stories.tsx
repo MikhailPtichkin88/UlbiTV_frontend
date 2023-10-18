@@ -3,6 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Theme } from '@/app/providers/ThemeProvider'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { ArticleViewSelector } from './ArticleViewSelector'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/Article/ArticleViewSelector',
@@ -22,7 +23,7 @@ const Template: ComponentStory<typeof ArticleViewSelector> = (args) => (
 
 export const Primary = Template.bind({})
 Primary.args = {}
-
+Primary.decorators = [StyleDecorator()]
 export const Small = Template.bind({})
 Small.args = {}
-Small.decorators = [ThemeDecorator(Theme.DARK)]
+Small.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]

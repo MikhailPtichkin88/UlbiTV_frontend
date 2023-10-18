@@ -4,6 +4,7 @@ import { CommentCard } from './CommentCard'
 import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/CommentCard',
@@ -18,9 +19,7 @@ export default {
 } as ComponentMeta<typeof CommentCard>
 
 const Template: ComponentStory<typeof CommentCard> = (args) => (
-  <div style={{ padding: '20px', maxWidth: '550px' }}>
-    <CommentCard {...args} />
-  </div>
+  <CommentCard {...args} />
 )
 
 const comment = {
@@ -37,10 +36,13 @@ export const Primary = Template.bind({})
 Primary.args = {
   comment,
 }
-
+Primary.decorators = [StyleDecorator({ width: 500 })]
 export const DarkSkeleton = Template.bind({})
 DarkSkeleton.args = {
   comment,
   isLoading: true,
 }
-DarkSkeleton.decorators = [ThemeDecorator(Theme.DARK)]
+DarkSkeleton.decorators = [
+  StyleDecorator({ width: 500 }),
+  ThemeDecorator(Theme.DARK),
+]

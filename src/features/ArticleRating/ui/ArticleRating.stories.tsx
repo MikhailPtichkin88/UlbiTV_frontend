@@ -5,6 +5,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDe
 import { Theme } from '@/app/providers/ThemeProvider'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import withMock from 'storybook-addon-mock'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'features/ArticleRating',
@@ -40,10 +41,14 @@ Normal.parameters = {
     },
   ],
 }
+Normal.decorators = [StyleDecorator({ maxWidth: 500 })]
 
 export const WithoutRateDark = Template.bind({})
 WithoutRateDark.args = { articleId: '1' }
-WithoutRateDark.decorators = [ThemeDecorator(Theme.DARK)]
+WithoutRateDark.decorators = [
+  StyleDecorator({ maxWidth: 500 }),
+  ThemeDecorator(Theme.DARK),
+]
 WithoutRateDark.parameters = {
   mockData: [
     {

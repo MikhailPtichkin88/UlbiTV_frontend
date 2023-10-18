@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { CountrySelect } from './CountrySelect'
 import '@/app/styles/index.scss'
 import { Country } from '../../Country'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/CountrySelect',
@@ -24,3 +25,4 @@ export const Primary = Template.bind({})
 Primary.args = {
   value: Country.Armenia,
 }
+Primary.decorators = [StyleDecorator()]

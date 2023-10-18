@@ -8,11 +8,11 @@ import {
   ArticleView,
 } from '../../model/consts/consts'
 import { ArticleList } from './ArticleList'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/Article/ArticleList',
   component: ArticleList,
-
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -113,12 +113,13 @@ const Template: ComponentStory<typeof ArticleList> = (args) => (
 //   articles: articles,
 // }
 
-export const PrimarySkeleton = Template.bind({})
-PrimarySkeleton.args = {
+export const Primary = Template.bind({})
+Primary.args = {
   view: ArticleView.BIG,
   articles: articles,
   isLoading: true,
 }
+Primary.decorators = [StyleDecorator()]
 
 export const SmallSkeleton = Template.bind({})
 SmallSkeleton.args = {
@@ -126,4 +127,4 @@ SmallSkeleton.args = {
   articles: articles,
   isLoading: true,
 }
-SmallSkeleton.decorators = [ThemeDecorator(Theme.DARK)]
+SmallSkeleton.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]

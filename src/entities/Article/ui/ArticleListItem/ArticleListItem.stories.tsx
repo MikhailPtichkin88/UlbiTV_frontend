@@ -97,7 +97,9 @@ const article = {
 }
 
 const Template: ComponentStory<typeof ArticleListItem> = (args) => (
-  <ArticleListItem {...args} />
+  <div style={{ padding: 30 }}>
+    <ArticleListItem {...args} />
+  </div>
 )
 
 export const Primary = Template.bind({})

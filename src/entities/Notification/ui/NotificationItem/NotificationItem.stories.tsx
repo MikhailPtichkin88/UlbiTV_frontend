@@ -3,6 +3,7 @@ import { NotificationItem } from './NotificationItem'
 import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/NotificationItem',
@@ -24,7 +25,10 @@ const Template: ComponentStory<typeof NotificationItem> = () => (
 
 export const Normal = Template.bind({})
 Normal.args = {}
-
+Normal.decorators = [StyleDecorator({ maxWidth: 500 })]
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [
+  StyleDecorator({ maxWidth: 500 }),
+  ThemeDecorator(Theme.DARK),
+]

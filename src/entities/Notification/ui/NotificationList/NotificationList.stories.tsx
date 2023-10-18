@@ -6,6 +6,7 @@ import { Theme } from '@/app/providers/ThemeProvider'
 
 import withMock from 'storybook-addon-mock'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 const notifications = [
   {
@@ -56,7 +57,11 @@ Normal.parameters = {
     },
   ],
 }
+Normal.decorators = [StyleDecorator({ maxWidth: 500 })]
 
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [
+  StyleDecorator({ maxWidth: 500 }),
+  ThemeDecorator(Theme.DARK),
+]

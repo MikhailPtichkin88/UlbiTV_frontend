@@ -4,6 +4,7 @@ import AddCommentForm from './AddCommentForm'
 import '@/app/styles/index.scss'
 import { action } from '@storybook/addon-actions'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 export default {
   title: 'features/AddCommentForm',
   component: AddCommentForm,
@@ -21,4 +22,4 @@ export const Primary = Template.bind({})
 Primary.args = {
   onSendComment: action('onSendComment'),
 }
-Primary.decorators = [StoreDecorator({})]
+Primary.decorators = [StyleDecorator({ maxWidth: 800 }), StoreDecorator({})]

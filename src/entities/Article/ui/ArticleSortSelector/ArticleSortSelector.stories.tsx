@@ -5,6 +5,7 @@ import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { ArticleSortField } from '../../model/consts/consts'
 import { ArticleSortSelector } from './ArticleSortSelector'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/Article/ArticleSortSelector',
@@ -25,7 +26,7 @@ const Template: ComponentStory<typeof ArticleSortSelector> = () => (
 
 export const Normal = Template.bind({})
 Normal.args = {}
-
+Normal.decorators = [StyleDecorator()]
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]

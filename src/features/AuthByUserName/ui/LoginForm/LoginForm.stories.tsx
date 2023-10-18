@@ -5,6 +5,7 @@ import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'features/LoginForm',
@@ -22,6 +23,7 @@ const Template: ComponentStory<typeof LoginForm> = (args) => (
 export const Primary = Template.bind({})
 Primary.args = {}
 Primary.decorators = [
+  StyleDecorator({ maxWidth: 500 }),
   StoreDecorator({
     loginForm: { username: '123', password: '123' },
   }),
@@ -30,6 +32,7 @@ Primary.decorators = [
 export const Dark = Template.bind({})
 Dark.args = {}
 Dark.decorators = [
+  StyleDecorator({ maxWidth: 500 }),
   ThemeDecorator(Theme.DARK),
   StoreDecorator({
     loginForm: { username: '123', password: '123' },
@@ -39,6 +42,7 @@ Dark.decorators = [
 export const withError = Template.bind({})
 withError.args = {}
 withError.decorators = [
+  StyleDecorator({ maxWidth: 500 }),
   StoreDecorator({
     loginForm: {
       username: '123',
@@ -51,6 +55,7 @@ withError.decorators = [
 export const Loading = Template.bind({})
 Loading.args = {}
 Loading.decorators = [
+  StyleDecorator({ maxWidth: 500 }),
   StoreDecorator({
     loginForm: { isLoading: true },
   }),

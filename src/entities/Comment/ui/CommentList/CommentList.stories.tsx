@@ -4,6 +4,7 @@ import { CommentList } from './CommentList'
 import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/CommentList',
@@ -18,9 +19,7 @@ export default {
 } as ComponentMeta<typeof CommentList>
 
 const Template: ComponentStory<typeof CommentList> = (args) => (
-  <div style={{ width: 300, padding: 20 }}>
-    <CommentList {...args} />
-  </div>
+  <CommentList {...args} />
 )
 
 export const Primary = Template.bind({})
@@ -48,7 +47,7 @@ Primary.args = {
     },
   ],
 }
-
+Primary.decorators = [StyleDecorator({ width: 500 })]
 export const Dark = Template.bind({})
 Dark.args = {
   comments: [
@@ -74,4 +73,4 @@ Dark.args = {
     },
   ],
 }
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [StyleDecorator({ width: 500 }), ThemeDecorator(Theme.DARK)]

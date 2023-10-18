@@ -19,7 +19,9 @@ export default {
 } as ComponentMeta<typeof ArticleDetails>
 
 const Template: ComponentStory<typeof ArticleDetails> = (args) => (
-  <ArticleDetails {...args} />
+  <div style={{ padding: 30 }}>
+    <ArticleDetails {...args} />
+  </div>
 )
 
 export const Primary = Template.bind({})

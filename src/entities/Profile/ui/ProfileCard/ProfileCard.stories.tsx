@@ -5,6 +5,7 @@ import '@/app/styles/index.scss'
 import { Country } from '../../../Country'
 import { Currency } from '../../../Currency'
 import avatar from '@/shared/assets/img/avatar.jpg'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'entities/ProfileCard',
@@ -34,13 +35,16 @@ Primary.args = {
     avatar,
   },
 }
+Primary.decorators = [StyleDecorator({ maxWidth: 800 })]
 
 export const withError = Template.bind({})
 withError.args = {
   error: 'true',
 }
+withError.decorators = [StyleDecorator()]
 
 export const Loading = Template.bind({})
 Loading.args = {
   isLoading: true,
 }
+Loading.decorators = [StyleDecorator()]
