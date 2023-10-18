@@ -1,7 +1,6 @@
 import { HTMLAttributeAnchorTarget } from 'react'
 import { useTranslation } from 'react-i18next'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink'
 import { Avatar } from '@/shared/ui/Avatar'
@@ -13,6 +12,7 @@ import { Article, ArticleTextBlock } from '../../model/types/article'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import cls from './ArticleListItem.module.scss'
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts'
+import { getRouteArticleDetails } from '@/shared/const/router'
 interface ArticleListItemProps {
   className?: string
   article: Article
@@ -59,10 +59,7 @@ export const ArticleListItem = ({
             />
           )}
           <div className={cls.footer}>
-            <AppLink
-              to={RoutePath.article_details + article.id}
-              target={target}
-            >
+            <AppLink to={getRouteArticleDetails(article.id)} target={target}>
               <Button theme={ButtonTheme.OUTLINE}>{t('Читать далее')}</Button>
             </AppLink>
 
@@ -76,7 +73,7 @@ export const ArticleListItem = ({
   return (
     <AppLink
       target={target}
-      to={RoutePath.article_details + article.id}
+      to={getRouteArticleDetails(article.id)}
       className={classNames(cls.articlelistitem, {}, [className, cls[view]])}
     >
       <Card>

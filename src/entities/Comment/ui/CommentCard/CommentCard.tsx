@@ -4,9 +4,9 @@ import { Comment } from '../../model/types/comment'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Text } from '@/shared/ui/Text'
 import { Skeleton } from '@/shared/ui/Skeleton'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { AppLink } from '@/shared/ui/AppLink'
 import { HStack, VStack } from '@/shared/ui/Stack'
+import { getRouteProfile } from '@/shared/const/router'
 
 interface CommentProps {
   className?: string
@@ -45,7 +45,7 @@ export const CommentCard = ({
       gap="16"
       className={classNames(cls.commentCard, {}, [className])}
     >
-      <AppLink to={`${RoutePath.profile}${comment.user.id}`}>
+      <AppLink to={getRouteProfile(comment.user.id)}>
         {comment.user.avatar && <Avatar size={40} src={comment.user.avatar} />}
         <Text className={cls.username} title={comment.user.username} />
       </AppLink>

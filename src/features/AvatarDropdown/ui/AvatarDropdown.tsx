@@ -7,10 +7,10 @@ import {
   userActions,
 } from '@/entities/User'
 import { useDispatch, useSelector } from 'react-redux'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
 import { DropdownDirection } from '@/shared/types'
+import { getRouteAdmin, getRouteProfile } from '@/shared/const/router'
 
 interface AvatarDropdownProps {
   className?: string
@@ -44,13 +44,13 @@ export const AvatarDropdown = ({
           ? [
               {
                 content: t('админ_панель'),
-                href: RoutePath.admin_panel,
+                href: getRouteAdmin(),
               },
             ]
           : []),
         {
           content: t('PROFILE_PAGE'),
-          href: RoutePath.profile + authData.id,
+          href: getRouteProfile(authData.id),
         },
         { content: t('Выйти'), onClick: onLogout },
       ]}

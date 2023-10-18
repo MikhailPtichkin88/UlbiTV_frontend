@@ -4,7 +4,6 @@ import { NotificationButton } from '@/features/NotificationButton'
 import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
@@ -12,6 +11,7 @@ import { HStack } from '@/shared/ui/Stack'
 import { Text, TextTheme } from '@/shared/ui/Text'
 import { getUserAuthData } from '../../../entities/User'
 import cls from './Navbar.module.scss'
+import { getRouteArticleCreate } from '@/shared/const/router'
 interface NavbarProps {
   className?: string
 }
@@ -37,7 +37,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           theme={TextTheme.INVERTED}
         />
         <AppLink
-          to={RoutePath.article_create}
+          to={getRouteArticleCreate()}
           theme={AppLinkTheme.SECONDARY}
           className={cls.createBtn}
         >
