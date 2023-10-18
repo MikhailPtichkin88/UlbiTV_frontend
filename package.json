@@ -27,7 +27,8 @@
     "storybook:build": "build-storybook -c ./config/storybook",
     "prepare": "husky install",
     "prettier": "npx prettier --write ./src",
-    "types:check": "npx tsc --noEmit"
+    "types:check": "npx tsc --noEmit",
+    "postinstall": "node ./scripts/clear-cache.js"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -61,7 +62,6 @@
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@vitejs/plugin-react": "^4.1.0",
     "babel-loader": "^8.2.3",
-    "babel-plugin-i18next-extract": "^0.8.3",
     "circular-dependency-plugin": "^5.2.2",
     "copy-webpack-plugin": "^11.0.0",
     "eslint": "^8.28.0",
