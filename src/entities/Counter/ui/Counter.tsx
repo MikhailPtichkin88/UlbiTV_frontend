@@ -1,20 +1,19 @@
 import { useTheme } from '@/app/providers/ThemeProvider'
-import { useDispatch, useSelector } from 'react-redux'
 import { Button } from '@/shared/ui/Button'
-import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue'
-import { counterActions } from '../model/slice/CounterSlice'
+import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue'
+import { useCounterActions } from '../model/slice/CounterSlice'
 
 export const Counter = () => {
-  const dispatch = useDispatch()
-  const counterValue = useSelector(getCounterValue)
+  const counterValue = useCounterValue()
   const { theme } = useTheme()
+  const { increment, decrement } = useCounterActions()
 
-  const increment = () => {
-    dispatch(counterActions.increment())
+  const incrementHandler = () => {
+    increment()
   }
 
-  const decrement = () => {
-    dispatch(counterActions.decrement())
+  const decrementHandler = () => {
+    decrement()
   }
   return (
     <div>
@@ -22,10 +21,10 @@ export const Counter = () => {
         className={theme}
         data-testid="value-title"
       >{`value = ${counterValue}`}</h1>
-      <Button data-testid="increment-btn" onClick={increment}>
+      <Button data-testid="increment-btn" onClick={incrementHandler}>
         {'incr'}
       </Button>
-      <Button data-testid="decrement-btn" onClick={decrement}>
+      <Button data-testid="decrement-btn" onClick={decrementHandler}>
         {'decr'}
       </Button>
     </div>
