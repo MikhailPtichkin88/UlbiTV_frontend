@@ -7,4 +7,4 @@ npm run lint:scss:fix
 npx pretty-quick --staged
 
 npm run test:unit
-
+npm run storybook:build
