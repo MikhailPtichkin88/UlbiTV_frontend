@@ -3,11 +3,12 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Card } from './Card'
 import '@/app/styles/index.scss'
 import { Text } from '@/shared/ui/Text'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'shared/Card',
   component: Card,
-
+  decorators: [StyleDecorator()],
   argTypes: {
     backgroundColor: { control: 'color' },
   },

@@ -1,8 +1,8 @@
-import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Avatar } from './Avatar'
 import '@/app/styles/index.scss'
 import avatar from '@/shared/assets/img/avatar.jpg'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'shared/Avatar',
@@ -14,6 +14,7 @@ export default {
   args: {
     to: '/',
   },
+  decorators: [StyleDecorator()],
 } as ComponentMeta<typeof Avatar>
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />

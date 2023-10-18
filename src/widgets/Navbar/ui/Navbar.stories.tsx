@@ -2,10 +2,32 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import '@/app/styles/index.scss'
-import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
-import { Theme } from '@/app/providers/ThemeProvider'
 import { Navbar } from './Navbar'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import withMock from 'storybook-addon-mock'
+const notifications = [
+  {
+    id: '1',
+    title: 'Уведомление 1',
+    description: 'Произошло событие 1',
+    userId: '1',
+    href: 'http://localhost:3000/admin',
+  },
+  {
+    id: '1',
+    title: 'Уведомление 1',
+    description: 'Произошло событие 1',
+    userId: '1',
+    href: 'http://localhost:3000/admin',
+  },
+  {
+    id: '3',
+    title: 'Уведомление 3',
+    description: 'Произошло событие 3',
+    userId: '1',
+    href: 'http://localhost:3000/admin',
+  },
+]
 
 export default {
   title: 'widget/Navbar',
@@ -18,16 +40,22 @@ export default {
 
 const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />
 
-export const Light = Template.bind({})
-Light.args = {}
-Light.decorators = [StoreDecorator({})]
-
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]
+export const Normal = Template.bind({})
+Normal.args = {}
+Normal.decorators = [StoreDecorator({})]
 
 export const AuthNavbar = Template.bind({})
 AuthNavbar.args = {}
+AuthNavbar.parameters = {
+  mockData: [
+    {
+      url: __API__ + '/notifications',
+      method: 'GET',
+      status: 200,
+      response: notifications,
+    },
+  ],
+}
 AuthNavbar.decorators = [
   StoreDecorator({
     user: {
@@ -38,4 +66,5 @@ AuthNavbar.decorators = [
       },
     },
   }),
+  withMock,
 ]

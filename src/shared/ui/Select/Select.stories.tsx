@@ -2,11 +2,12 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Select } from './Select'
 import '@/app/styles/index.scss'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'shared/Select',
   component: Select,
-
+  decorators: [StyleDecorator()],
   argTypes: {
     backgroundColor: { control: 'color' },
   },

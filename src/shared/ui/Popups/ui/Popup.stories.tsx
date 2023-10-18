@@ -4,6 +4,7 @@ import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
 import { Button } from '@/shared/ui/Button'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'shared/Popup',
@@ -21,6 +22,7 @@ Normal.args = {
   children: <Button>Menu</Button>,
   direction: 'bottom left',
 }
+Normal.decorators = [StyleDecorator()]
 
 export const Dark = Template.bind({})
 Dark.args = {
@@ -28,4 +30,4 @@ Dark.args = {
   children: <Button>Menu</Button>,
   direction: 'bottom left',
 }
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]

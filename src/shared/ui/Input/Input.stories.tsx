@@ -2,10 +2,12 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Input } from './Input'
 import '@/app/styles/index.scss'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'shared/Input',
   component: Input,
+  decorators: [StyleDecorator()],
 
   argTypes: {
     backgroundColor: { control: 'color' },

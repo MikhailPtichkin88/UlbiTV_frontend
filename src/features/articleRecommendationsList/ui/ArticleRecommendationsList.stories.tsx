@@ -7,9 +7,10 @@ import withMock from 'storybook-addon-mock'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import { Article, ArticleType } from '@/entities/Article'
 import { ArticleBlockType } from '@/entities/Article/model/consts/consts'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
-  title: 'pages/ArticleDetailsPage/ArticleRecommendationsList',
+  title: 'features/ArticleRecommendationsList',
   component: ArticleRecommendationsList,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -23,7 +24,7 @@ const Template: ComponentStory<typeof ArticleRecommendationsList> = () => (
 
 export const Normal = Template.bind({})
 Normal.args = {}
-Normal.decorators = [StoreDecorator({})]
+Normal.decorators = [StyleDecorator(), StoreDecorator({})]
 Normal.parameters = {
   mockData: [
     {
@@ -37,7 +38,11 @@ Normal.parameters = {
 
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]
+Dark.decorators = [
+  StyleDecorator(),
+  ThemeDecorator(Theme.DARK),
+  StoreDecorator({}),
+]
 Dark.parameters = {
   mockData: [
     {

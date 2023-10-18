@@ -3,6 +3,7 @@ import '@/app/styles/index.scss'
 import { Text, TextSize, TextTheme } from './Text'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 export default {
   title: 'shared/Text',
   component: Text,
@@ -19,6 +20,7 @@ Primary.args = {
   title: 'Title title title title',
   text: 'Text text text text',
 }
+Primary.decorators = [StyleDecorator()]
 
 export const Error = Template.bind({})
 Error.args = {
@@ -26,33 +28,38 @@ Error.args = {
   text: 'Text text text text',
   theme: TextTheme.ERROR,
 }
+Error.decorators = [StyleDecorator()]
 
 export const OnlyTitle = Template.bind({})
 OnlyTitle.args = {
   title: 'Title title title title',
 }
+OnlyTitle.decorators = [StyleDecorator()]
 
 export const OnlyText = Template.bind({})
 OnlyText.args = {
   text: 'Text text text text',
 }
+OnlyText.decorators = [StyleDecorator()]
 
 export const PrimaryDark = Template.bind({})
 PrimaryDark.args = {
   title: 'Title title title title',
   text: 'Text text text text',
 }
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
+PrimaryDark.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]
+
 export const OnlyTitleDark = Template.bind({})
 OnlyTitleDark.args = {
   title: 'Title title title title',
 }
-OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)]
+OnlyTitleDark.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]
+
 export const OnlyTextDark = Template.bind({})
 OnlyTextDark.args = {
   text: 'Text text text text',
 }
-OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
+OnlyTextDark.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]
 
 export const SizeS = Template.bind({})
 SizeS.args = {
@@ -60,6 +67,7 @@ SizeS.args = {
   text: 'Text text text text',
   size: TextSize.S,
 }
+SizeS.decorators = [StyleDecorator()]
 
 export const SizeM = Template.bind({})
 SizeM.args = {
@@ -67,6 +75,7 @@ SizeM.args = {
   text: 'Text text text text',
   size: TextSize.M,
 }
+SizeM.decorators = [StyleDecorator()]
 
 export const SizeL = Template.bind({})
 SizeL.args = {
@@ -74,3 +83,4 @@ SizeL.args = {
   text: 'Text text text text',
   size: TextSize.L,
 }
+SizeL.decorators = [StyleDecorator()]

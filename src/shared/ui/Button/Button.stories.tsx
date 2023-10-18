@@ -4,10 +4,12 @@ import { Button, ButtonSize, ButtonTheme } from './Button'
 import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'shared/Button',
   component: Button,
+  decorators: [StyleDecorator()],
 
   argTypes: {
     backgroundColor: { control: 'color' },

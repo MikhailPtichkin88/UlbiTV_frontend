@@ -6,7 +6,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDe
 import { Theme } from '@/app/providers/ThemeProvider'
 import { Sidebar } from './Sidebar'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
-
+import cls from './Sidebar.module.scss'
 export default {
   title: 'widget/Sidebar',
   component: Sidebar,
@@ -20,8 +20,8 @@ export default {
 const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />
 
 export const Light = Template.bind({})
-Light.args = {}
+Light.args = { className: cls.storybookHeight }
 
 export const Dark = Template.bind({})
-Dark.args = {}
+Dark.args = { className: cls.storybookHeight }
 Dark.decorators = [ThemeDecorator(Theme.DARK)]

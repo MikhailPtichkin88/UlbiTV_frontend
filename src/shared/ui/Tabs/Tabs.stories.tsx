@@ -4,6 +4,7 @@ import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
 import { ReactNode, useState } from 'react'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 interface TabItem {
   value: string
@@ -35,7 +36,8 @@ const Template: ComponentStory<typeof Tabs> = () => {
 
 export const Normal = Template.bind({})
 Normal.args = {}
+Normal.decorators = [StyleDecorator()]
 
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]

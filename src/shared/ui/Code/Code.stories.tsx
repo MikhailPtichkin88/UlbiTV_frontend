@@ -1,11 +1,12 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import '@/app/styles/index.scss'
 import { Code } from './Code'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'shared/Code',
   component: Code,
-
+  decorators: [StyleDecorator()],
   argTypes: {
     backgroundColor: { control: 'color' },
   },

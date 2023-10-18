@@ -4,6 +4,7 @@ import { Skeleton } from './Skeleton'
 import '@/app/styles/index.scss'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
+import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator'
 
 export default {
   title: 'shared/Skeleton',
@@ -23,6 +24,7 @@ Normal.args = {
   width: '100%',
   height: 200,
 }
+Normal.decorators = [StyleDecorator()]
 
 export const Circle = Template.bind({})
 Circle.args = {
@@ -30,13 +32,14 @@ Circle.args = {
   width: 100,
   height: 100,
 }
+Circle.decorators = [StyleDecorator()]
 
 export const NormalDark = Template.bind({})
 NormalDark.args = {
   width: '100%',
   height: 200,
 }
-NormalDark.decorators = [ThemeDecorator(Theme.DARK)]
+NormalDark.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]
 
 export const CirclelDark = Template.bind({})
 CirclelDark.args = {
@@ -44,4 +47,4 @@ CirclelDark.args = {
   width: 100,
   height: 100,
 }
-CirclelDark.decorators = [ThemeDecorator(Theme.DARK)]
+CirclelDark.decorators = [StyleDecorator(), ThemeDecorator(Theme.DARK)]
