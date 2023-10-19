@@ -54,7 +54,7 @@ export const AvatarDropdown = ({
         },
         { content: t('Выйти'), onClick: onLogout },
       ]}
-      trigger={<Avatar size={40} src={authData.avatar} />}
+      trigger={<Avatar fallbackInverted size={40} src={authData.avatar} />}
     />
   )
 }

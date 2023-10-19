@@ -87,7 +87,7 @@ export const ProfileCard = ({
     >
       {data?.avatar && (
         <HStack justify="center" max>
-          <Avatar src={data?.avatar} alt="avatar img" />
+          <Avatar size={200} src={data?.avatar} alt="avatar img" />
         </HStack>
       )}
       <Input
