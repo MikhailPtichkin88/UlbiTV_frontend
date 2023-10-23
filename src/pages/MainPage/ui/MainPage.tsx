@@ -10,7 +10,7 @@ const MainPage = memo(() => {
   const { t } = useTranslation('main')
   const [value, setValue] = useState('')
   return (
-    <Page>
+    <Page data-testid="MainPage">
       <BugButton />
       <Input value={value} onChange={setValue} placeholder={'Введите текст'} />
       <div>{t('Главная страница')}</div>

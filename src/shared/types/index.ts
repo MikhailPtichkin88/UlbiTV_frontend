@@ -4,3 +4,6 @@ export type DropdownDirection =
   | 'bottom left'
   | 'top right'
   | 'bottom right'
+export interface TestProps {
+  'data-testid'?: string
+}
