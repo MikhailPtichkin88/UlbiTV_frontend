@@ -67,7 +67,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm ci --force
+        run: npm ci
       - name: build production project
         run: npm run build:prod
         if: always()
