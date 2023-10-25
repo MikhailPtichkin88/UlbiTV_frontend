@@ -5,11 +5,11 @@
 extractedTranslations
 extractedTranslations/en/translation.json
 extractedTranslations/ru/translation.json
-
+/storybook-static
 /build
 node_modules
 .idea
-/storybook-static
+
 .loki/report.html
 .loki/report.json
 /reports
