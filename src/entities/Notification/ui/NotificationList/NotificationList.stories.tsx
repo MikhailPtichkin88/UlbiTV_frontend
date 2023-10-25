@@ -57,11 +57,22 @@ Normal.parameters = {
     },
   ],
 }
-Normal.decorators = [StyleDecorator({ maxWidth: 500 })]
+Normal.decorators = [withMock, StyleDecorator({ maxWidth: 500 })]
 
 export const Dark = Template.bind({})
 Dark.args = {}
+Dark.parameters = {
+  mockData: [
+    {
+      url: __API__ + '/notifications',
+      method: 'GET',
+      status: 200,
+      response: notifications,
+    },
+  ],
+}
 Dark.decorators = [
+  withMock,
   StyleDecorator({ maxWidth: 500 }),
   ThemeDecorator(Theme.DARK),
 ]

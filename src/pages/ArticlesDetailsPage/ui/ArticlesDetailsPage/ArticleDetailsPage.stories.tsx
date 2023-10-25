@@ -17,10 +17,15 @@ import { ArticleDetailsComments } from '../../ArticleDetailsComments/ArticleDeta
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { ThemeDecorator } from '@/shared/config/storybook/themeDecorator/themeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
+import withMock from 'storybook-addon-mock'
 
 export default {
   title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
   component: ArticleDetailsPage,
+  parameters: {
+    loki: { skip: true },
+  },
+  decorators: [withMock],
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -89,6 +94,7 @@ const article: Article = {
 export const Normal = Template.bind({})
 Normal.args = {}
 Normal.decorators = [
+  withMock,
   StoreDecorator({
     articleDetails: {
       data: article,
@@ -98,7 +104,25 @@ Normal.decorators = [
 
 export const Dark = Template.bind({})
 Dark.args = {}
+Normal.parameters = {
+  loki: { skip: true },
+  mockData: [
+    {
+      url: __API__ + '/articles',
+      method: 'GET',
+      status: 200,
+      response: article,
+    },
+    {
+      url: __API__ + '/article-ratings',
+      method: 'GET',
+      status: 200,
+      response: {},
+    },
+  ],
+}
 Dark.decorators = [
+  withMock,
   StoreDecorator({
     articleDetails: {
       data: article,
@@ -106,3 +130,20 @@ Dark.decorators = [
   }),
   ThemeDecorator(Theme.DARK),
 ]
+Dark.parameters = {
+  loki: { skip: true },
+  mockData: [
+    {
+      url: __API__ + '/articles?',
+      method: 'GET',
+      status: 200,
+      response: article,
+    },
+    {
+      url: __API__ + '/article-ratings',
+      method: 'GET',
+      status: 200,
+      response: {},
+    },
+  ],
+}
