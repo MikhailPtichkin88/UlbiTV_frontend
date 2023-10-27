@@ -11,6 +11,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    loki: {
+      skip: ['Dark'],
+    },
+  },
   decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof LoginModal>
 

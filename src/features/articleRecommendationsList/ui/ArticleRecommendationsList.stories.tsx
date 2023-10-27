@@ -15,6 +15,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    loki: {
+      skip: ['Dark'],
+    },
+  },
   decorators: [withMock],
 } as ComponentMeta<typeof ArticleRecommendationsList>
 

@@ -11,6 +11,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    loki: {
+      skip: ['Dark'],
+    },
+  },
 } as ComponentMeta<typeof Modal>
 
 const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />

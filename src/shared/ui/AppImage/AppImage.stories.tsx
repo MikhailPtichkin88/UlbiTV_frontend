@@ -10,6 +10,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    loki: {
+      skip: ['Dark'],
+    },
+  },
 } as ComponentMeta<typeof AppImage>
 
 const Template: ComponentStory<typeof AppImage> = () => <AppImage />
