@@ -22,9 +22,11 @@ import withMock from 'storybook-addon-mock'
 export default {
   title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
   component: ArticleDetailsPage,
-  parameters: {
-    loki: { skip: true },
-  },
+  // parameters: {
+  //   loki: {
+  //     skip: ['Small'],
+  //   },
+  // },
   decorators: [withMock],
   argTypes: {
     backgroundColor: { control: 'color' },

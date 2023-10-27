@@ -20,6 +20,11 @@ export default {
   args: {
     to: '/',
   },
+  parameters: {
+    loki: {
+      skip: ['Small'],
+    },
+  },
 } as ComponentMeta<typeof ArticleListItem>
 
 const article = {

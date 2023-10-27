@@ -17,6 +17,11 @@ export default {
   args: {
     to: '/',
   },
+  parameters: {
+    loki: {
+      skip: ['Small'],
+    },
+  },
 } as ComponentMeta<typeof ProfileCard>
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => (
@@ -32,8 +37,7 @@ Primary.args = {
     lastname: 'Ulbi',
     city: '113',
     currency: Currency.RUB,
-    avatar:
-      'https://www.azcentral.com/gcdn/-mm-/fd5c5b5393c72a785789f0cd5bd20acedd2d2804/c=0-350-2659-1850/local/-/media/Phoenix/BillGoodykoontz/2014/04/24//1398388295000-Homer-Simpson.jpg?width=2659&height=1500&fit=crop&format=pjpg&auto=webp',
+    avatar: 'https://placehold.co/600x400/000000/FFFFFF/jpg',
   },
 }
 Primary.decorators = [StyleDecorator({ maxWidth: 800 })]

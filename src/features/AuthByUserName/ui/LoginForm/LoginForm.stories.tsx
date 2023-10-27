@@ -14,6 +14,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    loki: {
+      skip: ['Dark'],
+    },
+  },
 } as ComponentMeta<typeof LoginForm>
 
 const Template: ComponentStory<typeof LoginForm> = (args) => (

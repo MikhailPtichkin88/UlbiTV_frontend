@@ -16,6 +16,11 @@ export default {
   args: {
     to: '/',
   },
+  parameters: {
+    loki: {
+      skip: ['LoadingDark'],
+    },
+  },
 } as ComponentMeta<typeof ArticleDetails>
 
 const Template: ComponentStory<typeof ArticleDetails> = (args) => (

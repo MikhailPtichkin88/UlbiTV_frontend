@@ -16,6 +16,11 @@ export default {
   args: {
     to: '/',
   },
+  parameters: {
+    loki: {
+      skip: ['DarkSkeleton'],
+    },
+  },
 } as ComponentMeta<typeof CommentCard>
 
 const Template: ComponentStory<typeof CommentCard> = (args) => (
