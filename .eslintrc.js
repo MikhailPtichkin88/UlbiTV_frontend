@@ -94,4 +94,5 @@ module.exports = {
       },
     },
   ],
+  ignorePatterns: ['**/*.html'],
 }
