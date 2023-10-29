@@ -26,7 +26,7 @@ const ArticlesPage = () => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
-      <div className={cls.articlePage}>
+      <div className={cls.articlePage} data-testid={'ArticlesPage'}>
         <ArticlesPageFilters />
         <ArticleInfiniteList className={cls.list} virtual />
       </div>
