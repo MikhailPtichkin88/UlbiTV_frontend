@@ -135,6 +135,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo(
     return (
       <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
         <VStack
+          data-testid="ArticleDetails.Info"
           gap="16"
           max
           className={classNames(cls.articledetails, {}, [className])}

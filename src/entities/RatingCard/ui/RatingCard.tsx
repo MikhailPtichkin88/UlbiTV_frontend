@@ -67,6 +67,7 @@ export const RatingCard = ({
     <>
       <Text title={feedbackTitle} />
       <Input
+        data-testid={'RatingCard.Input'}
         value={feedback}
         onChange={onInputChange}
         placeholder={t('Ваш отзыв')}
@@ -89,10 +90,16 @@ export const RatingCard = ({
           <VStack gap="32">
             {modalContent}
             <HStack max gap="16" justify="end">
-              <Button theme={ButtonTheme.OUTLINE_RED} onClick={cancelHandler}>
+              <Button
+                data-testid={'RatingCard.Close'}
+                theme={ButtonTheme.OUTLINE_RED}
+                onClick={cancelHandler}
+              >
                 {t('Закрыть')}
               </Button>
-              <Button onClick={acceptHandler}>{t('Отправить')}</Button>
+              <Button data-testid={'RatingCard.Send'} onClick={acceptHandler}>
+                {t('Отправить')}
+              </Button>
             </HStack>
           </VStack>
         </Modal>

@@ -22,6 +22,7 @@ export const CommentCard = ({
   if (isLoading) {
     return (
       <VStack
+        data-testid={'CommentCard.Loading'}
         gap="16"
         max
         className={classNames(cls.commentCard, {}, [className, cls.loading])}

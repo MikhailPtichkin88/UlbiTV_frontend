@@ -29,7 +29,12 @@ export const CommentList = ({
     )
   }
   return (
-    <VStack gap="16" max className={classNames('', {}, [className])}>
+    <VStack
+      data-testid={'CommentCard.Content'}
+      gap="16"
+      max
+      className={classNames('', {}, [className])}
+    >
       {comments?.length ? (
         comments.map((comment: Comment) => (
           <CommentCard

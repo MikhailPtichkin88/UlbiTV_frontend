@@ -59,6 +59,7 @@ export const ArticleList = ({
 
   return (
     <div
+      data-testid={'ArticlesList'}
       className={classNames('', { [cls[wrap]]: true }, [className, cls[view]])}
     >
       {articles.map((article) => (

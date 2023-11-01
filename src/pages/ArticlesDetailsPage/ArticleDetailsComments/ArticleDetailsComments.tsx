@@ -37,7 +37,12 @@ export const ArticleDetailsComments = ({
   })
 
   return (
-    <VStack gap="16" max className={classNames('', {}, [className])}>
+    <VStack
+      data-testid={'RatingCard'}
+      gap="16"
+      max
+      className={classNames('', {}, [className])}
+    >
       <Text size={TextSize.L} title={t('Комментарии')} />
       <Suspense fallback={<Loader />}>
         <AddCommentForm onSendComment={onSendComment} />

@@ -43,6 +43,7 @@ export const ArticleListItem = ({
     ) as ArticleTextBlock
     return (
       <div
+        data-testid={'ArticleListItem'}
         className={classNames(cls.articlelistitem, {}, [className, cls[view]])}
       >
         <Card className={cls.card}>
@@ -79,6 +80,7 @@ export const ArticleListItem = ({
 
   return (
     <AppLink
+      data-testid={'ArticleListItem'}
       target={target}
       to={getRouteArticleDetails(article.id)}
       className={classNames(cls.articlelistitem, {}, [className, cls[view]])}

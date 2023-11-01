@@ -14,3 +14,4 @@ node_modules
 .loki/report.json
 /reports
 /reports/index.html
+reports

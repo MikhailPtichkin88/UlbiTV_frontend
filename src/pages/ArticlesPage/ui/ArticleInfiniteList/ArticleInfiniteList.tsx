@@ -56,7 +56,7 @@ export const ArticleInfiniteList = ({
     )
   }
   return (
-    <div>
+    <div data-testid={'ArticlesVirtualList'}>
       <ArticleVirtualList
         view={view}
         error={error}
