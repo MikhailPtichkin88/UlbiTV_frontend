@@ -5,7 +5,7 @@ import {
   getRouteAdmin,
   getRouteProfile,
 } from '@/shared/const/router'
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import { UserRole } from '@/entities/User'
 describe('app/router/AppRouter', () => {
   test('Страница должна отрендериться', async () => {
@@ -20,7 +20,10 @@ describe('app/router/AppRouter', () => {
   })
   test('Редирект неавторизованного пользователя на главную страницу', async () => {
     componentRender(<AppRouter />, { route: getRouteProfile('1') })
-    const page = await screen.findByTestId('MainPage')
+    let page
+    await waitFor(async () => {
+      page = await screen.findByTestId('MainPage')
+    })
     expect(page).toBeInTheDocument()
   })
   test('Доступ к закрытой странице для авторизированного пользователя', async () => {
