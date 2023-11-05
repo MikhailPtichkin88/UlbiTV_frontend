@@ -15,3 +15,5 @@ node_modules
 /reports
 /reports/index.html
 reports
+reports/unit/report.html
+reports/unit/

@@ -1,0 +1,33 @@
+{
+  "id": "9",
+  "title": "Cybersecurity Trends",
+  "subtitle": "Emerging Trends in Cybersecurity for 2023",
+  "img": "https://img.freepik.com/free-photo/technology-human-touch-background-modern-remake-creation-adam_53876-129794.jpg?w=1060&t=st=1688281671~exp=1688282271~hmac=2206dd9932099981daa3cbdd19473280f74e2829da5cc25a137d09bb237aea04",
+  "views": 865,
+  "createdAt": "11.07.2021",
+  "userId": "1",
+  "type": ["Cybersecurity"],
+  "blocks": [
+    {
+      "id": "1",
+      "type": "TEXT",
+      "title": "Understanding Cybersecurity",
+      "paragraphs": [
+        "Cybersecurity is the practice of protecting computer systems, networks, and data from security breaches and attacks."
+      ]
+    },
+    {
+      "id": "2",
+      "type": "IMAGE",
+      "src": "https://www.freepik.com/free-vector/abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics_22421018.htm#query=technology&position=6&from_view=keyword&track=sph",
+      "title": "Image 1 - Cybersecurity"
+    }
+  ],
+  "user": {
+    "id": "1",
+    "username": "admin",
+    "password": "123",
+    "roles": ["ADMIN"],
+    "avatar": "https://logowik.com/content/uploads/images/homer-simpson4924.jpg"
+  }
+}

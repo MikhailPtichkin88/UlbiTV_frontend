@@ -23,7 +23,14 @@ describe('Article details page enter', () => {
     cy.addComment()
     cy.getByTestId('CommentCard.Content').should('have.length', 1)
   })
-  it('Article details left 3 star rating', () => {
+  // it('Article details left 3 star rating', () => {
+  //   cy.getByTestId('ArticleDetails.Info')
+  //   cy.getByTestId('RatingCard').scrollIntoView()
+  //   cy.setRate(3, 'feedback')
+  //   cy.get('[data-selected=true]').should('have.length', 3)
+  // })
+  it('Article details left 3 star rating (using fixtures)', () => {
+    cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' })
     cy.getByTestId('ArticleDetails.Info')
     cy.getByTestId('RatingCard').scrollIntoView()
     cy.setRate(3, 'feedback')

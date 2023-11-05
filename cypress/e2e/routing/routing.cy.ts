@@ -1,4 +1,4 @@
-import { selectByTestId } from 'cypress/helpers/selectByTestId'
+import { selectByTestId } from '../../helpers/selectByTestId'
 
 describe('Routing: not authorized', () => {
   it('Main page', () => {
