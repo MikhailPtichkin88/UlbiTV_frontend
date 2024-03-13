@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkUlbiTV_frontend=self.webpackChunkUlbiTV_frontend||[]).push([[360],{4360:function(e,n,s){s.r(n);var t=s(3007),l=s(5443),a=s(8979),c=s(5893);n.default=e=>{let{className:n}=e;const{t:s}=(0,l.$)();return(0,c.jsx)(a.T,{className:(0,t.A)("",{},[n]),children:s("админ_панель")})}}}]);

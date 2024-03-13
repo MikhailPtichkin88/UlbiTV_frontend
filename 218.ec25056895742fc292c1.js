@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkUlbiTV_frontend=self.webpackChunkUlbiTV_frontend||[]).push([[218],{6218:function(n,e,t){t.r(e);var r=t(7294),s=t(5443),u=t(8979),c=t(5893);const o=(0,r.memo)((()=>{const{t:n}=(0,s.$)("about");return(0,c.jsx)(u.T,{children:n("О сайте")})}));e.default=o}}]);
