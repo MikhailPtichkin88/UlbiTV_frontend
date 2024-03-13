@@ -29,6 +29,7 @@
     "prepare": "husky install",
     "prettier": "npx prettier --write ./src",
     "types:check": "npx tsc --noEmit",
+    "precommit": "pretty-quick --staged",
     "postinstall": "node ./scripts/clear-cache.js"
   },
   "devDependencies": {

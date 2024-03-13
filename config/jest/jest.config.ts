@@ -12,18 +12,18 @@ export default {
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
   moduleDirectories: ['node_modules'],
   modulePaths: ['<rootDir>src/'],
-  reporters: [
-    'default',
-    [
-      'jest-html-reporters',
-      {
-        publicPath: '<rootDir>/reports/unit',
-        filename: 'report.html',
-        openReport: true,
-        inlineSource: true,
-      },
-    ],
-  ],
+  // reporters: [
+  //   'default',
+  //   [
+  //     'jest-html-reporters',
+  //     {
+  //       publicPath: '<rootDir>/reports/unit',
+  //       filename: 'report.html',
+  //       openReport: true,
+  //       inlineSource: true,
+  //     },
+  //   ],
+  // ],
   testMatch: [
     // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
     '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',

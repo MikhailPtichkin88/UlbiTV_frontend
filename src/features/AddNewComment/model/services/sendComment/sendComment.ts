@@ -9,6 +9,7 @@ export const sendComment = createAsyncThunk<Comment, void, ThunkConfig<string>>(
   'addCommentForm/sendComment',
   async (_, thunkAPI) => {
     const { extra, dispatch, getState, rejectWithValue } = thunkAPI
+
     try {
       const userData = getUserAuthData(getState())
       const text = getAddCommentFormText(getState())
