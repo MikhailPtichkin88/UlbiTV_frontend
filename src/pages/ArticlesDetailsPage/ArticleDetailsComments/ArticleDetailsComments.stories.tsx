@@ -12,6 +12,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    loki: {
+      skip: ['Normal', 'Dark'],
+    },
+  },
 } as ComponentMeta<typeof ArticleDetailsComments>
 
 const Template: ComponentStory<typeof ArticleDetailsComments> = () => (

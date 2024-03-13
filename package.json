@@ -1,8 +1,9 @@
 {
-  "name": "UlbiTV",
+  "name": "UlbiTV_frontend",
   "version": "1.0.0",
   "main": "index.js",
   "author": "MikhailPtichkin88 <mikhailptichkin1988@gmail.com>",
+  "homepage": "https://mikhailptichkin88.github.io/UlbiTV_frontend/",
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --env port=3000",
