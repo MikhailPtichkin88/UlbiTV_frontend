@@ -4,11 +4,11 @@ import { buildWebpackConfig } from './config/build/buildWebpackConfig'
 import { BuildEnv, BuildMode, BuildPaths } from './config/build/types/config'
 
 function getApiUrl(mode: BuildMode, apiUrl?: string) {
-  if (apiUrl) {
-    return apiUrl
-  }
+  // if (apiUrl) {
+  //   return apiUrl
+  // }
   if (mode === 'production') {
-    return '/api'
+    return 'https://project-server-eoxpoehrk-mikhailptichkin88.vercel.app'
   }
   return 'http://localhost:8000'
 }
