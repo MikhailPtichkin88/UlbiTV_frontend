@@ -39,6 +39,9 @@ export function createReduxStore(
         thunk: {
           extraArgument: extraArg,
         },
+        serializableCheck: {
+          ignoredActions: ['articlesPage/fetchArticlesList/fulfilled'],
+        },
       }).concat(rtkApi.middleware),
   })
 

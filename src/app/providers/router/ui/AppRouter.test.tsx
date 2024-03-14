@@ -1,16 +1,16 @@
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender'
 import AppRouter from './AppRouter'
 import {
-  getRouteAbout,
   getRouteAdmin,
+  getRouteMain,
   getRouteProfile,
 } from '@/shared/const/router'
 import { screen, waitFor } from '@testing-library/react'
 import { UserRole } from '@/entities/User'
 describe('app/router/AppRouter', () => {
   test('Страница должна отрендериться', async () => {
-    componentRender(<AppRouter />, { route: getRouteAbout() })
-    const page = await screen.findByTestId('AboutPage')
+    componentRender(<AppRouter />, { route: getRouteMain() })
+    const page = await screen.findByTestId('MainPage')
     expect(page).toBeInTheDocument()
   })
   test('Страница не найдена', async () => {

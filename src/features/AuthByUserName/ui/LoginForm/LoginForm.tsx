@@ -50,9 +50,15 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const res = dispatch(loginByUserName({ username, password }))
     if ((await res).meta.requestStatus === 'fulfilled') {
       onSuccess()
-      navigate?.('/about')
+      navigate?.('/')
     }
   }, [dispatch, username, password, onSuccess, navigate])
+
+  const onEnterPressHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      onLoginClick()
+    }
+  }
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
@@ -71,6 +77,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
           autoFocus
           onChange={onChangeUserName}
           value={username}
+          onKeyDown={onEnterPressHandler}
         />
         <Input
           type="text"
@@ -78,6 +85,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
           placeholder={t('Введите пароль')}
           onChange={onChangePassword}
           value={password}
+          onKeyDown={onEnterPressHandler}
         />
         <Button
           theme={ButtonTheme.OUTLINE}

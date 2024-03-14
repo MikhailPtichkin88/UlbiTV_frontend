@@ -1,5 +1,4 @@
 import { UserRole } from '@/entities/User'
-import { AboutPage } from '@/pages/AboutPage'
 import { AdminPanelPage } from '@/pages/AdminPanelPage'
 import ArticleEditPage from '@/pages/ArticleEditPage/ui/ArticleEditPage'
 import { ArticleDetailsPage } from '@/pages/ArticlesDetailsPage'
@@ -10,7 +9,6 @@ import { NotFoundPage } from '@/pages/NotFoundPage'
 import { ProfilePage } from '@/pages/profilePage'
 import {
   AppRoutes,
-  getRouteAbout,
   getRouteAdmin,
   getRouteArticleCreate,
   getRouteArticleDetails,
@@ -31,10 +29,6 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.MAIN]: {
     path: getRouteMain(),
     element: <MainPage />,
-  },
-  [AppRoutes.ABOUT]: {
-    path: getRouteAbout(),
-    element: <AboutPage />,
   },
   [AppRoutes.PROFILE]: {
     path: getRouteProfile(':id'),

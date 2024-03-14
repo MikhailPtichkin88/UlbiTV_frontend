@@ -23,7 +23,6 @@ export const ArticleTypeTabs = ({
     Object.values(ArticleType).forEach((type) =>
       tabs.push({ value: type, content: t(type) })
     )
-    console.log(tabs)
     return tabs
   }, [t])
 

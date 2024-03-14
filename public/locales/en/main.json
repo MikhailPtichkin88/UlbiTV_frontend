@@ -1,3 +1,21 @@
 {
-  "Главная страница": "Main page"
+  "Описание": "An application where users with the role of an administrator can create, edit, and delete articles, while regular users can read, comment, and rate each article.",
+  "Учетные записи для тестирования функционала": "Credentials for testing functionality",
+  "Администратор": "Administrator:",
+  "(функционал в разработке) логин: admin, пароль: 123": "(functionality in development) login: admin, password: 123",
+  "Пользователь": "Regular User:",
+  "логин: user, пароль: 123": "login: user, password: 123",
+  "Особенности проекта": "Project Features:",
+  "Стэк": "Tech Stack:",
+  "Сборщик": "Builder:",
+  "Webpack, конфиг написан вручную": "Webpack, manually configured",
+  "Архитектура": "Architecture:",
+  "Тесты": "Testing:",
+  "Обычные unit тесты на Jest": "Regular unit tests with Jest",
+  "Тесты на компоненты с React Testing Library": "Component tests with React Testing Library",
+  "Скриншотное тестирование с Loki": "Snapshot testing with Loki",
+  "E2E тестирование с Cypress": "End-to-end testing with Cypress",
+  "Ссылка на сторибук основных компонентов": "Link to Storybook of core components",
+  "Ссылка на Git репозиторий": "Link to Git repository",
+  "Полезные статьи на тему IT и не только": "Useful articles on IT and more"
 }

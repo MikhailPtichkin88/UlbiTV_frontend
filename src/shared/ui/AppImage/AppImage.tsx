@@ -11,9 +11,14 @@ interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   errorFallback?: ReactElement
 }
 
-export const AppImage = (props: AppImageProps) => {
-  const { className, src, alt = 'image', errorFallback, fallback } = props
-
+export const AppImage = ({
+  className,
+  src,
+  alt = 'image',
+  errorFallback,
+  fallback,
+  ...rest
+}: AppImageProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 
@@ -34,5 +39,5 @@ export const AppImage = (props: AppImageProps) => {
   if (hasError && errorFallback) {
     return errorFallback
   }
-  return <img className={className} src={src} alt={alt} {...props} />
+  return <img className={className} src={src} alt={alt} {...rest} />
 }

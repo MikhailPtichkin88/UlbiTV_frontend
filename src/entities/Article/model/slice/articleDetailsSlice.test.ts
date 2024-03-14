@@ -52,13 +52,6 @@ describe('articleDetailsSlice.test', () => {
       isLoading: false,
       error: '',
     }
-    console.log(
-      articleDetailsReducer(
-        state as ArticleDetailsSchema,
-        fetchArticleById.pending
-      )
-    )
-
     expect(
       articleDetailsReducer(
         state as ArticleDetailsSchema,
