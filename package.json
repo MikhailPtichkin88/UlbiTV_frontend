@@ -31,9 +31,7 @@
     "prettier": "npx prettier --write ./src",
     "types:check": "npx tsc --noEmit",
     "precommit": "pretty-quick --staged",
-    "postinstall": "node ./scripts/clear-cache.js",
-    "predeploy": "npm run build:prod",
-    "deploy": "gh-pages -d build"
+    "postinstall": "node ./scripts/clear-cache.js"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -83,7 +81,6 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
-    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.0",
     "identity-obj-proxy": "^3.0.0",
